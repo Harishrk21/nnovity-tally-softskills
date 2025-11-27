@@ -3,24 +3,49 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap, Settings, TrendingUp, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroTally from "@/assets/hero-tally.jpg";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
+import teamSuccess from "@/assets/team-success.jpg";
 
 const Index = () => {
-  const tallyServices = [
-    "TallyPrime & ERP Sales",
-    "Cloud & Mobile Solutions",
-    "Customization & Support",
-    "Data Integration",
-  ];
-
-  const softskillsServices = [
-    "Leadership Training",
-    "Public Speaking",
-    "Personality Development",
-    "Corporate Training",
+  const allServices = [
+    {
+      icon: Briefcase,
+      title: "Tally Solutions",
+      description: "Complete Tally ERP sales, support, and implementation",
+      link: "/tally-sales",
+      color: "primary"
+    },
+    {
+      icon: Users,
+      title: "CRM Solutions",
+      description: "Customer Relationship Management systems",
+      link: "/crm-solutions",
+      color: "primary"
+    },
+    {
+      icon: Settings,
+      title: "ERP Solutions",
+      description: "Enterprise Resource Planning systems",
+      link: "/erp-solutions",
+      color: "accent"
+    },
+    {
+      icon: TrendingUp,
+      title: "HRMS Solutions",
+      description: "Human Resource Management systems",
+      link: "/hrms-solutions",
+      color: "secondary"
+    },
+    {
+      icon: GraduationCap,
+      title: "Softskills Training",
+      description: "Professional development and corporate training",
+      link: "/softskills-training",
+      color: "secondary"
+    },
   ];
 
   return (
@@ -64,83 +89,80 @@ const Index = () => {
         {/* Services Overview */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Dual Expertise, Complete Solutions</h2>
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
+                <Sparkles className="w-5 h-5 text-primary" />
+                <span className="text-sm font-semibold text-primary">Complete Business Solutions</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Transform Your Business & People</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We combine technology excellence with human development, offering both Tally ERP solutions 
-                and world-class softskills training under one roof.
+                From software solutions to skills development, we provide everything you need to grow and succeed
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Tally Services Card */}
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow border-primary/20">
-                <div className="h-48 overflow-hidden">
-                  <img src={heroTally} alt="Tally ERP Solutions" className="w-full h-full object-cover" />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Briefcase className="w-6 h-6 text-primary" />
-                    <CardTitle className="text-2xl">Tally ERP Solutions</CardTitle>
-                  </div>
-                  <CardDescription className="text-base">
-                    Authorized partner providing complete Tally sales, support, and customization services
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    {tallyServices.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span className="text-sm">{service}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex space-x-3 pt-4">
-                    <Button asChild className="flex-1 bg-hero-gradient hover:opacity-90">
-                      <NavLink to="/tally-sales">
-                        View Tally Sales <ArrowRight className="ml-2 w-4 h-4" />
-                      </NavLink>
-                    </Button>
-                    <Button asChild variant="outline" className="flex-1">
-                      <NavLink to="/tally-support">Support Services</NavLink>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {allServices.map((service, index) => {
+                const Icon = service.icon;
+                const colorClass = service.color === 'primary' ? 'bg-primary/10 group-hover:bg-primary/20' 
+                  : service.color === 'secondary' ? 'bg-secondary/10 group-hover:bg-secondary/20'
+                  : 'bg-accent/10 group-hover:bg-accent/20';
+                const iconColor = service.color === 'primary' ? 'text-primary' 
+                  : service.color === 'secondary' ? 'text-secondary'
+                  : 'text-accent';
+                
+                return (
+                  <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 cursor-pointer">
+                    <NavLink to={service.link} className="block">
+                      <CardHeader>
+                        <div className={`mb-4 w-16 h-16 rounded-2xl ${colorClass} flex items-center justify-center transition-colors`}>
+                          <Icon className={`w-8 h-8 ${iconColor}`} />
+                        </div>
+                        <CardTitle className="text-2xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base mb-4">{service.description}</CardDescription>
+                        <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
+                          Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                        </div>
+                      </CardContent>
+                    </NavLink>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-              {/* Softskills Training Card */}
-              <Card className="overflow-hidden hover:shadow-xl transition-shadow border-secondary/20">
-                <div className="h-48 overflow-hidden">
-                  <img src={heroSoftskills} alt="Softskills Training" className="w-full h-full object-cover" />
+        {/* Success Image Section */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
+                  <img src={teamSuccess} alt="Team Success" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                 </div>
-                <CardHeader>
-                  <div className="flex items-center space-x-2 mb-2">
-                    <GraduationCap className="w-6 h-6 text-secondary" />
-                    <CardTitle className="text-2xl">Softskills Training</CardTitle>
+                <div className="space-y-6">
+                  <h2 className="text-4xl font-bold">Empowering Chennai Businesses Since Inception</h2>
+                  <p className="text-lg text-muted-foreground">
+                    We've helped hundreds of organizations streamline their operations with cutting-edge software 
+                    and develop their workforce through world-class training programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-6 pt-4">
+                    <div className="text-center p-6 bg-background rounded-xl shadow-md">
+                      <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                      <div className="text-sm text-muted-foreground">Happy Clients</div>
+                    </div>
+                    <div className="text-center p-6 bg-background rounded-xl shadow-md">
+                      <div className="text-4xl font-bold text-secondary mb-2">10K+</div>
+                      <div className="text-sm text-muted-foreground">Training Hours</div>
+                    </div>
                   </div>
-                  <CardDescription className="text-base">
-                    International-standard training by ACTD & UKIQ accredited trainer Mr. Millath
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    {softskillsServices.map((service, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span className="text-sm">{service}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="pt-4">
-                    <Button asChild className="w-full bg-warm-gradient hover:opacity-90">
-                      <NavLink to="/softskills-training">
-                        Explore Training Programs <ArrowRight className="ml-2 w-4 h-4" />
-                      </NavLink>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                  <Button asChild size="lg" className="bg-hero-gradient hover:opacity-90 shadow-lg">
+                    <NavLink to="/about">Our Story <ArrowRight className="ml-2" /></NavLink>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
