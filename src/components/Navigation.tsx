@@ -10,6 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "./ui/navigation-menu";
+import logo from "@/assets/nnovity-logo.png";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,10 +24,12 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <NavLink to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-lg bg-hero-gradient flex items-center justify-center transform group-hover:scale-110 transition-transform">
-              <span className="text-primary-foreground font-bold text-xl">N</span>
-            </div>
+          <NavLink to="/" className="flex items-center space-x-3 group">
+            <img 
+              src={logo} 
+              alt="Nnovity Works Logo" 
+              className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform duration-300"
+            />
             <span className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
               Nnovity Works
             </span>

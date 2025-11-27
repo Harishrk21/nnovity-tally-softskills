@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap, Settings, TrendingUp, Sparkles, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap, Settings, TrendingUp, Sparkles, Phone, Target } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroTally from "@/assets/hero-tally.jpg";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
@@ -129,17 +129,17 @@ const Index = () => {
                   : 'text-accent';
                 
                 return (
-                  <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 cursor-pointer">
+                  <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 cursor-pointer animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                     <NavLink to={service.link} className="block">
                       <CardHeader>
-                        <div className={`mb-4 w-16 h-16 rounded-2xl ${colorClass} flex items-center justify-center transition-colors`}>
+                        <div className={`mb-4 w-16 h-16 rounded-2xl ${colorClass} flex items-center justify-center transition-all duration-300`}>
                           <Icon className={`w-8 h-8 ${iconColor}`} />
                         </div>
-                        <CardTitle className="text-2xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                        <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">{service.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <CardDescription className="text-base mb-4">{service.description}</CardDescription>
-                        <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform">
+                        <div className="flex items-center text-primary font-semibold group-hover:translate-x-2 transition-transform duration-300">
                           Learn More <ArrowRight className="ml-2 w-4 h-4" />
                         </div>
                       </CardContent>
@@ -157,26 +157,26 @@ const Index = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-fade-in">
-                  <img src={teamSuccess} alt="Team Success" className="w-full h-full object-cover" />
+                  <img src={teamSuccess} alt="Team Success" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-6 animate-fade-in">
                   <h2 className="text-4xl font-bold">Empowering Chennai Businesses Since Inception</h2>
                   <p className="text-lg text-muted-foreground">
                     We've helped hundreds of organizations streamline their operations with cutting-edge software 
                     and develop their workforce through world-class training programs.
                   </p>
                   <div className="grid grid-cols-2 gap-6 pt-4">
-                    <div className="text-center p-6 bg-background rounded-xl shadow-md">
+                    <div className="text-center p-6 bg-background rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                       <div className="text-4xl font-bold text-primary mb-2">500+</div>
                       <div className="text-sm text-muted-foreground">Happy Clients</div>
                     </div>
-                    <div className="text-center p-6 bg-background rounded-xl shadow-md">
+                    <div className="text-center p-6 bg-background rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                       <div className="text-4xl font-bold text-secondary mb-2">10K+</div>
                       <div className="text-sm text-muted-foreground">Training Hours</div>
                     </div>
                   </div>
-                  <Button asChild size="lg" className="bg-hero-gradient hover:opacity-90 shadow-lg">
+                  <Button asChild size="lg" className="bg-hero-gradient hover:opacity-90 shadow-lg transition-all duration-300 hover:shadow-xl">
                     <NavLink to="/about">Our Story <ArrowRight className="ml-2" /></NavLink>
                   </Button>
                 </div>
@@ -185,10 +185,68 @@ const Index = () => {
           </div>
         </section>
 
+        {/* How We Help Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16 animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">How We Transform Your Business</h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Our proven 4-step process ensures successful implementation and lasting results
+                </p>
+              </div>
+              <div className="grid md:grid-cols-4 gap-6">
+                {[
+                  { 
+                    step: "01", 
+                    title: "Consultation", 
+                    description: "We understand your unique business needs and challenges",
+                    icon: Target
+                  },
+                  { 
+                    step: "02", 
+                    title: "Solution Design", 
+                    description: "Tailored software and training solutions designed for you",
+                    icon: Sparkles
+                  },
+                  { 
+                    step: "03", 
+                    title: "Implementation", 
+                    description: "Expert setup, configuration, and hands-on training",
+                    icon: Settings
+                  },
+                  { 
+                    step: "04", 
+                    title: "Ongoing Support", 
+                    description: "Continuous assistance to ensure your success",
+                    icon: CheckCircle2
+                  },
+                ].map((phase, index) => {
+                  const Icon = phase.icon;
+                  return (
+                    <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                      <CardHeader>
+                        <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 hover:bg-primary/20">
+                          <Icon className="w-8 h-8 text-primary" />
+                        </div>
+                        <div className="text-5xl font-bold text-primary/20 mb-2">{phase.step}</div>
+                        <CardTitle className="text-lg">{phase.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription>{phase.description}</CardDescription>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Channel Partners */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-4xl font-bold mb-4">Our Trusted Partners</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 We collaborate with industry-leading brands to deliver exceptional solutions
@@ -218,12 +276,12 @@ const Index = () => {
                   ].map((partner, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-4">
-                        <Card className="border-2 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <Card className="border-2 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in">
                           <CardContent className="flex aspect-video items-center justify-center p-6 bg-white">
                             <img 
                               src={partner.logo} 
                               alt={`${partner.name} logo`} 
-                              className="max-h-20 max-w-full object-contain"
+                              className="max-h-20 max-w-full object-contain transition-transform duration-300 hover:scale-110"
                             />
                           </CardContent>
                         </Card>
@@ -241,11 +299,11 @@ const Index = () => {
         {/* Why Choose Us */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-16">Why Choose Nnovity Works?</h2>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Why Choose Nnovity Works?</h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in">
                 <CardHeader>
-                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 hover:bg-primary/20">
                     <Award className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle>International Accreditation</CardTitle>
@@ -257,9 +315,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: "0.1s"}}>
                 <CardHeader>
-                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center">
+                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center transition-all duration-300 hover:bg-secondary/20">
                     <Users className="w-8 h-8 text-secondary" />
                   </div>
                   <CardTitle>Chennai's Trusted Partner</CardTitle>
@@ -271,9 +329,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{animationDelay: "0.2s"}}>
                 <CardHeader>
-                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
+                  <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center transition-all duration-300 hover:bg-accent/20">
                     <CheckCircle2 className="w-8 h-8 text-accent" />
                   </div>
                   <CardTitle>Complete Solutions</CardTitle>
