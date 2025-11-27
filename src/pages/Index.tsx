@@ -1,13 +1,28 @@
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap, Settings, TrendingUp, Sparkles } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { ArrowRight, CheckCircle2, Award, Users, Briefcase, GraduationCap, Settings, TrendingUp, Sparkles, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroTally from "@/assets/hero-tally.jpg";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
 import teamSuccess from "@/assets/team-success.jpg";
+import tallyLogo from "@/assets/partners/tally-logo.jpg";
+import awsLogo from "@/assets/partners/aws-logo.jpg";
+import bizanalystLogo from "@/assets/partners/bizanalyst-logo.jpg";
+import greytLogo from "@/assets/partners/greyt-logo.jpg";
+import vtigerLogo from "@/assets/partners/vtiger-logo.jpg";
+import pagarbookLogo from "@/assets/partners/pagarbook-logo.jpg";
+import Autoplay from "embla-carousel-autoplay";
 
 const Index = () => {
   const allServices = [
@@ -75,11 +90,14 @@ const Index = () => {
                 <strong> professional softskills training</strong> by internationally accredited trainer <strong>Mr. Millath</strong>
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8">
+                <Button asChild size="lg" variant="cta" className="text-lg px-8 shadow-2xl">
                   <NavLink to="/contact">Get Started</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8">
-                  <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
+                <Button asChild size="lg" variant="call" className="text-lg px-8 shadow-2xl">
+                  <a href="tel:+919876543210">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call: +91 987 654 3210
+                  </a>
                 </Button>
               </div>
             </div>
@@ -163,6 +181,59 @@ const Index = () => {
                   </Button>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Channel Partners */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Our Trusted Partners</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                We collaborate with industry-leading brands to deliver exceptional solutions
+              </p>
+            </div>
+            <div className="max-w-6xl mx-auto">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {[
+                    { logo: tallyLogo, name: "Tally" },
+                    { logo: awsLogo, name: "AWS" },
+                    { logo: bizanalystLogo, name: "Biz Analyst" },
+                    { logo: greytLogo, name: "Greyt" },
+                    { logo: vtigerLogo, name: "Vtiger" },
+                    { logo: pagarbookLogo, name: "Pagarbook" },
+                  ].map((partner, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-4">
+                        <Card className="border-2 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                          <CardContent className="flex aspect-video items-center justify-center p-6 bg-white">
+                            <img 
+                              src={partner.logo} 
+                              alt={`${partner.name} logo`} 
+                              className="max-h-20 max-w-full object-contain"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" />
+              </Carousel>
             </div>
           </div>
         </section>
@@ -272,11 +343,14 @@ const Index = () => {
               to enhance your team's capabilities, Nnovity Works is your trusted partner in Chennai.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8">
+              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 shadow-2xl">
                 <NavLink to="/contact">Schedule a Consultation</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
-                <a href="tel:+91">Call Now: +91 XXX XXX XXXX</a>
+              <Button asChild size="lg" variant="call" className="text-lg px-8 shadow-2xl">
+                <a href="tel:+919876543210">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now: +91 987 654 3210
+                </a>
               </Button>
             </div>
           </div>
@@ -284,6 +358,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 };
