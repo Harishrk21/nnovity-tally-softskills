@@ -87,12 +87,12 @@ const CRMSolutions = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-hero-gradient text-primary-foreground py-24 overflow-hidden">
+        <section className="relative bg-hero-gradient text-primary-foreground py-24 overflow-hidden animate-fade-in">
           <div className="absolute inset-0 opacity-15">
             <img src={heroCRM} alt="" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center space-x-2 bg-secondary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Users className="w-5 h-5" />
                 <span className="text-sm font-semibold">Customer Relationship Management</span>
@@ -105,10 +105,10 @@ const CRMSolutions = () => {
                 Increase revenue, improve customer satisfaction, and grow your business faster.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8 shadow-xl">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8 shadow-xl transition-all duration-300">
                   <NavLink to="/contact">Request Demo</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8">
+                <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 transition-all duration-300">
                   <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
                 </Button>
               </div>
@@ -116,10 +116,57 @@ const CRMSolutions = () => {
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-20 bg-background">
+        {/* What is CRM Section */}
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="max-w-4xl mx-auto animate-fade-in">
+              <h2 className="text-3xl font-bold mb-6 text-center">What is CRM and Why Do You Need It?</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                <p>
+                  <strong>CRM (Customer Relationship Management)</strong> is a technology system that helps businesses manage all interactions 
+                  with current and potential customers. Think of it as a central hub where all customer information, communications, 
+                  and activities are stored and accessible to your entire team.
+                </p>
+                <p>
+                  Without a CRM, customer data is scattered across emails, spreadsheets, sticky notes, and team members' memories. 
+                  This leads to missed follow-ups, duplicate efforts, and lost opportunities. A CRM system organizes everything in 
+                  one place, ensuring no customer falls through the cracks.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 not-prose mt-8">
+                  <Card className="border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg">Before CRM (Common Problems)</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-sm text-muted-foreground space-y-2">
+                      <p>• Customer data spread across multiple systems</p>
+                      <p>• Missed follow-ups and forgotten tasks</p>
+                      <p>• No visibility into sales pipeline</p>
+                      <p>• Duplicate data entry and wasted time</p>
+                      <p>• Poor customer service due to lack of history</p>
+                    </CardContent>
+                  </Card>
+                  <Card className="border-l-4 border-l-secondary transition-all duration-300 hover:shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg">After CRM (Solutions)</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-sm text-muted-foreground space-y-2">
+                      <p>• Single source of truth for all customer data</p>
+                      <p>• Automated reminders and task management</p>
+                      <p>• Complete sales pipeline visibility</p>
+                      <p>• Streamlined workflows saving hours daily</p>
+                      <p>• Personalized service with full customer history</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Grid */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl font-bold mb-4">Comprehensive CRM Features</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Everything you need to manage customer relationships effectively, all in one powerful platform
@@ -129,9 +176,9 @@ const CRMSolutions = () => {
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/20">
+                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/20 animate-fade-in" style={{animationDelay: `${index * 0.05}s`}}>
                     <CardHeader>
-                      <div className="mb-4 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <div className="mb-4 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
                         <Icon className="w-7 h-7 text-primary" />
                       </div>
                       <CardTitle className="text-xl">{feature.title}</CardTitle>
