@@ -151,21 +151,32 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-primary">Tally ERP Solutions</h3>
-                  <ul className="space-y-2 text-muted-foreground">
+                  <h3 className="text-2xl font-semibold text-primary">Tally ERP Solutions</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
                     <li>• Authorized Tally sales and licensing</li>
                     <li>• Customization and implementation</li>
                     <li>• Tally on cloud and mobile solutions</li>
                     <li>• Data integration and migration</li>
                     <li>• 24/7 technical support</li>
-                    <li>• CRP-ERP-HRMS solutions</li>
+                    <li>• Training and onboarding</li>
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-secondary">Softskills Training</h3>
-                  <ul className="space-y-2 text-muted-foreground">
+                  <h3 className="text-2xl font-semibold text-accent">Business Solutions</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
+                    <li>• CRM - Customer Relationship Management</li>
+                    <li>• ERP - Enterprise Resource Planning</li>
+                    <li>• HRMS - Human Resource Management</li>
+                    <li>• Payroll processing systems</li>
+                    <li>• Business process automation</li>
+                    <li>• Custom software development</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-secondary">Softskills Training</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
                     <li>• Personality development programs</li>
                     <li>• Leadership and management training</li>
                     <li>• Public speaking and presentation skills</li>

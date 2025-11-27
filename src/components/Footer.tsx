@@ -57,26 +57,26 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <NavLink to="/tally-support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tally Customization
+                <NavLink to="/tally-sales" className="text-muted-foreground hover:text-primary transition-colors">
+                  Tally Sales
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/tally-support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tally on Cloud
+                <NavLink to="/crm-solutions" className="text-muted-foreground hover:text-primary transition-colors">
+                  CRM Solutions
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/softskills-training" className="text-muted-foreground hover:text-primary transition-colors">
-                  Corporate Training
+                <NavLink to="/erp-solutions" className="text-muted-foreground hover:text-primary transition-colors">
+                  ERP Solutions
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/softskills-training" className="text-muted-foreground hover:text-primary transition-colors">
-                  Leadership Development
+                <NavLink to="/hrms-solutions" className="text-muted-foreground hover:text-primary transition-colors">
+                  HRMS Solutions
                 </NavLink>
               </li>
             </ul>

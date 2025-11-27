@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wrench, Cloud, Smartphone, Database, GraduationCap, Cog, Link2, HeadphonesIcon } from "lucide-react";
+import { Wrench, Cloud, Smartphone, Database, GraduationCap, Link2, HeadphonesIcon } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 
 const TallySupport = () => {
@@ -37,12 +37,6 @@ const TallySupport = () => {
       title: "Data Integration",
       description: "Seamlessly integrate Tally with other business systems and applications",
       features: ["ERP Integration", "E-commerce Sync", "Banking Integration", "API Development"],
-    },
-    {
-      icon: Cog,
-      title: "CRP-ERP-HRMS Solutions",
-      description: "Comprehensive resource planning and human resource management systems",
-      features: ["Customer Relationship Management", "Enterprise Resource Planning", "HR & Payroll Management", "Project Management Tools"],
     },
     {
       icon: HeadphonesIcon,

@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import TallySales from "./pages/TallySales";
 import TallySupport from "./pages/TallySupport";
+import CRMSolutions from "./pages/CRMSolutions";
+import ERPSolutions from "./pages/ERPSolutions";
+import HRMSSolutions from "./pages/HRMSSolutions";
 import SoftskillsTraining from "./pages/SoftskillsTraining";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/tally-sales" element={<TallySales />} />
           <Route path="/tally-support" element={<TallySupport />} />
+          <Route path="/crm-solutions" element={<CRMSolutions />} />
+          <Route path="/erp-solutions" element={<ERPSolutions />} />
+          <Route path="/hrms-solutions" element={<HRMSSolutions />} />
           <Route path="/softskills-training" element={<SoftskillsTraining />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
