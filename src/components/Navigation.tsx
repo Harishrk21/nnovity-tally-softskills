@@ -161,6 +161,13 @@ const Navigation = () => {
             >
               Contact
             </NavLink>
+            <NavLink
+              to="/faq"
+              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
+              activeClassName="text-primary bg-muted"
+            >
+              FAQ
+            </NavLink>
             <Button asChild className="ml-4 bg-hero-gradient hover:opacity-90 transition-opacity shadow-lg">
               <NavLink to="/contact">Get Started</NavLink>
             </Button>
@@ -276,6 +283,14 @@ const Navigation = () => {
               activeClassName="text-primary bg-muted"
             >
               Contact
+            </NavLink>
+            <NavLink
+              to="/faq"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
+              activeClassName="text-primary bg-muted"
+            >
+              FAQ
             </NavLink>
             <div className="px-4 pt-2">
               <Button asChild className="w-full bg-hero-gradient hover:opacity-90 transition-opacity">

@@ -52,6 +52,11 @@ const Footer = () => {
                   About Us
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
+                  FAQ
+                </NavLink>
+              </li>
             </ul>
           </div>
 
