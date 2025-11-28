@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Package, DollarSign, Users, BarChart3, Settings, Database, ShoppingCart, Truck, FileText, Clock, Zap, Shield } from "lucide-react";
@@ -84,32 +85,33 @@ const ERPSolutions = () => {
       </Helmet>
 
       <Navigation />
+      <WhatsAppFloat />
 
       <main>
         {/* Hero Section */}
         <section className="relative bg-success-gradient text-accent-foreground py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 opacity-15 animate-fade-in">
             <img src={heroERP} alt="" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <Settings className="w-5 h-5" />
+            <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-scale-in">
+                <Settings className="w-5 h-5 animate-pulse" />
                 <span className="text-sm font-semibold">Enterprise Resource Planning</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Unify Your Business with Powerful ERP Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-accent-foreground/90">
+              <p className="text-xl md:text-2xl mb-8 text-accent-foreground/90 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 Integrate finance, operations, sales, and HR into one seamless platform. 
                 Boost efficiency, reduce costs, and drive growth with our comprehensive ERP systems.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl">
+              <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl hover:scale-105 transition-all duration-300">
                   <NavLink to="/contact">Request Consultation</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
-                  <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
+                <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8 hover:scale-105 transition-all duration-300">
+                  <a href="tel:+917299817996">Call: +91 72998 17996</a>
                 </Button>
               </div>
             </div>
@@ -119,7 +121,7 @@ const ERPSolutions = () => {
         {/* Modules Grid */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl font-bold mb-4">Comprehensive ERP Modules</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Complete business management suite with integrated modules for every department
@@ -129,12 +131,16 @@ const ERPSolutions = () => {
               {modules.map((module, index) => {
                 const Icon = module.icon;
                 return (
-                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-accent/20">
+                  <Card 
+                    key={index} 
+                    className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-accent/20 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
                     <CardHeader>
-                      <div className="mb-4 w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <Icon className="w-7 h-7 text-accent" />
+                      <div className="mb-4 w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+                        <Icon className="w-7 h-7 text-accent group-hover:rotate-12 transition-transform" />
                       </div>
-                      <CardTitle className="text-xl">{module.title}</CardTitle>
+                      <CardTitle className="text-xl group-hover:text-accent transition-colors">{module.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{module.description}</CardDescription>
@@ -310,8 +316,8 @@ const ERPSolutions = () => {
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8 shadow-xl">
                 <NavLink to="/contact">Schedule Consultation</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8">
-                <a href="tel:+91">Call Sales: +91 XXX XXX XXXX</a>
+              <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
+                <a href="tel:+917299817996">Call Sales: +91 72998 17996</a>
               </Button>
             </div>
           </div>
