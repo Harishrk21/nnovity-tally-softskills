@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -70,6 +71,7 @@ const Contact = () => {
       </Helmet>
 
       <Navigation />
+      <WhatsAppFloat />
 
       <main>
         {/* Hero Section */}
@@ -92,10 +94,10 @@ const Contact = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle>Contact Information</CardTitle>
-                    <CardDescription>Reach out to us through any of these channels</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-start space-x-3">
+              <CardDescription>Reach out to us through any of these channels</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
                       <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Address</p>
@@ -103,27 +105,27 @@ const Contact = () => {
                           Chennai, Tamil Nadu, India
                         </p>
                       </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      </div>
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
+                        <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <a href="tel:+91" className="text-sm text-muted-foreground hover:text-primary">
-                          +91 XXX XXX XXXX
+                        <a href="tel:+917299817996" className="text-sm text-muted-foreground hover:text-primary">
+                          +91 72998 17996
                         </a>
                       </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      </div>
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
+                        <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Email</p>
-                        <a href="mailto:info@nnovityworks.com" className="text-sm text-muted-foreground hover:text-primary">
-                          info@nnovityworks.com
+                        <a href="mailto:harish.dev@askmeister.com" className="text-sm text-muted-foreground hover:text-primary">
+                          harish.dev@askmeister.com
                         </a>
                       </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                      </div>
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
+                        <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Business Hours</p>
                         <p className="text-sm text-muted-foreground">

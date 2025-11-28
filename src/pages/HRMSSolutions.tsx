@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Calendar, DollarSign, FileText, TrendingUp, Award, Clock, UserCheck, BarChart3, Shield, Zap, Target } from "lucide-react";
@@ -84,32 +85,33 @@ const HRMSSolutions = () => {
       </Helmet>
 
       <Navigation />
+      <WhatsAppFloat />
 
       <main>
         {/* Hero Section */}
         <section className="relative bg-warm-gradient text-secondary-foreground py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-15">
+          <div className="absolute inset-0 opacity-15 animate-fade-in">
             <img src={heroHRMS} alt="" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <Users className="w-5 h-5" />
+            <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-scale-in">
+                <Users className="w-5 h-5 animate-pulse" />
                 <span className="text-sm font-semibold">Human Resource Management System</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 Simplify HR Operations with Intelligent HRMS Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90">
+              <p className="text-xl md:text-2xl mb-8 text-secondary-foreground/90 animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 From recruitment to retirement, manage your entire employee lifecycle with our comprehensive 
                 HRMS platform. Automate payroll, track attendance, and empower your workforce.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl">
+              <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl hover:scale-105 transition-all duration-300">
                   <NavLink to="/contact">Request Demo</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary text-lg px-8">
-                  <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
+                <Button asChild size="lg" variant="outline" className="border-2 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary text-lg px-8 hover:scale-105 transition-all duration-300">
+                  <a href="tel:+917299817996">Call: +91 72998 17996</a>
                 </Button>
               </div>
             </div>
@@ -119,7 +121,7 @@ const HRMSSolutions = () => {
         {/* Features Grid */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl font-bold mb-4">Complete HRMS Features</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 All the tools you need to manage your human resources efficiently and effectively
@@ -129,12 +131,16 @@ const HRMSSolutions = () => {
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/20">
+                  <Card 
+                    key={index} 
+                    className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/20 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
                     <CardHeader>
-                      <div className="mb-4 w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
-                        <Icon className="w-7 h-7 text-secondary" />
+                      <div className="mb-4 w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
+                        <Icon className="w-7 h-7 text-secondary group-hover:rotate-12 transition-transform" />
                       </div>
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-xl group-hover:text-secondary transition-colors">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{feature.description}</CardDescription>
@@ -299,7 +305,7 @@ const HRMSSolutions = () => {
                 <NavLink to="/contact">Schedule Free Demo</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
-                <a href="tel:+91">Call Sales: +91 XXX XXX XXXX</a>
+                <a href="tel:+917299817996">Call Sales: +91 72998 17996</a>
               </Button>
             </div>
           </div>

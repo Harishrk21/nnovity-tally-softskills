@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, Users, TrendingUp, BookOpen, Briefcase, MessageSquare, Target, Lightbulb } from "lucide-react";
@@ -121,6 +122,7 @@ const SoftskillsTraining = () => {
       </Helmet>
 
       <Navigation />
+      <WhatsAppFloat />
 
       <main>
         {/* Hero Section */}
@@ -150,7 +152,7 @@ const SoftskillsTraining = () => {
                   <NavLink to="/contact">Book a Training Session</NavLink>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
-                  <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
+                  <a href="tel:+917299817996">Call: +91 72998 17996</a>
                 </Button>
               </div>
             </div>
