@@ -78,10 +78,22 @@ const HRMSSolutions = () => {
   return (
     <>
       <Helmet>
-        <title>HRMS Solutions Chennai - Human Resource Management Software | Nnovity Works</title>
-        <meta name="description" content="Professional HRMS software solutions in Chennai by Nnovity Works. Streamline HR operations, payroll, attendance, and employee management with comprehensive HR systems." />
+        <title>HRMS Solutions Chennai - Human Resource Management Software | NnovityWorks</title>
+        <meta name="description" content="Professional HRMS software solutions in Chennai by NnovityWorks. Streamline HR operations, payroll, attendance, and employee management with comprehensive HR systems." />
         <meta name="keywords" content="HRMS Chennai, HRMS software Chennai, human resource management Chennai, HR software, payroll software Chennai, attendance management, best HRMS Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/hrms-solutions" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/hrms-solutions" />
+        <meta property="og:title" content="HRMS Solutions Chennai - Human Resource Management Software | NnovityWorks" />
+        <meta property="og:description" content="Professional HRMS software solutions in Chennai. Streamline HR operations and payroll management." />
+        <meta property="og:image" content="https://nnovityworks.com/hrms-solutions-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HRMS Solutions Chennai - NnovityWorks" />
+        <meta name="twitter:description" content="Human Resource Management Software for HR operations" />
       </Helmet>
 
       <Navigation />
@@ -91,7 +103,7 @@ const HRMSSolutions = () => {
         {/* Hero Section */}
         <section className="relative bg-warm-gradient text-secondary-foreground py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-15 animate-fade-in">
-            <img src={heroHRMS} alt="" className="w-full h-full object-cover" />
+            <img src={heroHRMS} alt="HRMS software solutions for human resource management in Chennai" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>

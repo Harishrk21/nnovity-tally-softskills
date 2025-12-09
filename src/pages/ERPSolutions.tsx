@@ -78,10 +78,22 @@ const ERPSolutions = () => {
   return (
     <>
       <Helmet>
-        <title>ERP Solutions Chennai - Enterprise Resource Planning Software | Nnovity Works</title>
-        <meta name="description" content="Professional ERP software solutions in Chennai by Nnovity Works. Integrate and automate your business processes with comprehensive Enterprise Resource Planning systems." />
+        <title>ERP Solutions Chennai - Enterprise Resource Planning Software | NnovityWorks</title>
+        <meta name="description" content="Professional ERP software solutions in Chennai by NnovityWorks. Integrate and automate your business processes with comprehensive Enterprise Resource Planning systems." />
         <meta name="keywords" content="ERP Chennai, ERP software Chennai, enterprise resource planning Chennai, ERP solutions, business ERP, manufacturing ERP, best ERP Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/erp-solutions" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/erp-solutions" />
+        <meta property="og:title" content="ERP Solutions Chennai - Enterprise Resource Planning Software | NnovityWorks" />
+        <meta property="og:description" content="Professional ERP software solutions in Chennai. Integrate and automate your business processes." />
+        <meta property="og:image" content="https://nnovityworks.com/erp-solutions-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ERP Solutions Chennai - NnovityWorks" />
+        <meta name="twitter:description" content="Enterprise Resource Planning software for business automation" />
       </Helmet>
 
       <Navigation />
@@ -91,7 +103,7 @@ const ERPSolutions = () => {
         {/* Hero Section */}
         <section className="relative bg-success-gradient text-accent-foreground py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-15 animate-fade-in">
-            <img src={heroERP} alt="" className="w-full h-full object-cover" />
+            <img src={heroERP} alt="ERP software solutions for enterprise resource planning in Chennai" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>

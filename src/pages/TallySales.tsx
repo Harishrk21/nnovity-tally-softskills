@@ -39,10 +39,24 @@ const TallySales = () => {
   return (
     <>
       <Helmet>
-        <title>Tally Sales Chennai - Buy TallyPrime & Tally ERP 9 | Nnovity Works</title>
-        <meta name="description" content="Purchase genuine Tally software in Chennai from authorized partner Nnovity Works. Get TallyPrime, Tally ERP 9, and enterprise solutions with expert installation and support." />
+        <title>Tally Sales Chennai - Buy TallyPrime & Tally ERP 9 | NnovityWorks</title>
+        <meta name="description" content="Purchase genuine Tally software in Chennai from authorized partner NnovityWorks. Get TallyPrime, Tally ERP 9, and enterprise solutions with expert installation and support." />
         <meta name="keywords" content="buy Tally Chennai, Tally sales Chennai, TallyPrime price, Tally ERP 9 Chennai, Tally software dealer Chennai, authorized Tally partner, Tally license Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/tally-sales" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/tally-sales" />
+        <meta property="og:title" content="Tally Sales Chennai - Buy TallyPrime & Tally ERP 9 | NnovityWorks" />
+        <meta property="og:description" content="Purchase genuine Tally software in Chennai. Official Tally licenses with expert installation and support." />
+        <meta property="og:image" content="https://nnovityworks.com/tally-sales-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tally Sales Chennai - NnovityWorks" />
+        <meta name="twitter:description" content="Buy genuine TallyPrime and Tally ERP 9 in Chennai" />
+        <meta name="twitter:image" content="https://nnovityworks.com/tally-sales-image.jpg" />
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -59,7 +73,7 @@ const TallySales = () => {
               "availability": "https://schema.org/InStock",
               "seller": {
                 "@type": "Organization",
-                "name": "Nnovity Works"
+                "name": "NnovityWorks"
               }
             }
           })}
@@ -72,16 +86,16 @@ const TallySales = () => {
         {/* Hero Section */}
         <section className="relative bg-hero-gradient text-primary-foreground py-20 overflow-hidden animate-fade-in">
           <div className="absolute inset-0 opacity-10">
-            <img src={heroTally} alt="" className="w-full h-full object-cover" />
+            <img src={heroTally} alt="Genuine Tally software sales and licensing in Chennai - TallyPrime and Tally ERP 9" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Purchase Genuine Tally Software in Chennai
+                Tally Software Sales & Licensing
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90">
-                As an authorized Tally partner, we provide authentic Tally solutions with competitive pricing, 
-                instant activation, and comprehensive post-sales support.
+                Official Tally licenses with version recommendations based on your business needs. 
+                Fast onboarding and setup with expert guidance.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">

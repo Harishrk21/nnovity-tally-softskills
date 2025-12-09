@@ -13,15 +13,44 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <Helmet>
-        <title>FAQ - Frequently Asked Questions | Nnovity Works Chennai</title>
+        <title>FAQ - Frequently Asked Questions | NnovityWorks Chennai</title>
         <meta
           name="description"
-          content="Find answers to common questions about Tally ERP, CRM, ERP, HRMS solutions, softskills training programs, pricing, and support services in Chennai."
+          content="Find answers to common questions about Tally ERP, CRM, ERP, HRMS solutions, soft skills training programs, pricing, and support services in Chennai."
         />
         <meta
           name="keywords"
-          content="Tally FAQ, CRM questions, ERP FAQ, HRMS support, training FAQ Chennai, Tally pricing, business software support"
+          content="Tally FAQ, CRM questions, ERP FAQ, HRMS support, training FAQ Chennai, Tally pricing, business software support, NnovityWorks FAQ"
         />
+        <link rel="canonical" href="https://nnovityworks.com/faq" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/faq" />
+        <meta property="og:title" content="FAQ - Frequently Asked Questions | NnovityWorks Chennai" />
+        <meta property="og:description" content="Find answers to common questions about Tally ERP, CRM, ERP, HRMS solutions, and soft skills training in Chennai." />
+        <meta property="og:image" content="https://nnovityworks.com/faq-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="FAQ - NnovityWorks Chennai" />
+        <meta name="twitter:description" content="Frequently Asked Questions about Tally and Training Services" />
+        
+        {/* Structured Data for FAQ */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+              "@type": "Question",
+              "name": "What is Tally ERP and why do businesses need it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tally ERP is a comprehensive business management software that handles accounting, inventory, taxation (GST), payroll, and financial reporting. Businesses need Tally to streamline operations, ensure compliance with Indian tax laws, reduce manual errors, and get real-time insights into their financial health."
+              }
+            }]
+          })}
+        </script>
       </Helmet>
 
       <Navigation />

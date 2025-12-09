@@ -23,20 +23,20 @@ const TallySupport = () => {
     {
       icon: Cloud,
       title: "Tally on Cloud",
-      description: "Access your Tally data anytime, anywhere with secure cloud hosting solutions",
-      features: ["Remote Access 24/7", "Automatic Backups", "Multi-user Collaboration", "Enhanced Security & Encryption"],
+      description: "Cloud access services provides a powerful option for businesses to access TallyPrime from anywhere",
+      features: ["Access from Anywhere", "Secure Cloud Hosting", "Multi-user Collaboration", "Automatic Backups"],
     },
     {
       icon: Smartphone,
-      title: "Tally on Mobile",
-      description: "Manage your business on the go with mobile access to critical Tally functions",
-      features: ["Real-time Data Access", "Mobile Reporting", "Expense Management", "iOS & Android Support"],
+      title: "Tally on Mobile Application",
+      description: "Stay connected to your business. Always. Track your business anytime, anywhere",
+      features: ["Real-time Data Access", "Mobile Reporting", "Business Tracking", "iOS & Android Support"],
     },
     {
       icon: Database,
-      title: "Data Integration",
-      description: "Seamlessly integrate Tally with other business systems and applications",
-      features: ["ERP Integration", "E-commerce Sync", "Banking Integration", "API Development"],
+      title: "Tally Customization Services",
+      description: "Addressing Specific Business requirements for reporting and ease of data posting through Customization & Cross Platform Automatic API based Data Porting services",
+      features: ["Custom Reports & Formats", "Cross Platform API Integration", "Business-specific Solutions", "Data Porting Services"],
     },
     {
       icon: HeadphonesIcon,
@@ -55,10 +55,23 @@ const TallySupport = () => {
   return (
     <>
       <Helmet>
-        <title>Tally Support Services Chennai - Customization, Cloud, Training | Nnovity Works</title>
-        <meta name="description" content="Best Tally support services in Chennai. Expert customization, Tally on cloud, mobile access, training, data integration, and 24/7 technical support by Nnovity Works." />
+        <title>Tally Support Services Chennai - Customization, Cloud, Training | NnovityWorks</title>
+        <meta name="description" content="Best Tally support services in Chennai. Expert customization, Tally on cloud, mobile access, training, data integration, and 24/7 technical support by NnovityWorks." />
         <meta name="keywords" content="Tally support Chennai, Tally customization Chennai, Tally cloud Chennai, Tally training Chennai, best Tally support, Tally on mobile, Tally integration, Tally technical support, ERP solutions Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/tally-support" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/tally-support" />
+        <meta property="og:title" content="Tally Support Services Chennai - Customization, Cloud, Training | NnovityWorks" />
+        <meta property="og:description" content="Best Tally support services in Chennai. Expert customization, cloud solutions, and training." />
+        <meta property="og:image" content="https://nnovityworks.com/tally-support-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tally Support Services Chennai" />
+        <meta name="twitter:description" content="Expert Tally customization, cloud, and training services" />
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -66,7 +79,7 @@ const TallySupport = () => {
             "serviceType": "Tally Support Services",
             "provider": {
               "@type": "Organization",
-              "name": "Nnovity Works",
+              "name": "NnovityWorks",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Chennai",
@@ -99,11 +112,11 @@ const TallySupport = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Comprehensive Tally Support Services in Chennai
+                Tally Support & AMC Services
               </h1>
               <p className="text-xl mb-8 text-primary-foreground/90">
-                From customization to cloud hosting, training to technical support - we provide end-to-end 
-                Tally solutions to maximize your business efficiency.
+                Installation & Implementation, Troubleshooting & error fixing, Annual maintenance and priority support. 
+                Online & Onsite support available.
               </p>
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
                 <NavLink to="/contact">Request Support</NavLink>

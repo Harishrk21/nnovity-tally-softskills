@@ -11,78 +11,85 @@ import heroSoftskills from "@/assets/hero-softskills.jpg";
 const SoftskillsTraining = () => {
   const programs = [
     {
-      icon: Users,
-      title: "Personality Development",
-      description: "Build confidence, improve communication, and develop a winning personality",
+      icon: MessageSquare,
+      title: "Communication Skills",
+      description: "Build effective communication skills for personal and professional success",
       audience: "Students, Professionals, Job Seekers",
     },
     {
-      icon: MessageSquare,
-      title: "Public Speaking & Presentation Skills",
-      description: "Master the art of engaging presentations and confident public speaking",
-      audience: "Corporate, Educators, Leaders",
+      icon: Users,
+      title: "Personality Mental Attitude",
+      description: "Develop a positive mental attitude and winning personality",
+      audience: "Students, Professionals, Corporate Teams",
     },
     {
-      icon: BookOpen,
-      title: "Business English Communication",
-      description: "Excel in professional English communication for global business success",
-      audience: "Corporate Teams, Entrepreneurs",
+      icon: MessageSquare,
+      title: "Public Speaking",
+      description: "Master the art of confident public speaking and engaging presentations",
+      audience: "Corporate, Educators, Leaders, Students",
     },
     {
       icon: Target,
-      title: "Leadership Training",
-      description: "Develop essential leadership qualities to inspire and manage teams effectively",
+      title: "Time Management & Productivity",
+      description: "Learn effective time management techniques to maximize productivity",
+      audience: "Professionals, Managers, Students",
+    },
+    {
+      icon: TrendingUp,
+      title: "Leadership & Teamwork",
+      description: "Develop essential leadership qualities and effective teamwork skills",
       audience: "Managers, Team Leaders, Executives",
     },
     {
       icon: Briefcase,
-      title: "Interview Skills & Grooming",
-      description: "Stand out in interviews with proven techniques and professional grooming",
-      audience: "Students, Career Changers",
-    },
-    {
-      icon: Lightbulb,
-      title: "Entrepreneurship Training",
-      description: "Learn the mindset, skills, and strategies to launch and grow your business",
-      audience: "Aspiring Entrepreneurs, Startups",
-    },
-    {
-      icon: TrendingUp,
-      title: "Sales & Negotiation Skills",
-      description: "Master persuasion techniques and negotiation strategies for business success",
-      audience: "Sales Teams, Business Owners",
+      title: "Workplace Behavior",
+      description: "Understand professional workplace behavior and etiquette",
+      audience: "Corporate Teams, New Employees",
     },
     {
       icon: Award,
-      title: "Advanced Management Skills",
-      description: "Enhance strategic thinking, decision-making, and management capabilities",
-      audience: "Senior Managers, Directors",
+      title: "PoSH Training at Workplace",
+      description: "The Prevention of Sexual Harassment (PoSH) Training at Workplace",
+      audience: "Corporate Organizations, HR Teams",
     },
   ];
 
-  const certifications = [
+  const achievements = [
     {
-      name: "ACTD Accreditation",
-      description: "Accredited Corporate Trainer & Developer - International Recognition",
+      name: "15+ Years Experience",
+      description: "Highly experienced in Accounting & Business Automation Support",
     },
     {
-      name: "UKIQ Certification",
-      description: "UK Institute of Quality - Professional Training Excellence",
+      name: "1000+ Students Trained",
+      description: "Training young minds for Tally Prime Accounting & Soft Skills from prestigious Educational institutions and CSR & NGO Activities",
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Best Softskills Training in Chennai - Mr. Millath | Nnovity Works</title>
-        <meta name="description" content="Top softskills trainer in Chennai. Mr. Millath, ACTD & UKIQ accredited international trainer, offers personality development, leadership training, public speaking, business English, and corporate training programs for schools, colleges, and companies." />
-        <meta name="keywords" content="softskills training Chennai, best softskills trainer Chennai, personality development Chennai, leadership training Chennai, public speaking Chennai, business English training, corporate training Chennai, interview skills, entrepreneurship training, sales training, Mr. Millath trainer, ACTD trainer, UKIQ trainer" />
+        <title>Best Soft Skills Training in Chennai - Samshul Millath | NnovityWorks</title>
+        <meta name="description" content="Top soft skills trainer in Chennai. Samshul Millath, 15+ years experienced Tally Implementation & Training Expert, offers communication skills, personality development, public speaking, time management, leadership, workplace behavior, and PoSH training for schools, colleges, and companies." />
+        <meta name="keywords" content="soft skills training Chennai, best soft skills trainer Chennai, personality development Chennai, leadership training Chennai, public speaking Chennai, PoSH training Chennai, corporate training Chennai, communication skills training, Samshul Millath trainer" />
         <link rel="canonical" href="https://nnovityworks.com/softskills-training" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/softskills-training" />
+        <meta property="og:title" content="Best Soft Skills Training in Chennai - Samshul Millath | NnovityWorks" />
+        <meta property="og:description" content="Professional soft skills training by Samshul Millath. Communication, leadership, public speaking, and corporate training in Chennai." />
+        <meta property="og:image" content="https://nnovityworks.com/softskills-training-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Soft Skills Training Chennai - NnovityWorks" />
+        <meta name="twitter:description" content="Professional soft skills training by Samshul Millath" />
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "Nnovity Works Softskills Training",
+            "name": "NnovityWorks Soft Skills Training",
             "description": "Premier softskills training institute in Chennai",
             "address": {
               "@type": "PostalAddress",
@@ -109,8 +116,8 @@ const SoftskillsTraining = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Mr. Millath",
-            "jobTitle": "International Softskills Trainer",
+            "name": "Samshul Millath",
+            "jobTitle": "Tally Implementation & Training Expert",
             "description": "ACTD & UKIQ accredited softskills trainer specializing in corporate training, leadership development, and personality enhancement",
             "knowsAbout": ["Leadership Training", "Public Speaking", "Business Communication", "Personality Development", "Sales Training"],
             "alumniOf": [
@@ -128,7 +135,7 @@ const SoftskillsTraining = () => {
         {/* Hero Section */}
         <section className="relative bg-warm-gradient text-secondary-foreground py-20 overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-            <img src={heroSoftskills} alt="" className="w-full h-full object-cover" />
+            <img src={heroSoftskills} alt="Professional soft skills training by Samshul Millath in Chennai - Communication, Leadership, and Personality Development" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl animate-fade-in">
@@ -137,15 +144,15 @@ const SoftskillsTraining = () => {
                 <span className="text-sm font-semibold uppercase tracking-wide">ACTD & UKIQ Accredited</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Transform Lives Through Professional Softskills Training
+                Professional Soft Skills Training
               </h1>
               <p className="text-xl mb-6 text-secondary-foreground/90">
-                Led by <strong>Mr. Millath</strong>, internationally accredited trainer (ACTD, UKIQ) specializing in 
-                personality development, leadership, public speaking, and corporate training excellence.
+                Led by <strong>Samshul Millath</strong>, Tally Implementation & Training Expert with 15+ years of experience, 
+                specializing in communication skills, personality development, leadership, public speaking, and corporate training excellence.
               </p>
               <p className="text-lg mb-8 text-secondary-foreground/80">
-                Empowering individuals and organizations across Chennai with world-class softskills training 
-                for schools, colleges, and corporate events.
+                Empowering individuals and organizations across Chennai with comprehensive soft skills training 
+                for schools, colleges, and corporate events. Training 1000+ young minds from prestigious Educational institutions and CSR & NGO Activities.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -163,28 +170,32 @@ const SoftskillsTraining = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-6">Meet Mr. Millath - Your Expert Trainer</h2>
+              <h2 className="text-3xl font-bold mb-6">Meet Samshul Millath - Your Expert Trainer</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Mr. Millath is an internationally recognized softskills trainer with prestigious accreditations from 
-                <strong> ACTD (Accredited Corporate Trainer & Developer)</strong> and <strong>UKIQ (UK Institute of Quality)</strong>.
+                <strong>Samshul Millath</strong> is a Tally Implementation & Training Expert (Tally & SoftSkills) with 
+                <strong> 15+ Years</strong> of highly experienced in Accounting & Business Automation Support.
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Performing TallyPrime Sales - Service - Training & Implementation projects. Providing Simple & Systematic solutions 
+                for Accounting needs beyond boundaries.
               </p>
               <p className="text-muted-foreground">
-                With extensive experience in corporate training, educational institutions, and personal development coaching, 
-                Mr. Millath has transformed thousands of individuals and teams across Chennai and beyond. His dynamic training 
-                methodology combines practical exercises, real-world scenarios, and interactive sessions to ensure lasting impact.
+                Training <strong>1000+ Young minds</strong> for Tally Prime Accounting & Soft Skills from prestigious Educational 
+                institutions and CSR & NGO Activities. With extensive experience in corporate training, educational institutions, 
+                and personal development coaching, Samshul Millath has transformed thousands of individuals and teams across Chennai and beyond.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              {certifications.map((cert, index) => (
+              {achievements.map((achievement, index) => (
                 <Card key={index} className="text-center border-primary/20">
                   <CardHeader>
                     <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center">
                       <Award className="w-8 h-8 text-secondary" />
                     </div>
-                    <CardTitle className="text-xl">{cert.name}</CardTitle>
+                    <CardTitle className="text-xl">{achievement.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{cert.description}</CardDescription>
+                    <CardDescription>{achievement.description}</CardDescription>
                   </CardContent>
                 </Card>
               ))}
@@ -196,9 +207,9 @@ const SoftskillsTraining = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Comprehensive Softskills Training Programs</h2>
+              <h2 className="text-3xl font-bold mb-4">Comprehensive Soft Skills Training Programs</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Tailored programs for schools, colleges, corporate teams, and individuals seeking personal and professional growth
+                Customized workshops focused on performance, communication, and professional development for schools, colleges, corporate teams, and individuals
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -323,10 +334,10 @@ const SoftskillsTraining = () => {
         {/* CTA Section */}
         <section className="py-16 bg-hero-gradient text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Unlock Your Full Potential?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
             <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-              Join hundreds of individuals and organizations in Chennai who have transformed their capabilities 
-              through our world-class softskills training programs led by Mr. Millath.
+              Get in touch with NnovityWorks today. Join 1000+ individuals and organizations in Chennai who have transformed their capabilities 
+              through our comprehensive soft skills training programs led by Samshul Millath.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">

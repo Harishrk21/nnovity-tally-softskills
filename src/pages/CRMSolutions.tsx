@@ -77,10 +77,22 @@ const CRMSolutions = () => {
   return (
     <>
       <Helmet>
-        <title>CRM Solutions Chennai - Customer Relationship Management Software | Nnovity Works</title>
-        <meta name="description" content="Professional CRM software solutions in Chennai by Nnovity Works. Streamline customer management, boost sales, and enhance customer relationships with our comprehensive CRM systems." />
+        <title>CRM Solutions Chennai - Customer Relationship Management Software | NnovityWorks</title>
+        <meta name="description" content="Professional CRM software solutions in Chennai by NnovityWorks. Streamline customer management, boost sales, and enhance customer relationships with our comprehensive CRM systems." />
         <meta name="keywords" content="CRM Chennai, CRM software Chennai, customer relationship management Chennai, CRM solutions, sales CRM, customer management software, best CRM Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/crm-solutions" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/crm-solutions" />
+        <meta property="og:title" content="CRM Solutions Chennai - Customer Relationship Management Software | NnovityWorks" />
+        <meta property="og:description" content="Professional CRM software solutions in Chennai. Streamline customer management and boost sales." />
+        <meta property="og:image" content="https://nnovityworks.com/crm-solutions-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CRM Solutions Chennai - NnovityWorks" />
+        <meta name="twitter:description" content="Professional CRM software for customer relationship management" />
       </Helmet>
 
       <Navigation />
@@ -89,7 +101,7 @@ const CRMSolutions = () => {
         {/* Hero Section */}
         <section className="relative bg-hero-gradient text-primary-foreground py-24 overflow-hidden animate-fade-in">
           <div className="absolute inset-0 opacity-15">
-            <img src={heroCRM} alt="" className="w-full h-full object-cover" />
+            <img src={heroCRM} alt="CRM software solutions for customer relationship management in Chennai" className="w-full h-full object-cover" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">

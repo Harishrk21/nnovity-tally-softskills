@@ -9,11 +9,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              Nnovity Works
+              NnovityWorks
             </h3>
             <p className="text-sm text-muted-foreground">
-              Premier Tally ERP solutions and professional softskills training in Chennai. 
-              Empowering businesses and individuals since inception.
+              Innovate. Empower. Excel.
+              <br />
+              Empowering businesses with Tally solutions and professional soft skills training in Chennai.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
@@ -112,9 +113,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Nnovity Works. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NnovityWorks • Tally Sales & Support | Soft Skills Training</p>
           <p className="mt-2">
-            Best Tally Provider in Chennai | Top Softskills Trainer in Chennai | Mr. Millath - ACTD & UKIQ Accredited
+            Best Tally Provider in Chennai | Top Soft Skills Trainer in Chennai | Samshul Millath - 15+ Years Experience
           </p>
         </div>
       </div>

@@ -8,109 +8,146 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Stunning Modern Color Palette */
     --background: 0 0% 100%;
-    --foreground: 220 15% 20%;
+    --foreground: 240 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 20%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 20%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 214 95% 36%;
+    /* Primary: Vibrant Deep Blue-Purple Gradient */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 29 94% 52%;
+    /* Secondary: Warm Coral-Orange Gradient */
+    --secondary: 12 100% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 50%;
+    /* Muted: Soft Lavender-Gray */
+    --muted: 250 20% 96%;
+    --muted-foreground: 240 8% 45%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: Vibrant Teal-Cyan */
+    --accent: 180 100% 50%;
+    --accent-foreground: 240 10% 15%;
 
-    --destructive: 0 84% 60%;
+    /* Destructive: Modern Red */
+    --destructive: 0 91% 71%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 95% 36%;
+    --border: 240 12% 88%;
+    --input: 240 12% 88%;
+    --ring: 262 83% 58%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
     
-    /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(214 95% 36%) 0%, hsl(214 85% 46%) 100%);
-    --warm-gradient: linear-gradient(135deg, hsl(29 94% 52%) 0%, hsl(29 84% 62%) 100%);
-    --success-gradient: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 66% 46%) 100%);
-    --subtle-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    /* Stunning Creative Gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 50%, hsl(262 83% 58%) 100%);
+    --warm-gradient: linear-gradient(135deg, hsl(12 100% 65%) 0%, hsl(25 95% 70%) 50%, hsl(12 100% 65%) 100%);
+    --success-gradient: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(160 90% 55%) 50%, hsl(180 100% 50%) 100%);
+    --subtle-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(250 20% 98%) 100%);
     
-    --shadow-sm: 0 1px 2px 0 hsl(220 15% 20% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(220 15% 20% / 0.1), 0 2px 4px -2px hsl(220 15% 20% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(220 15% 20% / 0.1), 0 4px 6px -4px hsl(220 15% 20% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(220 15% 20% / 0.1), 0 8px 10px -6px hsl(220 15% 20% / 0.1);
+    /* Additional Creative Gradients */
+    --purple-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 100%);
+    --coral-gradient: linear-gradient(135deg, hsl(12 100% 65%) 0%, hsl(25 95% 70%) 100%);
+    --teal-gradient: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(160 90% 55%) 100%);
+    --rainbow-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 25%, hsl(12 100% 65%) 50%, hsl(25 95% 70%) 75%, hsl(180 100% 50%) 100%);
+    --sunset-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 30%, hsl(12 100% 65%) 60%, hsl(25 95% 70%) 100%);
+    --ocean-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(240 75% 60%) 50%, hsl(180 100% 50%) 100%);
+    
+    /* Enhanced Shadows with Color Tints */
+    --shadow-sm: 0 1px 2px 0 hsl(262 83% 58% / 0.08);
+    --shadow-md: 0 4px 6px -1px hsl(262 83% 58% / 0.12), 0 2px 4px -2px hsl(262 83% 58% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(262 83% 58% / 0.15), 0 4px 6px -4px hsl(262 83% 58% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(262 83% 58% / 0.18), 0 8px 10px -6px hsl(262 83% 58% / 0.12);
+    --shadow-2xl: 0 25px 50px -12px hsl(262 83% 58% / 0.25);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 0.75rem;
+    --sidebar-background: 250 20% 98%;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 15%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 262 83% 58%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 250 20% 95%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 10% 15%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 12% 88%;
 
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
-    --background: 220 18% 12%;
-    --foreground: 220 14% 96%;
+    /* Stunning Dark Mode Palette */
+    --background: 240 15% 8%;
+    --foreground: 240 10% 95%;
 
-    --card: 220 18% 15%;
-    --card-foreground: 220 14% 96%;
+    --card: 240 12% 12%;
+    --card-foreground: 240 10% 95%;
 
-    --popover: 220 18% 15%;
-    --popover-foreground: 220 14% 96%;
+    --popover: 240 12% 12%;
+    --popover-foreground: 240 10% 95%;
 
-    --primary: 214 95% 46%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary: Brighter Purple for Dark Mode */
+    --primary: 262 83% 68%;
+    --primary-foreground: 240 15% 8%;
 
-    --secondary: 29 94% 62%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary: Vibrant Coral for Dark Mode */
+    --secondary: 12 100% 70%;
+    --secondary-foreground: 240 15% 8%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 60%;
+    /* Muted: Dark Lavender */
+    --muted: 240 12% 18%;
+    --muted-foreground: 240 8% 65%;
 
-    --accent: 142 76% 46%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: Bright Teal for Dark Mode */
+    --accent: 180 100% 60%;
+    --accent-foreground: 240 15% 8%;
 
-    --destructive: 0 84% 60%;
+    /* Destructive: Softer Red for Dark Mode */
+    --destructive: 0 91% 65%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 25%;
-    --ring: 214 95% 46%;
+    --border: 240 12% 22%;
+    --input: 240 12% 22%;
+    --ring: 262 83% 68%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(214 95% 46%) 0%, hsl(214 85% 56%) 100%);
-    --warm-gradient: linear-gradient(135deg, hsl(29 94% 62%) 0%, hsl(29 84% 72%) 100%);
-    --success-gradient: linear-gradient(135deg, hsl(142 76% 46%) 0%, hsl(142 66% 56%) 100%);
-    --subtle-gradient: linear-gradient(180deg, hsl(220 18% 12%) 0%, hsl(220 18% 15%) 100%);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Enhanced Dark Mode Gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 50%, hsl(262 83% 68%) 100%);
+    --warm-gradient: linear-gradient(135deg, hsl(12 100% 70%) 0%, hsl(25 95% 75%) 50%, hsl(12 100% 70%) 100%);
+    --success-gradient: linear-gradient(135deg, hsl(180 100% 60%) 0%, hsl(160 90% 65%) 50%, hsl(180 100% 60%) 100%);
+    --subtle-gradient: linear-gradient(180deg, hsl(240 15% 8%) 0%, hsl(240 12% 12%) 100%);
+    
+    /* Dark Mode Creative Gradients */
+    --purple-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 100%);
+    --coral-gradient: linear-gradient(135deg, hsl(12 100% 70%) 0%, hsl(25 95% 75%) 100%);
+    --teal-gradient: linear-gradient(135deg, hsl(180 100% 60%) 0%, hsl(160 90% 65%) 100%);
+    --rainbow-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 25%, hsl(12 100% 70%) 50%, hsl(25 95% 75%) 75%, hsl(180 100% 60%) 100%);
+    --sunset-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 30%, hsl(12 100% 70%) 60%, hsl(25 95% 75%) 100%);
+    --ocean-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(240 75% 65%) 50%, hsl(180 100% 60%) 100%);
+    
+    /* Enhanced Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -4px hsl(0 0% 0% / 0.4);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.6), 0 8px 10px -6px hsl(0 0% 0% / 0.5);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.7);
+    
+    --sidebar-background: 240 12% 10%;
+    --sidebar-foreground: 240 10% 95%;
+    --sidebar-primary: 262 83% 68%;
+    --sidebar-primary-foreground: 240 15% 8%;
+    --sidebar-accent: 240 12% 18%;
+    --sidebar-accent-foreground: 240 10% 95%;
+    --sidebar-border: 240 12% 22%;
+    --sidebar-ring: 262 83% 68%;
   }
 }
 
@@ -121,5 +158,58 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Lazy loading image styles */
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Enhanced animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Gradient text animation */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 75% 65%), hsl(12 100% 65%));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Parallax effect */
+  .parallax {
+    transition: transform 0.1s ease-out;
   }
 }

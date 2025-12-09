@@ -46,17 +46,29 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Nnovity Works - Tally & Softskills Training Enquiries Chennai</title>
-        <meta name="description" content="Contact Nnovity Works for Tally ERP solutions and softskills training enquiries in Chennai. Reach out to Mr. Millath for expert consultation and support." />
-        <meta name="keywords" content="contact Nnovity Works, Tally enquiry Chennai, softskills training contact, Mr. Millath contact, Chennai training contact" />
+        <title>Contact NnovityWorks - Tally & Soft Skills Training Enquiries Chennai</title>
+        <meta name="description" content="Contact NnovityWorks for Tally ERP solutions and soft skills training enquiries in Chennai. Reach out to Samshul Millath for expert consultation and support." />
+        <meta name="keywords" content="contact NnovityWorks, Tally enquiry Chennai, soft skills training contact, Samshul Millath contact, Chennai training contact" />
         <link rel="canonical" href="https://nnovityworks.com/contact" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/contact" />
+        <meta property="og:title" content="Contact NnovityWorks - Tally & Soft Skills Training Chennai" />
+        <meta property="og:description" content="Get in touch with NnovityWorks for Tally solutions and soft skills training. Contact Samshul Millath for expert consultation." />
+        <meta property="og:image" content="https://nnovityworks.com/contact-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact NnovityWorks" />
+        <meta name="twitter:description" content="Tally & Soft Skills Training Enquiries in Chennai" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "mainEntity": {
-              "@type": "Organization",
-              "name": "Nnovity Works",
+            "@type": "Organization",
+            "name": "NnovityWorks",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Chennai",

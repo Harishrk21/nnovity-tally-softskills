@@ -34,10 +34,42 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Nnovity Works - Mr. Millath | Tally & Softskills Training Chennai</title>
-        <meta name="description" content="Learn about Nnovity Works and Mr. Millath, ACTD & UKIQ accredited trainer. Leading provider of Tally ERP solutions and professional softskills training in Chennai." />
-        <meta name="keywords" content="about Nnovity Works, Mr. Millath, ACTD trainer Chennai, UKIQ trainer, Tally partner Chennai, softskills training company" />
+        <title>About NnovityWorks - Samshul Millath | Tally & Soft Skills Training Chennai</title>
+        <meta name="description" content="Learn about NnovityWorks and Samshul Millath, 15+ years experienced Tally Implementation & Training Expert. Leading provider of Tally ERP solutions and professional soft skills training in Chennai." />
+        <meta name="keywords" content="about NnovityWorks, Samshul Millath, Tally expert Chennai, Tally training Chennai, soft skills training company Chennai, Tally implementation expert" />
         <link rel="canonical" href="https://nnovityworks.com/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nnovityworks.com/about" />
+        <meta property="og:title" content="About NnovityWorks - Samshul Millath | Tally & Soft Skills Training Chennai" />
+        <meta property="og:description" content="Learn about NnovityWorks and Samshul Millath, 15+ years experienced Tally Implementation & Training Expert in Chennai." />
+        <meta property="og:image" content="https://nnovityworks.com/about-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About NnovityWorks - Samshul Millath" />
+        <meta name="twitter:description" content="15+ years experienced Tally Implementation & Training Expert in Chennai" />
+        <meta name="twitter:image" content="https://nnovityworks.com/about-image.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "NnovityWorks",
+              "founder": {
+                "@type": "Person",
+                "name": "Samshul Millath",
+                "jobTitle": "Tally Implementation & Training Expert",
+                "description": "15+ years experienced in Accounting & Business Automation Support"
+              },
+              "description": "Empowering businesses with Tally solutions and professional soft skills training"
+            }
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
@@ -47,9 +79,12 @@ const About = () => {
         <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">About Nnovity Works</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">About NnovityWorks</h1>
               <p className="text-xl text-primary-foreground/90 animate-fade-in">
-                Empowering businesses and individuals through technology solutions and skills development
+                Innovate. Empower. Excel.
+              </p>
+              <p className="text-lg text-primary-foreground/80 animate-fade-in mt-2">
+                Empowering businesses with Tally solutions and professional soft skills training.
               </p>
             </div>
           </div>
@@ -62,20 +97,16 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6 text-center animate-fade-in">Our Story</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6 animate-fade-in">
                 <p>
-                  Nnovity Works was founded with a vision to bridge the gap between technology and human potential. 
-                  We recognized that while businesses need robust software solutions like Tally ERP to manage their operations, 
-                  they equally need skilled, confident, and well-trained individuals to leverage these tools effectively.
+                  At NnovityWorks, we blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
                 </p>
                 <p>
-                  Under the leadership of <strong>Mr. Millath</strong>, an internationally accredited softskills trainer 
-                  (ACTD & UKIQ), we've grown into Chennai's trusted partner for both Tally ERP solutions and professional 
-                  development training. Our unique combination of technical expertise and training excellence sets us apart 
-                  in the market.
+                  We specialize in <strong>Tally Software Sales & Support</strong> and <strong>Soft Skills Training</strong>, offering practical solutions that improve both operational performance and human capability.
                 </p>
                 <p>
-                  Today, we serve hundreds of businesses, educational institutions, and individuals across Chennai, 
-                  helping them achieve operational efficiency through Tally and personal excellence through our comprehensive 
-                  softskills training programs.
+                  Under the leadership of <strong>Samshul Millath</strong>, a Tally Implementation & Training Expert with 15+ years of experience in Accounting & Business Automation Support, we've established ourselves as Chennai's trusted partner for both Tally ERP solutions and professional development training.
+                </p>
+                <p>
+                  Our mission is to empower people and businesses with the right skills and systems to perform at their best. We've trained 1000+ young minds for Tally Prime Accounting & Soft Skills from prestigious Educational institutions and through CSR & NGO Activities.
                 </p>
                 <div className="mt-8 grid md:grid-cols-3 gap-6 not-prose">
                   <div className="text-center p-6 bg-primary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
@@ -96,11 +127,11 @@ const About = () => {
           </div>
         </section>
 
-        {/* About Mr. Millath */}
+        {/* About Samshul Millath */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">Meet Our Founder</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 animate-fade-in">About the Founder</h2>
               <Card className="border-secondary/30 shadow-xl overflow-hidden animate-fade-in">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5 gap-0">
@@ -111,7 +142,7 @@ const About = () => {
                           <div className="absolute inset-0 bg-hero-gradient opacity-20 rounded-2xl blur-xl"></div>
                           <img 
                             src={founderImage} 
-                            alt="Mr. Millath - Founder & International Softskills Trainer" 
+                            alt="Samshul Millath - Tally Implementation & Training Expert" 
                             className="relative rounded-2xl shadow-2xl w-full max-w-xs object-cover transition-transform duration-300 hover:scale-105"
                           />
                         </div>
@@ -121,35 +152,34 @@ const About = () => {
                     {/* Content Column */}
                     <div className="md:col-span-3 p-8 md:p-10 space-y-6">
                       <div>
-                        <h3 className="text-3xl font-bold mb-2">Mr. Millath</h3>
-                        <p className="text-lg text-muted-foreground mb-3">Founder & International Softskills Trainer</p>
-                        <div className="flex flex-wrap gap-2">
-                          <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                            <Award className="w-4 h-4 mr-1" />
-                            ACTD Accredited
+                        <h3 className="text-3xl font-bold mb-2">Samshul Millath</h3>
+                        <p className="text-lg text-primary mb-3 font-semibold">Tally Implementation & Training Expert (Tally & SoftSkills)</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold">
+                            15+ Years Experience
                           </span>
-                          <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                            <Award className="w-4 h-4 mr-1" />
-                            UKIQ Certified
+                          <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold">
+                            Accounting & Business Automation
                           </span>
                         </div>
                       </div>
                       
                       <div className="space-y-4 text-muted-foreground">
                         <p>
-                          Mr. Millath is the driving force behind Nnovity Works' success in both technical and training domains. 
-                          With prestigious international accreditations from <strong>ACTD (Accredited Corporate Trainer & Developer)</strong> and 
-                          <strong> UKIQ (UK Institute of Quality)</strong>, he brings world-class training methodologies to Chennai.
+                          <strong>15+ Years</strong> of highly experienced in Accounting & Business Automation Support.
                         </p>
                         <p>
-                          His expertise spans across personality development, leadership training, public speaking, business English, 
-                          and corporate training. He has successfully trained thousands of students, professionals, and corporate teams, 
-                          helping them unlock their full potential and achieve their career goals.
+                          Performing <strong>TallyPrime Sales - Service - Training & Implementation</strong> projects.
                         </p>
                         <p>
-                          Beyond training, Mr. Millath's vision for Nnovity Works encompasses providing comprehensive business solutions, 
-                          which is why the company also specializes in Tally ERP sales, support, and customization - ensuring businesses 
-                          have both the right tools and the right skills to succeed.
+                          Providing <strong>Simple & Systematic solutions</strong> for Accounting needs beyond boundaries.
+                        </p>
+                        <p>
+                          Training <strong>1000+ Young minds</strong> for Tally Prime Accounting & Soft Skills from prestigious Educational institutions and <strong>CSR & NGO Activities</strong>.
+                        </p>
+                        <p>
+                          Samshul Millath is the driving force behind NnovityWorks' success in both technical and training domains. 
+                          His expertise spans across Tally implementation, customization, cloud solutions, and comprehensive soft skills training.
                         </p>
                       </div>
                       
@@ -196,38 +226,64 @@ const About = () => {
               <h2 className="text-3xl font-bold text-center mb-12">What We Offer</h2>
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-primary">Tally ERP Solutions</h3>
+                  <h3 className="text-2xl font-semibold text-primary">Tally Software Sales & Licensing</h3>
                   <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
-                    <li>• Authorized Tally sales and licensing</li>
-                    <li>• Customization and implementation</li>
-                    <li>• Tally on cloud and mobile solutions</li>
-                    <li>• Data integration and migration</li>
-                    <li>• 24/7 technical support</li>
-                    <li>• Training and onboarding</li>
+                    <li>• Official Tally licenses</li>
+                    <li>• Version recommendations based on business needs</li>
+                    <li>• Fast onboarding and setup</li>
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-accent">Business Solutions</h3>
+                  <h3 className="text-2xl font-semibold text-accent">Tally Support & AMC</h3>
                   <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
-                    <li>• CRM - Customer Relationship Management</li>
-                    <li>• ERP - Enterprise Resource Planning</li>
-                    <li>• HRMS - Human Resource Management</li>
-                    <li>• Payroll processing systems</li>
-                    <li>• Business process automation</li>
-                    <li>• Custom software development</li>
+                    <li>• Installation & Implementation</li>
+                    <li>• Troubleshooting & error fixing</li>
+                    <li>• Annual maintenance and priority support</li>
+                    <li>• Online & Onsite support</li>
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-secondary">Softskills Training</h3>
+                  <h3 className="text-2xl font-semibold text-secondary">Tally on Cloud & Mobile</h3>
                   <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
-                    <li>• Personality development programs</li>
-                    <li>• Leadership and management training</li>
-                    <li>• Public speaking and presentation skills</li>
-                    <li>• Business English communication</li>
-                    <li>• Interview skills and career coaching</li>
-                    <li>• Sales and negotiation training</li>
-                    <li>• Entrepreneurship development</li>
-                    <li>• Train the trainer certification</li>
+                    <li>• Cloud access services for TallyPrime from anywhere</li>
+                    <li>• Tally on Mobile Application</li>
+                    <li>• Track your business anytime, anywhere</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-primary">Tally Customization Services</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
+                    <li>• Addressing specific business requirements</li>
+                    <li>• Custom reporting and data posting</li>
+                    <li>• Cross Platform Automatic API based Data Porting</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-accent">Tally & MS-Office Training</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
+                    <li>• Training for individuals, students, and professionals</li>
+                    <li>• Corporate Tally training for accounting teams</li>
+                    <li>• MS-Office Training for Office Teams, Jobseekers & Students</li>
+                    <li>• Practical, hands-on sessions</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-secondary">Soft Skills Training</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
+                    <li>• Communication skills</li>
+                    <li>• Personality Mental Attitude</li>
+                    <li>• Public Speaking</li>
+                    <li>• Time management & productivity</li>
+                    <li>• Leadership & teamwork</li>
+                    <li>• Workplace behavior</li>
+                    <li>• The Prevention of Sexual Harassment (PoSH) Training at Workplace</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-semibold text-primary">Corporate Training Programs</h3>
+                  <ul className="grid md:grid-cols-2 gap-3 text-muted-foreground">
+                    <li>• Customized workshops focused on performance</li>
+                    <li>• Communication and professional development</li>
                   </ul>
                 </div>
               </div>
@@ -238,10 +294,9 @@ const About = () => {
         {/* CTA Section */}
         <section className="py-16 bg-success-gradient text-accent-foreground">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Partner with Us?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
             <p className="text-xl mb-8 text-accent-foreground/90 max-w-2xl mx-auto">
-              Whether you need Tally solutions for your business or training programs to enhance your team's capabilities, 
-              we're here to help you succeed.
+              Get in touch with NnovityWorks today. We blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">

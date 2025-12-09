@@ -31,7 +31,7 @@ const Navigation = () => {
               className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform duration-300"
             />
             <span className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              Nnovity Works
+              NnovityWorks
             </span>
           </NavLink>
 
