@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Package, DollarSign, Users, BarChart3, Settings, Database, ShoppingCart, Truck, FileText, Clock, Zap, Shield } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import heroERP from "@/assets/hero-erp.jpg";
 
 const ERPSolutions = () => {
@@ -102,9 +103,9 @@ const ERPSolutions = () => {
       <main>
         {/* Hero Section */}
         <section className="relative bg-success-gradient text-accent-foreground py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-15 animate-fade-in">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-15">
             <img src={heroERP} alt="ERP software solutions for enterprise resource planning in Chennai" className="w-full h-full object-cover" />
-          </div>
+          </ParallaxSection>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-scale-in">
@@ -123,7 +124,7 @@ const ERPSolutions = () => {
                   <NavLink to="/contact">Request Consultation</NavLink>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8 hover:scale-105 transition-all duration-300">
-                  <a href="tel:+917299817996">Call: +91 72998 17996</a>
+                  <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
             </div>
@@ -329,7 +330,7 @@ const ERPSolutions = () => {
                 <NavLink to="/contact">Schedule Consultation</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
-                <a href="tel:+917299817996">Call Sales: +91 72998 17996</a>
+                <a href="tel:+919841115769">Call Sales: +91 98411 15769</a>
               </Button>
             </div>
           </div>

@@ -68,7 +68,7 @@ export default {
         'warm-gradient': 'var(--warm-gradient)',
         'success-gradient': 'var(--success-gradient)',
         'subtle-gradient': 'var(--subtle-gradient)',
-        'purple-gradient': 'var(--purple-gradient)',
+        'blue-gradient': 'var(--blue-gradient)',
         'coral-gradient': 'var(--coral-gradient)',
         'teal-gradient': 'var(--teal-gradient)',
         'rainbow-gradient': 'var(--rainbow-gradient)',

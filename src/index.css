@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 15%;
 
-    /* Primary: Vibrant Deep Blue-Purple Gradient */
-    --primary: 262 83% 58%;
+    /* Primary: Professional Blue */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary: Warm Coral-Orange Gradient */
@@ -40,30 +40,30 @@ All colors MUST be HSL.
 
     --border: 240 12% 88%;
     --input: 240 12% 88%;
-    --ring: 262 83% 58%;
+    --ring: 217 91% 60%;
 
     --radius: 0.875rem;
     
     /* Stunning Creative Gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 50%, hsl(262 83% 58%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 95% 65%) 50%, hsl(217 91% 60%) 100%);
     --warm-gradient: linear-gradient(135deg, hsl(12 100% 65%) 0%, hsl(25 95% 70%) 50%, hsl(12 100% 65%) 100%);
     --success-gradient: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(160 90% 55%) 50%, hsl(180 100% 50%) 100%);
     --subtle-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(250 20% 98%) 100%);
     
     /* Additional Creative Gradients */
-    --purple-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 100%);
+    --blue-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 95% 65%) 100%);
     --coral-gradient: linear-gradient(135deg, hsl(12 100% 65%) 0%, hsl(25 95% 70%) 100%);
     --teal-gradient: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(160 90% 55%) 100%);
-    --rainbow-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 25%, hsl(12 100% 65%) 50%, hsl(25 95% 70%) 75%, hsl(180 100% 50%) 100%);
-    --sunset-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 75% 65%) 30%, hsl(12 100% 65%) 60%, hsl(25 95% 70%) 100%);
-    --ocean-gradient: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(240 75% 60%) 50%, hsl(180 100% 50%) 100%);
+    --rainbow-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 95% 65%) 25%, hsl(12 100% 65%) 50%, hsl(25 95% 70%) 75%, hsl(180 100% 50%) 100%);
+    --sunset-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 95% 65%) 30%, hsl(12 100% 65%) 60%, hsl(25 95% 70%) 100%);
+    --ocean-gradient: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 95% 65%) 50%, hsl(180 100% 50%) 100%);
     
     /* Enhanced Shadows with Color Tints */
-    --shadow-sm: 0 1px 2px 0 hsl(262 83% 58% / 0.08);
-    --shadow-md: 0 4px 6px -1px hsl(262 83% 58% / 0.12), 0 2px 4px -2px hsl(262 83% 58% / 0.08);
-    --shadow-lg: 0 10px 15px -3px hsl(262 83% 58% / 0.15), 0 4px 6px -4px hsl(262 83% 58% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(262 83% 58% / 0.18), 0 8px 10px -6px hsl(262 83% 58% / 0.12);
-    --shadow-2xl: 0 25px 50px -12px hsl(262 83% 58% / 0.25);
+    --shadow-sm: 0 1px 2px 0 hsl(217 91% 60% / 0.08);
+    --shadow-md: 0 4px 6px -1px hsl(217 91% 60% / 0.12), 0 2px 4px -2px hsl(217 91% 60% / 0.08);
+    --shadow-lg: 0 10px 15px -3px hsl(217 91% 60% / 0.15), 0 4px 6px -4px hsl(217 91% 60% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(217 91% 60% / 0.18), 0 8px 10px -6px hsl(217 91% 60% / 0.12);
+    --shadow-2xl: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -71,7 +71,7 @@ All colors MUST be HSL.
 
     --sidebar-foreground: 240 10% 15%;
 
-    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary: 217 91% 60%;
 
     --sidebar-primary-foreground: 0 0% 100%;
 
@@ -81,7 +81,7 @@ All colors MUST be HSL.
 
     --sidebar-border: 240 12% 88%;
 
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
@@ -95,8 +95,8 @@ All colors MUST be HSL.
     --popover: 240 12% 12%;
     --popover-foreground: 240 10% 95%;
 
-    /* Primary: Brighter Purple for Dark Mode */
-    --primary: 262 83% 68%;
+    /* Primary: Brighter Blue for Dark Mode */
+    --primary: 217 91% 68%;
     --primary-foreground: 240 15% 8%;
 
     /* Secondary: Vibrant Coral for Dark Mode */
@@ -117,21 +117,21 @@ All colors MUST be HSL.
 
     --border: 240 12% 22%;
     --input: 240 12% 22%;
-    --ring: 262 83% 68%;
+    --ring: 217 91% 68%;
     
     /* Enhanced Dark Mode Gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 50%, hsl(262 83% 68%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(217 91% 68%) 0%, hsl(200 95% 72%) 50%, hsl(217 91% 68%) 100%);
     --warm-gradient: linear-gradient(135deg, hsl(12 100% 70%) 0%, hsl(25 95% 75%) 50%, hsl(12 100% 70%) 100%);
     --success-gradient: linear-gradient(135deg, hsl(180 100% 60%) 0%, hsl(160 90% 65%) 50%, hsl(180 100% 60%) 100%);
     --subtle-gradient: linear-gradient(180deg, hsl(240 15% 8%) 0%, hsl(240 12% 12%) 100%);
     
     /* Dark Mode Creative Gradients */
-    --purple-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 100%);
+    --blue-gradient: linear-gradient(135deg, hsl(217 91% 68%) 0%, hsl(200 95% 72%) 100%);
     --coral-gradient: linear-gradient(135deg, hsl(12 100% 70%) 0%, hsl(25 95% 75%) 100%);
     --teal-gradient: linear-gradient(135deg, hsl(180 100% 60%) 0%, hsl(160 90% 65%) 100%);
-    --rainbow-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 25%, hsl(12 100% 70%) 50%, hsl(25 95% 75%) 75%, hsl(180 100% 60%) 100%);
-    --sunset-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(280 75% 72%) 30%, hsl(12 100% 70%) 60%, hsl(25 95% 75%) 100%);
-    --ocean-gradient: linear-gradient(135deg, hsl(262 83% 68%) 0%, hsl(240 75% 65%) 50%, hsl(180 100% 60%) 100%);
+    --rainbow-gradient: linear-gradient(135deg, hsl(217 91% 68%) 0%, hsl(200 95% 72%) 25%, hsl(12 100% 70%) 50%, hsl(25 95% 75%) 75%, hsl(180 100% 60%) 100%);
+    --sunset-gradient: linear-gradient(135deg, hsl(217 91% 68%) 0%, hsl(200 95% 72%) 30%, hsl(12 100% 70%) 60%, hsl(25 95% 75%) 100%);
+    --ocean-gradient: linear-gradient(135deg, hsl(217 91% 68%) 0%, hsl(200 95% 72%) 50%, hsl(180 100% 60%) 100%);
     
     /* Enhanced Dark Mode Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
@@ -142,12 +142,12 @@ All colors MUST be HSL.
     
     --sidebar-background: 240 12% 10%;
     --sidebar-foreground: 240 10% 95%;
-    --sidebar-primary: 262 83% 68%;
+    --sidebar-primary: 217 91% 68%;
     --sidebar-primary-foreground: 240 15% 8%;
     --sidebar-accent: 240 12% 18%;
     --sidebar-accent-foreground: 240 10% 95%;
     --sidebar-border: 240 12% 22%;
-    --sidebar-ring: 262 83% 68%;
+    --sidebar-ring: 217 91% 68%;
   }
 }
 
@@ -191,7 +191,7 @@ All colors MUST be HSL.
 
   /* Gradient text animation */
   .gradient-text {
-    background: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 75% 65%), hsl(12 100% 65%));
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(200 95% 65%), hsl(12 100% 65%));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,5 +211,18 @@ All colors MUST be HSL.
   /* Parallax effect */
   .parallax {
     transition: transform 0.1s ease-out;
+    will-change: transform;
+  }
+  
+  .parallax-slow {
+    transform: translateY(var(--parallax-offset, 0px));
+  }
+  
+  .parallax-medium {
+    transform: translateY(calc(var(--parallax-offset, 0px) * 0.5));
+  }
+  
+  .parallax-fast {
+    transform: translateY(calc(var(--parallax-offset, 0px) * 1.5));
   }
 }

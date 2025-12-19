@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, Users, TrendingUp, BookOpen, Briefcase, MessageSquare, Target, Lightbulb } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
 
 const SoftskillsTraining = () => {
@@ -93,7 +94,9 @@ const SoftskillsTraining = () => {
             "description": "Premier softskills training institute in Chennai",
             "address": {
               "@type": "PostalAddress",
+              "streetAddress": "13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East",
               "addressLocality": "Chennai",
+              "postalCode": "600102",
               "addressRegion": "TN",
               "addressCountry": "IN"
             },
@@ -134,9 +137,9 @@ const SoftskillsTraining = () => {
       <main>
         {/* Hero Section */}
         <section className="relative bg-warm-gradient text-secondary-foreground py-20 overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
             <img src={heroSoftskills} alt="Professional soft skills training by Samshul Millath in Chennai - Communication, Leadership, and Personality Development" className="w-full h-full object-cover" />
-          </div>
+          </ParallaxSection>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl animate-fade-in">
               <div className="flex items-center space-x-2 mb-4">
@@ -159,7 +162,10 @@ const SoftskillsTraining = () => {
                   <NavLink to="/contact">Book a Training Session</NavLink>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
-                  <a href="tel:+917299817996">Call: +91 72998 17996</a>
+                  <NavLink to="/about">About Our Trainer</NavLink>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
+                  <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
             </div>

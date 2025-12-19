@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wrench, Cloud, Smartphone, Database, GraduationCap, Link2, HeadphonesIcon } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { ParallaxSection } from "@/components/ParallaxSection";
 
 const TallySupport = () => {
   const services = [
@@ -82,7 +83,9 @@ const TallySupport = () => {
               "name": "NnovityWorks",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East",
                 "addressLocality": "Chennai",
+                "postalCode": "600102",
                 "addressRegion": "TN",
                 "addressCountry": "IN"
               }
@@ -108,8 +111,11 @@ const TallySupport = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in">
-          <div className="container mx-auto px-4">
+        <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in relative overflow-hidden">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
+          </ParallaxSection>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Tally Support & AMC Services
@@ -118,9 +124,14 @@ const TallySupport = () => {
                 Installation & Implementation, Troubleshooting & error fixing, Annual maintenance and priority support. 
                 Online & Onsite support available.
               </p>
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
-                <NavLink to="/contact">Request Support</NavLink>
-              </Button>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
+                  <NavLink to="/contact">Request Support</NavLink>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
+                  <NavLink to="/tally-sales">Buy Tally Software</NavLink>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -264,7 +275,7 @@ const TallySupport = () => {
                 <NavLink to="/contact">Get Support Now</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent transition-all duration-300">
-                <a href="tel:+91">Call Support: +91 XXX XXX XXXX</a>
+                <a href="tel:+919841115769">Call Support: +91 98411 15769</a>
               </Button>
             </div>
           </div>

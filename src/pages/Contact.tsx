@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -71,12 +72,14 @@ const Contact = () => {
             "name": "NnovityWorks",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East",
                 "addressLocality": "Chennai",
+                "postalCode": "600102",
                 "addressRegion": "TN",
                 "addressCountry": "IN"
               },
-              "telephone": "+91-XXX-XXX-XXXX",
-              "email": "info@nnovityworks.com"
+              "telephone": "+91-98411-15769",
+              "email": "millath@nnovityworks.com"
             }
           })}
         </script>
@@ -87,8 +90,11 @@ const Contact = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-hero-gradient text-primary-foreground py-16">
-          <div className="container mx-auto px-4">
+        <section className="bg-hero-gradient text-primary-foreground py-16 relative overflow-hidden">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
+          </ParallaxSection>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
               <p className="text-xl text-primary-foreground/90">
@@ -114,7 +120,7 @@ const Contact = () => {
                       <div>
                         <p className="font-semibold">Address</p>
                         <p className="text-sm text-muted-foreground">
-                          Chennai, Tamil Nadu, India
+                          13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102
                         </p>
                       </div>
                       </div>
@@ -122,8 +128,8 @@ const Contact = () => {
                         <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <a href="tel:+917299817996" className="text-sm text-muted-foreground hover:text-primary">
-                          +91 72998 17996
+                        <a href="tel:+919841115769" className="text-sm text-muted-foreground hover:text-primary">
+                          +91 98411 15769
                         </a>
                       </div>
                       </div>
@@ -131,8 +137,8 @@ const Contact = () => {
                         <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <p className="font-semibold">Email</p>
-                        <a href="mailto:harish.dev@askmeister.com" className="text-sm text-muted-foreground hover:text-primary">
-                          harish.dev@askmeister.com
+                        <a href="mailto:millath@nnovityworks.com" className="text-sm text-muted-foreground hover:text-primary">
+                          millath@nnovityworks.com
                         </a>
                       </div>
                       </div>
@@ -254,8 +260,34 @@ const Contact = () => {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-8">Find Us in Chennai</h2>
-            <div className="max-w-4xl mx-auto bg-muted rounded-lg h-96 flex items-center justify-center">
-              <p className="text-muted-foreground">Map integration placeholder - Add Google Maps embed here</p>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-muted rounded-lg overflow-hidden shadow-xl border border-border/50">
+                <iframe
+                  src="https://www.google.com/maps?q=13,1st+Main+Road,R.V.Nagar,Block+1,+Anna+Nagar+East,chennai-600102&output=embed"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                  title="NnovityWorks Location - 13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102"
+                ></iframe>
+              </div>
+              <div className="mt-6 text-center space-y-4">
+                <p className="text-muted-foreground mb-4">
+                  13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/Wti9D7waUN8LYSFc6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <MapPin className="w-5 h-5" />
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
           </div>
         </section>

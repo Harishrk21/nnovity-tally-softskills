@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, ShoppingCart, Award, TrendingUp, Shield, Clock } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import heroTally from "@/assets/hero-tally.jpg";
 
 const TallySales = () => {
@@ -85,9 +86,9 @@ const TallySales = () => {
       <main>
         {/* Hero Section */}
         <section className="relative bg-hero-gradient text-primary-foreground py-20 overflow-hidden animate-fade-in">
-          <div className="absolute inset-0 opacity-10">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-10">
             <img src={heroTally} alt="Genuine Tally software sales and licensing in Chennai - TallyPrime and Tally ERP 9" className="w-full h-full object-cover" />
-          </div>
+          </ParallaxSection>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -102,7 +103,7 @@ const TallySales = () => {
                   <NavLink to="/contact">Request a Quote</NavLink>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
-                  <a href="tel:+91">Call Now</a>
+                  <a href="tel:+919841115769">Call Now: +91 98411 15769</a>
                 </Button>
               </div>
             </div>
@@ -235,6 +236,9 @@ const TallySales = () => {
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
                 <NavLink to="/tally-support">View Support Services</NavLink>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
+                <NavLink to="/about">About Our Team</NavLink>
               </Button>
             </div>
           </div>

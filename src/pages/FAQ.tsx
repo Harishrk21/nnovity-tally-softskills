@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
+import { ParallaxSection } from "@/components/ParallaxSection";
 
 const FAQ = () => {
   return (
@@ -57,8 +58,11 @@ const FAQ = () => {
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <ParallaxSection speed={0.2} className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
+        </ParallaxSection>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
               Frequently Asked Questions
@@ -503,10 +507,10 @@ const FAQ = () => {
                 Contact Us
               </a>
               <a 
-                href="tel:+919840567890" 
+                href="tel:+919841115769" 
                 className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Call Now: +91 98405 67890
+                Call Now: +91 98411 15769
               </a>
             </div>
           </div>

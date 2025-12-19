@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Award, Target, Heart, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import { ParallaxSection } from "@/components/ParallaxSection";
 import founderImage from "@/assets/founder-millath.jpg";
 
 const About = () => {
@@ -76,8 +77,11 @@ const About = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in">
-          <div className="container mx-auto px-4">
+        <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in relative overflow-hidden">
+          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
+          </ParallaxSection>
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">About NnovityWorks</h1>
               <p className="text-xl text-primary-foreground/90 animate-fade-in">
@@ -303,7 +307,7 @@ const About = () => {
                 <NavLink to="/contact">Get in Touch</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent">
-                <a href="tel:+91">Call: +91 XXX XXX XXXX</a>
+                <a href="tel:+919841115769">Call: +91 98411 15769</a>
               </Button>
             </div>
           </div>

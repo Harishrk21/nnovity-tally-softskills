@@ -49,7 +49,7 @@ const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-medium text-foreground/80 hover:text-foreground data-[state=open]:bg-transparent">
                     Tally Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -90,7 +90,7 @@ const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">
+                  <NavigationMenuTrigger className="text-sm font-medium text-foreground/80 hover:text-foreground data-[state=open]:bg-transparent">
                     Business Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
