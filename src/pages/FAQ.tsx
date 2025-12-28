@@ -17,11 +17,11 @@ const FAQ = () => {
         <title>FAQ - Frequently Asked Questions | NnovityWorks Chennai</title>
         <meta
           name="description"
-          content="Find answers to common questions about Tally ERP, CRM, ERP, HRMS solutions, soft skills training programs, pricing, and support services in Chennai."
+          content="Find answers to common questions about Tally Prime, CRM, ERP, HRMS solutions, soft skills training programs, pricing, and support services in Chennai."
         />
         <meta
           name="keywords"
-          content="Tally FAQ, CRM questions, ERP FAQ, HRMS support, training FAQ Chennai, Tally pricing, business software support, NnovityWorks FAQ"
+          content="Tally Prime FAQ, CRM questions, ERP FAQ, HRMS support, training FAQ Chennai, Tally Prime pricing, business software support, NnovityWorks FAQ"
         />
         <link rel="canonical" href="https://nnovityworks.com/faq" />
         
@@ -29,13 +29,13 @@ const FAQ = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nnovityworks.com/faq" />
         <meta property="og:title" content="FAQ - Frequently Asked Questions | NnovityWorks Chennai" />
-        <meta property="og:description" content="Find answers to common questions about Tally ERP, CRM, ERP, HRMS solutions, and soft skills training in Chennai." />
+        <meta property="og:description" content="Find answers to common questions about Tally Prime, CRM, ERP, HRMS solutions, and soft skills training in Chennai." />
         <meta property="og:image" content="https://nnovityworks.com/faq-image.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="FAQ - NnovityWorks Chennai" />
-        <meta name="twitter:description" content="Frequently Asked Questions about Tally and Training Services" />
+        <meta name="twitter:description" content="Frequently Asked Questions about Tally Prime and Training Services" />
         
         {/* Structured Data for FAQ */}
         <script type="application/ld+json">
@@ -44,10 +44,10 @@ const FAQ = () => {
             "@type": "FAQPage",
             "mainEntity": [{
               "@type": "Question",
-              "name": "What is Tally ERP and why do businesses need it?",
+              "name": "What is Tally Prime and why do businesses need it?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tally ERP is a comprehensive business management software that handles accounting, inventory, taxation (GST), payroll, and financial reporting. Businesses need Tally to streamline operations, ensure compliance with Indian tax laws, reduce manual errors, and get real-time insights into their financial health."
+                "text": "Tally Prime is a comprehensive business management software that handles accounting, inventory, taxation (GST), payroll, and financial reporting. Businesses need Tally Prime to streamline operations, ensure compliance with Indian tax laws, reduce manual errors, and get real-time insights into their financial health."
               }
             }]
           })}
@@ -58,17 +58,24 @@ const FAQ = () => {
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
-        <ParallaxSection speed={0.2} className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
-        </ParallaxSection>
-        <div className="container mx-auto max-w-6xl relative z-10">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
+        </div>
+        {/* Floating Orbs */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10 py-12 md:py-16 px-4">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Find answers to common questions about our Tally solutions, CRM, ERP, HRMS implementations, 
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-medium">
+              Find answers to common questions about our Tally Prime solutions, CRM, ERP, HRMS implementations, 
               training programs, pricing, and support services.
             </p>
           </div>
@@ -76,20 +83,20 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Sections */}
-      <section className="py-16 px-4">
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
         <div className="container mx-auto max-w-4xl space-y-12">
           
-          {/* Tally Questions */}
+          {/* Tally Prime Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Tally ERP Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Tally Prime Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="tally-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  What is Tally ERP, and why do businesses need it?
+                  What is Tally Prime, and why do businesses need it?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Tally ERP is a comprehensive business management software that handles accounting, inventory, 
-                  taxation (GST), payroll, and financial reporting. Businesses need Tally to streamline operations, 
+                  Tally Prime is a comprehensive business management software that handles accounting, inventory, 
+                  taxation (GST), payroll, and financial reporting. Businesses need Tally Prime to streamline operations, 
                   ensure compliance with Indian tax laws, reduce manual errors, and get real-time insights into 
                   their financial health. It's especially crucial for SMEs looking to scale efficiently.
                 </AccordionContent>
@@ -97,11 +104,11 @@ const FAQ = () => {
 
               <AccordionItem value="tally-2" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  Which Tally version should I choose - TallyPrime or Tally on Cloud?
+                  Which Tally Prime version should I choose - TallyPrime or Tally Prime on Cloud?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   TallyPrime is ideal if you want software installed on your local system with one-time licensing. 
-                  Tally on Cloud is perfect for businesses needing remote access, multi-location operations, or 
+                  Tally Prime on Cloud is perfect for businesses needing remote access, multi-location operations, or 
                   automatic backups. We help you assess your business needs and recommend the best option based on 
                   your team size, locations, and operational requirements.
                 </AccordionContent>
@@ -109,10 +116,10 @@ const FAQ = () => {
 
               <AccordionItem value="tally-3" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  How long does Tally implementation take?
+                  How long does Tally Prime implementation take?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Basic Tally setup can be completed in 1-2 days. However, complete implementation including data 
+                  Basic Tally Prime setup can be completed in 1-2 days. However, complete implementation including data 
                   migration, customization, and user training typically takes 1-2 weeks depending on your business 
                   complexity and data volume. We provide a detailed timeline after understanding your specific requirements.
                 </AccordionContent>
@@ -120,10 +127,10 @@ const FAQ = () => {
 
               <AccordionItem value="tally-4" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  Do you provide Tally training for our staff?
+                  Do you provide Tally Prime training for our staff?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Yes! We offer comprehensive Tally training programs from basic to advanced levels. Training covers 
+                  Yes! We offer comprehensive Tally Prime training programs from basic to advanced levels. Training covers 
                   accounting fundamentals, GST compliance, inventory management, payroll processing, and report generation. 
                   We provide both on-site and online training options customized to your team's skill level.
                 </AccordionContent>
@@ -131,23 +138,23 @@ const FAQ = () => {
 
               <AccordionItem value="tally-5" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  Can you migrate data from my old software to Tally?
+                  Can you migrate data from my old software to Tally Prime?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   Absolutely! We specialize in data migration from Excel, Busy, Marg, or any other accounting software 
-                  to Tally. We ensure all your historical data, ledgers, transactions, and inventory records are 
+                  to Tally Prime. We ensure all your historical data, ledgers, transactions, and inventory records are 
                   accurately transferred without any loss or corruption. The process is secure and includes validation checks.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="tally-6" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  What Tally support services do you offer?
+                  What Tally Prime support services do you offer?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   We provide 24/7 technical support, annual maintenance contracts (AMC), remote troubleshooting, 
                   on-site visits, software updates, data backup solutions, and performance optimization. Our support 
-                  includes GST filing assistance, report customization, and resolution of any Tally-related issues.
+                  includes GST filing assistance, report customization, and resolution of any Tally Prime-related issues.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -182,11 +189,11 @@ const FAQ = () => {
 
               <AccordionItem value="crm-3" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  Can CRM integrate with my existing Tally software?
+                  Can CRM integrate with my existing Tally Prime software?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Yes! We specialize in integrating CRM systems with Tally ERP. This integration ensures seamless 
-                  data flow between sales (CRM) and accounting (Tally), eliminating duplicate data entry and providing 
+                  Yes! We specialize in integrating CRM systems with Tally Prime. This integration ensures seamless 
+                  data flow between sales (CRM) and accounting (Tally Prime), eliminating duplicate data entry and providing 
                   a complete view of customer transactions, invoicing, and payments.
                 </AccordionContent>
               </AccordionItem>
@@ -210,24 +217,24 @@ const FAQ = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="erp-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  What is ERP and how is it different from Tally?
+                  What is ERP and how is it different from Tally Prime?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   ERP (Enterprise Resource Planning) is a comprehensive system that integrates all business processes 
                   including accounting, manufacturing, supply chain, HR, CRM, and more into one unified platform. 
-                  While Tally focuses primarily on accounting and inventory, ERP solutions handle end-to-end business 
+                  While Tally Prime focuses primarily on accounting and inventory, ERP solutions handle end-to-end business 
                   operations suitable for manufacturing, distribution, and multi-location enterprises.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="erp-2" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  When should a business move from Tally to ERP?
+                  When should a business move from Tally Prime to ERP?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   Consider upgrading to ERP when your business experiences: multiple locations requiring centralized 
                   control, manufacturing operations needing production planning, complex supply chain requirements, 
-                  departmental silos affecting efficiency, or when Tally's capabilities no longer meet your growing 
+                  departmental silos affecting efficiency, or when Tally Prime's capabilities no longer meet your growing 
                   business needs. We provide consultation to assess if ERP is right for you.
                 </AccordionContent>
               </AccordionItem>
@@ -275,11 +282,11 @@ const FAQ = () => {
 
               <AccordionItem value="hrms-2" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
-                  Can HRMS integrate with our Tally payroll?
+                  Can HRMS integrate with our Tally Prime payroll?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Yes! We can integrate HRMS with Tally to ensure seamless payroll data flow. Attendance, leave, and 
-                  salary components from HRMS can be synced with Tally for final payroll processing and accounting. 
+                  Yes! We can integrate HRMS with Tally Prime to ensure seamless payroll data flow. Attendance, leave, and 
+                  salary components from HRMS can be synced with Tally Prime for final payroll processing and accounting. 
                   This eliminates duplicate data entry and ensures accuracy in salary disbursement and accounting records.
                 </AccordionContent>
               </AccordionItem>
@@ -321,7 +328,7 @@ const FAQ = () => {
                   We offer comprehensive training in Personality Development, Public Speaking, Business English 
                   Communication, Leadership Skills, Interview Preparation, Entrepreneurship Development, Management 
                   Skills, Sales & Negotiation, and Train-the-Trainer programs. All programs are conducted by 
-                  internationally accredited trainer Mr. Millath (ACTD, UKIQ certified).
+                  internationally accredited trainer Mr. Samshul Millath (ACTD, UKIQ certified).
                 </AccordionContent>
               </AccordionItem>
 
@@ -471,7 +478,7 @@ const FAQ = () => {
                   Can you help with GST compliance and filing?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Yes! We provide comprehensive GST support including Tally configuration for GST compliance, 
+                  Yes! We provide comprehensive GST support including Tally Prime configuration for GST compliance, 
                   invoice formatting as per GST rules, GSTR-1, GSTR-3B preparation and filing assistance, 
                   e-way bill generation, and GST reconciliation. Our team stays updated with latest GST changes 
                   and ensures your software is always compliant.

@@ -100,20 +100,43 @@ const CRMSolutions = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-hero-gradient text-primary-foreground py-24 overflow-hidden animate-fade-in">
-          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-15">
-            <img src={heroCRM} alt="CRM software solutions for customer relationship management in Chennai" className="w-full h-full object-cover" />
-          </ParallaxSection>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center text-white overflow-hidden">
+          <div className="absolute inset-0" style={{ transform: 'none' }}>
+            <img 
+              src={heroCRM} 
+              alt="CRM software solutions for customer relationship management in Chennai" 
+              className="w-full h-full object-cover object-center"
+              style={{ 
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
+          </div>
+          {/* Animated Grid Pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
+          </div>
+          {/* Floating Orbs */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center space-x-2 bg-secondary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <Users className="w-5 h-5" />
-                <span className="text-sm font-semibold">Customer Relationship Management</span>
+              <div className="inline-flex items-center space-x-2 glass-morphism px-4 py-2 rounded-full mb-6">
+                <Users className="w-5 h-5 text-cyan-400" />
+                <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Customer Relationship Management</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 Transform Customer Relationships with Powerful CRM Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              <p className="text-xl md:text-2xl mb-8 text-white/95 font-medium">
                 Streamline sales, marketing, and customer service with our comprehensive CRM platform. 
                 Increase revenue, improve customer satisfaction, and grow your business faster.
               </p>
@@ -130,7 +153,7 @@ const CRMSolutions = () => {
         </section>
 
         {/* What is CRM Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto animate-fade-in">
               <h2 className="text-3xl font-bold mb-6 text-center">What is CRM and Why Do You Need It?</h2>
@@ -177,7 +200,7 @@ const CRMSolutions = () => {
         </section>
 
         {/* Features Grid */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-4xl font-bold mb-4">Comprehensive CRM Features</h2>
@@ -207,7 +230,7 @@ const CRMSolutions = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Why Choose Our CRM Solutions?</h2>
@@ -290,18 +313,19 @@ const CRMSolutions = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-success-gradient text-accent-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Customer Management?</h2>
-            <p className="text-xl mb-10 text-accent-foreground/90 max-w-3xl mx-auto">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Revolutionize Your Customer Management?</h2>
+            <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-medium">
               Join hundreds of businesses in Chennai who have transformed their customer relationships with our CRM solutions. 
               Schedule a free demo today and see the difference.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 text-lg px-8 shadow-xl">
+              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Schedule Free Demo</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8">
+              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                 <a href="tel:+919841115769">Call Sales: +91 98411 15769</a>
               </Button>
             </div>

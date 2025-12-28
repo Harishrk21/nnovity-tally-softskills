@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -22,22 +22,35 @@ const Contact = () => {
     service: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Check for success parameter in URL (from formsubmit.io redirect)
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      });
+      // Clean up URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    }
+  }, [toast]);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    // Don't prevent default - let form submit naturally to formsubmit.io
+    setIsSubmitting(true);
     
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+    // FormSubmit.io will handle the submission and redirect to _next URL
+    // The form will submit naturally to https://formsubmit.co/smillath@nnovityworks.com
   };
 
   const handleChange = (field: string, value: string) => {
@@ -47,22 +60,22 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact NnovityWorks - Tally & Soft Skills Training Enquiries Chennai</title>
-        <meta name="description" content="Contact NnovityWorks for Tally ERP solutions and soft skills training enquiries in Chennai. Reach out to Samshul Millath for expert consultation and support." />
-        <meta name="keywords" content="contact NnovityWorks, Tally enquiry Chennai, soft skills training contact, Samshul Millath contact, Chennai training contact" />
+        <title>Contact NnovityWorks - Tally Prime & Soft Skills Training Enquiries Chennai</title>
+        <meta name="description" content="Contact NnovityWorks for Tally Prime solutions and soft skills training enquiries in Chennai. Reach out to Mr. Samshul Millath for expert consultation and support." />
+        <meta name="keywords" content="contact NnovityWorks, Tally Prime enquiry Chennai, soft skills training contact, Mr. Samshul Millath contact, Chennai training contact" />
         <link rel="canonical" href="https://nnovityworks.com/contact" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nnovityworks.com/contact" />
-        <meta property="og:title" content="Contact NnovityWorks - Tally & Soft Skills Training Chennai" />
-        <meta property="og:description" content="Get in touch with NnovityWorks for Tally solutions and soft skills training. Contact Samshul Millath for expert consultation." />
+        <meta property="og:title" content="Contact NnovityWorks - Tally Prime & Soft Skills Training Chennai" />
+        <meta property="og:description" content="Get in touch with NnovityWorks for Tally Prime solutions and soft skills training. Contact Mr. Samshul Millath for expert consultation." />
         <meta property="og:image" content="https://nnovityworks.com/contact-image.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Contact NnovityWorks" />
-        <meta name="twitter:description" content="Tally & Soft Skills Training Enquiries in Chennai" />
+        <meta name="twitter:description" content="Tally Prime & Soft Skills Training Enquiries in Chennai" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -79,7 +92,7 @@ const Contact = () => {
                 "addressCountry": "IN"
               },
               "telephone": "+91-98411-15769",
-              "email": "millath@nnovityworks.com"
+              "email": "smillath@nnovityworks.com"
             }
           })}
         </script>
@@ -90,21 +103,28 @@ const Contact = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-hero-gradient text-primary-foreground py-16 relative overflow-hidden">
-          <ParallaxSection speed={0.3} className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
-          </ParallaxSection>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center text-white overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
+          {/* Animated Grid Pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
+          </div>
+          {/* Floating Orbs */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-              <p className="text-xl text-primary-foreground/90">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Get in Touch</h1>
+              <p className="text-xl md:text-2xl text-white/95 font-medium">
                 Have questions about our services? We're here to help you find the right solution.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-background">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Contact Information */}
@@ -114,45 +134,45 @@ const Contact = () => {
                     <CardTitle>Contact Information</CardTitle>
               <CardDescription>Reach out to us through any of these channels</CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
-                      <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold">Address</p>
-                        <p className="text-sm text-muted-foreground">
-                          13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102
-                        </p>
+                    <CardContent className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform pb-4 border-b border-border/50">
+                        <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold">Address</p>
+                          <p className="text-sm text-muted-foreground mt-1">
+                            13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102
+                          </p>
+                        </div>
                       </div>
-                      </div>
-                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform pb-4 border-b border-border/50">
                         <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold">Phone</p>
-                        <a href="tel:+919841115769" className="text-sm text-muted-foreground hover:text-primary">
-                          +91 98411 15769
-                        </a>
+                        <div>
+                          <p className="font-semibold">Phone</p>
+                          <a href="tel:+919841115769" className="text-sm text-muted-foreground hover:text-primary mt-1 block">
+                            +91 98411 15769
+                          </a>
+                        </div>
                       </div>
-                      </div>
-                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
+                      <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform pb-4 border-b border-border/50">
                         <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold">Email</p>
-                        <a href="mailto:millath@nnovityworks.com" className="text-sm text-muted-foreground hover:text-primary">
-                          millath@nnovityworks.com
-                        </a>
-                      </div>
+                        <div>
+                          <p className="font-semibold">Email</p>
+                          <a href="mailto:smillath@nnovityworks.com" className="text-sm text-muted-foreground hover:text-primary mt-1 block">
+                            smillath@nnovityworks.com
+                          </a>
+                        </div>
                       </div>
                       <div className="flex items-start space-x-3 hover:translate-x-1 transition-transform">
                         <Clock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold">Business Hours</p>
-                        <p className="text-sm text-muted-foreground">
-                          Mon - Sat: 9:00 AM - 6:00 PM<br />
-                          Sunday: Closed
-                        </p>
+                        <div>
+                          <p className="font-semibold">Business Hours</p>
+                          <p className="text-sm text-muted-foreground mt-1">
+                            Mon - Sat: 9:00 AM - 6:00 PM<br />
+                            Sunday: Closed
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
+                    </CardContent>
                 </Card>
 
                 <Card className="bg-muted/50">
@@ -176,12 +196,24 @@ const Contact = () => {
                     <CardDescription>Fill out the form below and we'll get back to you shortly</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form 
+                      action="https://formsubmit.co/smillath@nnovityworks.com" 
+                      method="POST"
+                      onSubmit={handleSubmit}
+                      className="space-y-6"
+                    >
+                      {/* FormSubmit.io hidden inputs */}
+                      <input type="hidden" name="_subject" value="New Contact Form Submission from NnovityWorks Website" />
+                      <input type="hidden" name="_captcha" value="false" />
+                      <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + "/contact?success=true" : "/contact?success=true"} />
+                      <input type="hidden" name="_template" value="table" />
+                      
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor="name">Full Name *</Label>
                           <Input
                             id="name"
+                            name="name"
                             placeholder="Your name"
                             value={formData.name}
                             onChange={(e) => handleChange("name", e.target.value)}
@@ -192,6 +224,7 @@ const Contact = () => {
                           <Label htmlFor="phone">Phone Number *</Label>
                           <Input
                             id="phone"
+                            name="phone"
                             type="tel"
                             placeholder="+91 XXXXX XXXXX"
                             value={formData.phone}
@@ -205,6 +238,7 @@ const Contact = () => {
                         <Label htmlFor="email">Email Address *</Label>
                         <Input
                           id="email"
+                          name="email"
                           type="email"
                           placeholder="your.email@example.com"
                           value={formData.email}
@@ -220,23 +254,26 @@ const Contact = () => {
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="tally-sales">Tally Sales</SelectItem>
-                            <SelectItem value="tally-customization">Tally Customization</SelectItem>
-                            <SelectItem value="tally-cloud">Tally on Cloud</SelectItem>
-                            <SelectItem value="tally-support">Tally Technical Support</SelectItem>
-                            <SelectItem value="tally-training">Tally Training</SelectItem>
+                            <SelectItem value="tally-sales">Tally Prime Sales</SelectItem>
+                            <SelectItem value="tally-customization">Tally Prime Customization</SelectItem>
+                            <SelectItem value="tally-cloud">Tally Prime on Cloud</SelectItem>
+                            <SelectItem value="tally-support">Tally Prime Technical Support</SelectItem>
+                            <SelectItem value="tally-training">Tally Prime Training</SelectItem>
                             <SelectItem value="softskills-corporate">Corporate Softskills Training</SelectItem>
                             <SelectItem value="softskills-personal">Personal Development Training</SelectItem>
                             <SelectItem value="train-trainer">Train the Trainer Program</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
+                        {/* Hidden input for service to be sent via formsubmit */}
+                        <input type="hidden" name="service" value={formData.service} />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="message">Message *</Label>
                         <Textarea
                           id="message"
+                          name="message"
                           placeholder="Tell us about your requirements..."
                           rows={5}
                           value={formData.message}
@@ -245,8 +282,13 @@ const Contact = () => {
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full bg-hero-gradient hover:opacity-90">
-                        Send Message
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="w-full bg-hero-gradient hover:opacity-90"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Send Message"}
                       </Button>
                     </form>
                   </CardContent>
@@ -259,7 +301,7 @@ const Contact = () => {
         {/* Map Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8">Find Us in Chennai</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Find Us in Chennai</h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-muted rounded-lg overflow-hidden shadow-xl border border-border/50">
                 <iframe

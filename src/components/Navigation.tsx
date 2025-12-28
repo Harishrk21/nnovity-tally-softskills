@@ -45,7 +45,7 @@ const Navigation = () => {
               Home
             </NavLink>
 
-            {/* Tally Dropdown */}
+            {/* Tally Prime Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -60,9 +60,9 @@ const Navigation = () => {
                             to="/tally-sales"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Tally Sales</div>
+                            <div className="text-sm font-medium leading-none">Tally Prime Sales</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Purchase genuine TallyPrime and Tally ERP software
+                              Purchase genuine TallyPrime software
                             </p>
                           </NavLink>
                         </NavigationMenuLink>
@@ -73,7 +73,7 @@ const Navigation = () => {
                             to="/tally-support"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Tally Support</div>
+                            <div className="text-sm font-medium leading-none">Tally Prime Support</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Customization, cloud, training, and technical support
                             </p>
@@ -195,7 +195,7 @@ const Navigation = () => {
               Home
             </NavLink>
 
-            {/* Tally Mobile Dropdown */}
+            {/* Tally Prime Mobile Dropdown */}
             <div>
               <button
                 onClick={() => toggleMobileDropdown('tally')}
@@ -211,14 +211,14 @@ const Navigation = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
                   >
-                    Tally Sales
+                    Tally Prime Sales
                   </NavLink>
                   <NavLink
                     to="/tally-support"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
                   >
-                    Tally Support
+                    Tally Prime Support
                   </NavLink>
                 </div>
               )}

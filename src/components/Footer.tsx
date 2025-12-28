@@ -14,7 +14,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               Innovate. Empower. Excel.
               <br />
-              Empowering businesses with Tally solutions and professional soft skills training in Chennai.
+              Empowering businesses with Tally Prime solutions and professional soft skills training in Chennai.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
@@ -40,12 +40,12 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/tally-sales" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tally Sales
+                  Tally Prime Sales
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/tally-support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tally Support
+                  Tally Prime Support
                 </NavLink>
               </li>
               <li>
@@ -67,7 +67,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <NavLink to="/tally-sales" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tally Sales
+                  Tally Prime Sales
                 </NavLink>
               </li>
               <li>
@@ -104,8 +104,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <a href="mailto:millath@nnovityworks.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  millath@nnovityworks.com
+                <a href="mailto:smillath@nnovityworks.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  smillath@nnovityworks.com
                 </a>
               </li>
             </ul>
@@ -113,9 +113,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} NnovityWorks • Tally Sales & Support | Soft Skills Training</p>
+          <p>&copy; {new Date().getFullYear()} NnovityWorks • Tally Prime Sales & Support | Soft Skills Training</p>
           <p className="mt-2">
-            Best Tally Provider in Chennai | Top Soft Skills Trainer in Chennai | Samshul Millath - 15+ Years Experience
+            Best Tally Prime Provider in Chennai | Top Soft Skills Trainer in Chennai | Mr. Samshul Millath - 15+ Years Experience
           </p>
         </div>
       </div>
