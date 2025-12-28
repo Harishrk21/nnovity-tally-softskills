@@ -146,7 +146,7 @@ const SoftskillsTraining = () => {
           <div className="absolute inset-0" style={{ transform: 'none' }}>
             <img 
               src={heroSoftskills} 
-              alt="Professional soft skills training by Mr. Samshul Millath in Chennai - Communication, Leadership, and Personality Development" 
+              alt="Professional soft skills training by Mr. Samshul Millath in Chennai - Communication, Leadership, and Personality Development"
               className="w-full h-full object-cover object-center"
               style={{ 
                 position: 'absolute',
@@ -175,25 +175,25 @@ const SoftskillsTraining = () => {
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">ACTD & UKIQ Accredited</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 Professional Soft Skills Training
               </h1>
-              <p className="text-xl md:text-2xl mb-6 text-white/95 font-medium">
+              <p className="text-sm md:text-base mb-6 text-white/95 font-medium">
                 Led by <strong className="text-white">Mr. Samshul Millath</strong>, Tally Prime Implementation & Training Expert with 15+ years of experience, 
                 specializing in communication skills, personality development, leadership, public speaking, and corporate training excellence.
               </p>
-              <p className="text-lg md:text-xl mb-8 text-white/80">
+              <p className="text-sm md:text-base mb-8 text-white/80">
                 Empowering individuals and organizations across Chennai with comprehensive soft skills training 
                 for schools, colleges, and corporate events. Training 1000+ young minds from prestigious Educational institutions and CSR & NGO Activities.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+                <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                   <NavLink to="/contact">Book a Training Session</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+                <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                   <NavLink to="/about">About Our Trainer</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+                <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                   <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
@@ -205,8 +205,8 @@ const SoftskillsTraining = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Meet Mr. Samshul Millath - Your Expert Trainer</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Meet Mr. Samshul Millath - Your Expert Trainer</h2>
+              <p className="text-sm md:text-base text-muted-foreground mb-6">
                 <strong>Mr. Samshul Millath</strong> is a Tally Prime Implementation & Training Expert (Tally Prime & SoftSkills) with 
                 <strong> 15+ Years</strong> of highly experienced in Accounting & Business Automation Support.
               </p>
@@ -227,7 +227,7 @@ const SoftskillsTraining = () => {
                     <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center">
                       <Award className="w-8 h-8 text-secondary" />
                     </div>
-                    <CardTitle className="text-xl">{achievement.name}</CardTitle>
+                    <CardTitle className="text-base md:text-lg">{achievement.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription>{achievement.description}</CardDescription>
@@ -242,8 +242,8 @@ const SoftskillsTraining = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Comprehensive Soft Skills Training Programs</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Comprehensive Soft Skills Training Programs</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
                 Customized workshops focused on performance, communication, and professional development for schools, colleges, corporate teams, and individuals
               </p>
             </div>
@@ -256,7 +256,7 @@ const SoftskillsTraining = () => {
                       <div className="mb-4 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
                         <Icon className="w-6 h-6 text-secondary" />
                       </div>
-                      <CardTitle className="text-lg">{program.title}</CardTitle>
+                      <CardTitle className="text-base md:text-lg">{program.title}</CardTitle>
                       <CardDescription className="text-sm">{program.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -274,11 +274,11 @@ const SoftskillsTraining = () => {
         {/* Who We Serve */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Who We Serve</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Who We Serve</h2>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-xl">Schools & Colleges</CardTitle>
+                  <CardTitle className="text-base md:text-lg">Schools & Colleges</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -289,7 +289,7 @@ const SoftskillsTraining = () => {
               </Card>
               <Card className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-xl">Corporate Organizations</CardTitle>
+                  <CardTitle className="text-base md:text-lg">Corporate Organizations</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -300,7 +300,7 @@ const SoftskillsTraining = () => {
               </Card>
               <Card className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-xl">Individuals</CardTitle>
+                  <CardTitle className="text-base md:text-lg">Individuals</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
@@ -317,8 +317,8 @@ const SoftskillsTraining = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto font-medium">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
+            <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with NnovityWorks today. Join 1000+ individuals and organizations in Chennai who have transformed their capabilities 
               through our comprehensive soft skills training programs led by Mr. Samshul Millath.
             </p>

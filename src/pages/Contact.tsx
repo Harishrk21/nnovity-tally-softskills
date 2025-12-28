@@ -116,8 +116,8 @@ const Contact = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Get in Touch</h1>
-              <p className="text-xl md:text-2xl text-white/95 font-medium">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Get in Touch</h1>
+              <p className="text-sm md:text-base text-white/95 font-medium">
                 Have questions about our services? We're here to help you find the right solution.
               </p>
             </div>
@@ -177,7 +177,7 @@ const Contact = () => {
 
                 <Card className="bg-muted/50">
                   <CardHeader>
-                    <CardTitle className="text-lg">Quick Response</CardTitle>
+                    <CardTitle className="text-base md:text-lg">Quick Response</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
@@ -301,7 +301,7 @@ const Contact = () => {
         {/* Map Section */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Find Us in Chennai</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Find Us in Chennai</h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-muted rounded-lg overflow-hidden shadow-xl border border-border/50">
                 <iframe
@@ -310,7 +310,6 @@ const Contact = () => {
                   height="450"
                   style={{ border: 0 }}
                   allowFullScreen
-                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full"
                   title="NnovityWorks Location - 13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East,chennai-600102"

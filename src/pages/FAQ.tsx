@@ -71,10 +71,10 @@ const FAQ = () => {
         </div>
         <div className="container mx-auto max-w-6xl relative z-10 py-12 md:py-16 px-4">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto font-medium">
+            <p className="text-sm md:text-base text-white/90 max-w-3xl mx-auto font-medium">
               Find answers to common questions about our Tally Prime solutions, CRM, ERP, HRMS implementations, 
               training programs, pricing, and support services.
             </p>
@@ -88,7 +88,7 @@ const FAQ = () => {
           
           {/* Tally Prime Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Tally Prime Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Tally Prime Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="tally-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -162,7 +162,7 @@ const FAQ = () => {
 
           {/* CRM Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">CRM Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">CRM Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="crm-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -213,7 +213,7 @@ const FAQ = () => {
 
           {/* ERP Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">ERP Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">ERP Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="erp-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -266,7 +266,7 @@ const FAQ = () => {
 
           {/* HRMS Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">HRMS Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">HRMS Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="hrms-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -318,7 +318,7 @@ const FAQ = () => {
 
           {/* Training Programs */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Softskills Training Programs</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Softskills Training Programs</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="training-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -381,7 +381,7 @@ const FAQ = () => {
 
           {/* Pricing & Payment */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Pricing & Payment</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Pricing & Payment</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="pricing-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -435,7 +435,7 @@ const FAQ = () => {
 
           {/* Support & Services */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Support & Services</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary">Support & Services</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="support-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -501,8 +501,8 @@ const FAQ = () => {
 
           {/* Still Have Questions Section */}
           <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background rounded-xl p-8 md:p-12 text-center animate-fade-in border border-primary/20">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Still Have Questions?</h3>
-            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold mb-4">Still Have Questions?</h3>
+            <p className="text-sm md:text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions 
               about our services, pricing, or implementation process.
             </p>

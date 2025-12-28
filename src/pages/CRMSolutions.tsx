@@ -104,7 +104,7 @@ const CRMSolutions = () => {
           <div className="absolute inset-0" style={{ transform: 'none' }}>
             <img 
               src={heroCRM} 
-              alt="CRM software solutions for customer relationship management in Chennai" 
+              alt="CRM software solutions for customer relationship management in Chennai"
               className="w-full h-full object-cover object-center"
               style={{ 
                 position: 'absolute',
@@ -133,18 +133,18 @@ const CRMSolutions = () => {
                 <Users className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Customer Relationship Management</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 Transform Customer Relationships with Powerful CRM Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/95 font-medium">
+              <p className="text-sm md:text-base mb-8 text-white/95 font-medium">
                 Streamline sales, marketing, and customer service with our comprehensive CRM platform. 
                 Increase revenue, improve customer satisfaction, and grow your business faster.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-lg px-8 shadow-xl transition-all duration-300">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-sm md:text-base px-6 py-3 shadow-xl transition-all duration-300">
                   <NavLink to="/contact">Request Demo</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 transition-all duration-300">
+                <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-sm md:text-base px-6 py-3 transition-all duration-300">
                   <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
@@ -156,7 +156,7 @@ const CRMSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto animate-fade-in">
-              <h2 className="text-3xl font-bold mb-6 text-center">What is CRM and Why Do You Need It?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">What is CRM and Why Do You Need It?</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p>
                   <strong>CRM (Customer Relationship Management)</strong> is a technology system that helps businesses manage all interactions 
@@ -171,7 +171,7 @@ const CRMSolutions = () => {
                 <div className="grid md:grid-cols-2 gap-6 not-prose mt-8">
                   <Card className="border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg">
                     <CardHeader>
-                      <CardTitle className="text-lg">Before CRM (Common Problems)</CardTitle>
+                      <CardTitle className="text-base md:text-lg">Before CRM (Common Problems)</CardTitle>
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground space-y-2">
                       <p>• Customer data spread across multiple systems</p>
@@ -183,7 +183,7 @@ const CRMSolutions = () => {
                   </Card>
                   <Card className="border-l-4 border-l-secondary transition-all duration-300 hover:shadow-lg">
                     <CardHeader>
-                      <CardTitle className="text-lg">After CRM (Solutions)</CardTitle>
+                      <CardTitle className="text-base md:text-lg">After CRM (Solutions)</CardTitle>
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground space-y-2">
                       <p>• Single source of truth for all customer data</p>
@@ -203,8 +203,8 @@ const CRMSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl font-bold mb-4">Comprehensive CRM Features</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Comprehensive CRM Features</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 Everything you need to manage customer relationships effectively, all in one powerful platform
               </p>
             </div>
@@ -217,7 +217,7 @@ const CRMSolutions = () => {
                       <div className="mb-4 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
                         <Icon className="w-7 h-7 text-primary" />
                       </div>
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <CardTitle className="text-base md:text-lg">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{feature.description}</CardDescription>
@@ -233,8 +233,8 @@ const CRMSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Why Choose Our CRM Solutions?</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Our CRM Solutions?</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 Proven results that drive business growth and customer satisfaction
               </p>
             </div>
@@ -247,7 +247,7 @@ const CRMSolutions = () => {
                       <div className="mx-auto mb-4 w-20 h-20 rounded-2xl bg-success-gradient flex items-center justify-center shadow-lg">
                         <Icon className="w-10 h-10 text-accent-foreground" />
                       </div>
-                      <CardTitle className="text-2xl">{benefit.title}</CardTitle>
+                      <CardTitle className="text-xl md:text-2xl">{benefit.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{benefit.description}</CardDescription>
@@ -263,7 +263,7 @@ const CRMSolutions = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-16">Perfect For Every Business Type</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">Perfect For Every Business Type</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="border-l-4 border-l-primary">
                   <CardHeader>

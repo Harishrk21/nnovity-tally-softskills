@@ -384,7 +384,7 @@ const Index = () => {
                     </div>
                     
                     {/* Main Heading */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
                       <span className="block bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent text-shadow-glow gradient-animate">
                         Innovate.
                       </span>
@@ -397,7 +397,7 @@ const Index = () => {
                     </h1>
                     
                     {/* Subheading */}
-                    <p className="text-lg md:text-xl font-bold text-white/95 leading-relaxed">
+                    <p className="text-sm md:text-base font-bold text-white/95 leading-relaxed">
                       Empowering businesses with{' '}
                       <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                         Tally Prime solutions
@@ -411,7 +411,7 @@ const Index = () => {
                     {/* Expert Info */}
                     <div className="glass-morphism p-6 rounded-2xl inline-block">
                       <p className="text-sm md:text-base text-white/90 mb-2">
-                        Led by <span className="font-black text-lg md:text-xl bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Mr. Samshul Millath</span>
+                        Led by <span className="font-black text-sm md:text-base bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Mr. Samshul Millath</span>
                       </p>
                       <p className="text-cyan-300 text-sm md:text-base font-semibold">
                         Tally Prime expert and corporate trainer with 15+ years of experience
@@ -420,13 +420,13 @@ const Index = () => {
                     
                     {/* CTA Buttons */}
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                      <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+                      <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                         <NavLink to="/contact">
                           Get Started 
                           <ArrowRight className="ml-2 w-5 h-5" />
                         </NavLink>
                       </Button>
-                      <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+                      <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                         <NavLink to="/contact">
                           Contact Us
                         </NavLink>
@@ -479,10 +479,10 @@ const Index = () => {
                   <Sparkles className="w-6 h-6" />
                   <span className="text-base font-bold">Complete Business Solutions</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent leading-tight">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent leading-tight">
                   Transform Your Business & People
                 </h2>
-                <p className="text-base md:text-lg text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed">
+                <p className="text-sm md:text-base text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed">
                   From software solutions to skills development, we provide everything you need to grow and succeed. 
                   Our comprehensive approach ensures both your technology and team are optimized for maximum performance.
                 </p>
@@ -509,7 +509,7 @@ const Index = () => {
                           <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
                         </div>
                         
-                        <CardTitle className="text-lg md:text-xl font-bold text-slate-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+                        <CardTitle className="text-base md:text-lg font-bold text-slate-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
                           {service.title}
                         </CardTitle>
                       </CardHeader>
@@ -547,14 +547,14 @@ const Index = () => {
                   <div className="relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                     <img 
                       src={teamSuccess} 
-                      alt="NnovityWorks team empowering Chennai businesses" 
+                      alt="NnovityWorks team empowering Chennai businesses"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-blue-900/40 to-transparent" />
                     
                     {/* Overlay Badge */}
                     <div className="absolute bottom-8 left-8 right-8 glass-morphism p-6 rounded-2xl">
-                      <p className="text-white font-bold text-base md:text-lg">Trusted by 500+ Businesses</p>
+                      <p className="text-white font-bold text-sm md:text-base">Trusted by 500+ Businesses</p>
                       <p className="text-cyan-300">Across Chennai and Tamil Nadu</p>
                     </div>
                   </div>
@@ -566,13 +566,13 @@ const Index = () => {
                     <div className="inline-block px-6 py-3 bg-cyan-500/20 rounded-full mb-6">
                       <span className="font-bold text-cyan-300">Our Impact</span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 leading-tight">
                       Empowering Chennai Businesses 
                       <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                         Since Inception
                       </span>
                     </h2>
-                    <p className="text-base md:text-lg text-white/90 leading-relaxed">
+                    <p className="text-sm md:text-base text-white/90 leading-relaxed">
                       We've helped hundreds of organizations streamline their operations with cutting-edge software 
                       and develop their workforce through world-class training programs.
                     </p>
@@ -581,7 +581,7 @@ const Index = () => {
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-6">
                     <div className="stat-card glass-morphism p-8 rounded-2xl hover-lift cursor-pointer">
-                      <div className="text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-3">
+                      <div className="text-2xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-3">
                         500+
                       </div>
                       <div className="text-sm md:text-base font-semibold text-white/90">Happy Clients</div>
@@ -589,31 +589,31 @@ const Index = () => {
                     </div>
                     
                     <div className="stat-card glass-morphism p-8 rounded-2xl hover-lift cursor-pointer">
-                      <div className="text-5xl font-black bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent mb-3">
+                      <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent mb-3">
                         10K+
                       </div>
-                      <div className="text-lg font-semibold text-white/90">Training Hours</div>
+                      <div className="text-sm md:text-base font-semibold text-white/90">Training Hours</div>
                       <div className="text-sm text-white/70 mt-1">Delivered</div>
                     </div>
                     
                     <div className="stat-card glass-morphism p-8 rounded-2xl hover-lift cursor-pointer">
-                      <div className="text-5xl font-black bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-3">
+                      <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-3">
                         15+
                       </div>
-                      <div className="text-lg font-semibold text-white/90">Years Experience</div>
+                      <div className="text-sm md:text-base font-semibold text-white/90">Years Experience</div>
                       <div className="text-sm text-white/70 mt-1">Industry Expertise</div>
                     </div>
                     
                     <div className="stat-card glass-morphism p-8 rounded-2xl hover-lift cursor-pointer">
-                      <div className="text-5xl font-black bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-3">
+                      <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-3">
                         100%
                       </div>
-                      <div className="text-lg font-semibold text-white/90">Satisfaction</div>
+                      <div className="text-sm md:text-base font-semibold text-white/90">Satisfaction</div>
                       <div className="text-sm text-white/70 mt-1">Guaranteed</div>
                     </div>
                   </div>
                   
-                  <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-white text-slate-900 hover:bg-white/90 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all duration-300 font-bold">
+                  <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-white text-slate-900 hover:bg-white/90 shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all duration-300 font-bold">
                     <NavLink to="/about">
                       Our Story 
                       <ArrowRight className="ml-2 w-5 h-5" />
@@ -633,7 +633,7 @@ const Index = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
                   How We Transform Your Business
                 </h2>
-                <p className="text-base md:text-lg text-slate-600 font-medium max-w-3xl mx-auto">
+                <p className="text-sm md:text-base text-slate-600 font-medium max-w-3xl mx-auto">
                   Our proven 4-step process ensures successful implementation and lasting results
                 </p>
               </div>
@@ -688,7 +688,7 @@ const Index = () => {
                           <div className={`mx-auto mb-4 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br ${phase.gradient} flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110`}>
                             <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                           </div>
-                          <CardTitle className="text-lg md:text-xl font-bold text-slate-900 mb-2">{phase.title}</CardTitle>
+                          <CardTitle className="text-base md:text-lg font-bold text-slate-900 mb-2">{phase.title}</CardTitle>
                         </CardHeader>
                         
                         <CardContent className="text-center pb-6">
@@ -714,10 +714,10 @@ const Index = () => {
               <div className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full mb-6 font-bold">
                 Trusted Partnerships
               </div>
-              <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
                 Our Trusted Partners
               </h2>
-              <p className="text-xl text-slate-600 font-medium max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-slate-600 font-medium max-w-2xl mx-auto">
                 We collaborate with industry-leading brands to deliver exceptional solutions
               </p>
             </div>
@@ -751,7 +751,7 @@ const Index = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <img 
                               src={partner.logo} 
-                              alt={`${partner.name} logo`} 
+                              alt={`${partner.name} logo`}
                               className="max-h-24 max-w-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
                             />
                           </CardContent>
@@ -772,7 +772,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15)_0%,transparent_50%)]"></div>
           
           <div className="container mx-auto px-4 relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 md:mb-16 text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-12 md:mb-16 text-white">
               Why Choose 
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2">
                 NnovityWorks?
@@ -829,13 +829,13 @@ const Index = () => {
                         </div>
                         <div className={`absolute inset-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.gradient} blur-2xl opacity-0 group-hover:opacity-60 transition-opacity duration-300`}></div>
                       </div>
-                      <CardTitle className="text-xl md:text-2xl font-bold text-white group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      <CardTitle className="text-base md:text-lg font-bold text-white group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {feature.title}
                       </CardTitle>
                     </CardHeader>
                     
                     <CardContent className="text-center pb-8">
-                      <CardDescription className="text-base md:text-lg text-white/80 leading-relaxed">
+                      <CardDescription className="text-sm md:text-base text-white/80 leading-relaxed">
                         {feature.description}
                       </CardDescription>
                     </CardContent>
@@ -851,10 +851,10 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
                   Client Testimonials
                 </h2>
-                <p className="text-base md:text-lg text-slate-600 font-medium">
+                <p className="text-sm md:text-base text-slate-600 font-medium">
                   What our satisfied clients say about us
                 </p>
               </div>
@@ -946,7 +946,7 @@ const Index = () => {
                       <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-gradient-to-br from-blue-600 to-cyan-600 p-1 shadow-2xl group-hover:scale-110 transition-transform duration-300">
                         <img 
                           src="/millath.png" 
-                          alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert" 
+                          alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert"
                           className="w-full h-full rounded-full object-cover"
                         />
                       </div>
@@ -955,7 +955,7 @@ const Index = () => {
                     
                     <div className="flex-1 space-y-4 text-center lg:text-left">
                       <div>
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 text-slate-900">Mr. Samshul Millath</h3>
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-black mb-3 text-slate-900">Mr. Samshul Millath</h3>
                         <p className="text-lg md:text-xl bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent font-bold mb-6">
                           Tally Prime Implementation & Training Expert
                         </p>
@@ -997,27 +997,27 @@ const Index = () => {
           
           <div className="container mx-auto px-4 relative z-10 text-center">
             <div className="max-w-5xl mx-auto space-y-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight">
                 Ready to Upgrade Your Skills or Streamline Your Business Systems?
               </h2>
               
-              <p className="text-lg md:text-xl text-white/95 font-medium leading-relaxed max-w-4xl mx-auto">
+              <p className="text-sm md:text-base text-white/95 font-medium leading-relaxed max-w-4xl mx-auto">
                 Get in touch with NnovityWorks today. We blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
               </p>
               
               <div className="flex flex-wrap justify-center gap-6 pt-8">
-                <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-white text-blue-600 hover:bg-white/90 shadow-2xl hover:shadow-white/20 hover:scale-110 transition-all duration-300 font-black">
+                <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-white text-blue-600 hover:bg-white/90 shadow-2xl hover:shadow-white/20 hover:scale-110 transition-all duration-300 font-black">
                   <NavLink to="/contact">
                     Contact Us
                     <ArrowRight className="ml-3 w-6 h-6" />
                   </NavLink>
                 </Button>
                 
-                <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/50 hover:bg-white/10 hover:border-white shadow-2xl hover:scale-110 transition-all duration-300 font-black">
+                <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/50 hover:bg-white/10 hover:border-white shadow-2xl hover:scale-110 transition-all duration-300 font-black">
                   <NavLink to="/contact">Request a Demo</NavLink>
                 </Button>
                 
-                <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600 shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 font-black">
+                <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600 shadow-2xl hover:shadow-orange-500/50 hover:scale-110 transition-all duration-300 font-black">
                   <NavLink to="/softskills-training">Enroll Now</NavLink>
                 </Button>
               </div>

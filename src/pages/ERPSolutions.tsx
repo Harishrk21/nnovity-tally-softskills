@@ -106,7 +106,7 @@ const ERPSolutions = () => {
           <div className="absolute inset-0" style={{ transform: 'none' }}>
             <img 
               src={heroERP} 
-              alt="ERP software solutions for enterprise resource planning in Chennai" 
+              alt="ERP software solutions for enterprise resource planning in Chennai"
               className="w-full h-full object-cover object-center"
               style={{ 
                 position: 'absolute',
@@ -135,18 +135,18 @@ const ERPSolutions = () => {
                 <Settings className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Enterprise Resource Planning</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 animate-fade-in bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 animate-fade-in bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent" style={{ animationDelay: '0.2s' }}>
                 Unify Your Business with Powerful ERP Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/95 font-medium animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-sm md:text-base mb-8 text-white/95 font-medium animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 Integrate finance, operations, sales, and HR into one seamless platform. 
                 Boost efficiency, reduce costs, and drive growth with our comprehensive ERP systems.
               </p>
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl hover:scale-105 transition-all duration-300">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-sm md:text-base px-6 py-3 shadow-xl hover:scale-105 transition-all duration-300">
                   <NavLink to="/contact">Request Consultation</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-lg px-8 hover:scale-105 transition-all duration-300">
+                <Button asChild size="lg" variant="outline" className="border-2 border-accent-foreground text-accent-foreground hover:bg-accent-foreground hover:text-accent text-sm md:text-base px-6 py-3 hover:scale-105 transition-all duration-300">
                   <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
@@ -158,8 +158,8 @@ const ERPSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl font-bold mb-4">Comprehensive ERP Modules</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Comprehensive ERP Modules</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 Complete business management suite with integrated modules for every department
               </p>
             </div>
@@ -176,7 +176,7 @@ const ERPSolutions = () => {
                       <div className="mb-4 w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
                         <Icon className="w-7 h-7 text-accent group-hover:rotate-12 transition-transform" />
                       </div>
-                      <CardTitle className="text-xl group-hover:text-accent transition-colors">{module.title}</CardTitle>
+                      <CardTitle className="text-base md:text-lg group-hover:text-accent transition-colors">{module.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{module.description}</CardDescription>
@@ -192,8 +192,8 @@ const ERPSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Transform Your Business Operations</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Transform Your Business Operations</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 Experience measurable improvements across your entire organization
               </p>
             </div>
@@ -206,7 +206,7 @@ const ERPSolutions = () => {
                       <div className="mx-auto mb-4 w-20 h-20 rounded-2xl bg-hero-gradient flex items-center justify-center shadow-lg">
                         <Icon className="w-10 h-10 text-primary-foreground" />
                       </div>
-                      <CardTitle className="text-2xl">{benefit.title}</CardTitle>
+                      <CardTitle className="text-xl md:text-2xl">{benefit.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{benefit.description}</CardDescription>
@@ -222,11 +222,11 @@ const ERPSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-16">Industry-Specific Solutions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">Industry-Specific Solutions</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="border-l-4 border-l-accent">
                   <CardHeader>
-                    <CardTitle className="text-xl">Manufacturing & Production</CardTitle>
+                    <CardTitle className="text-base md:text-lg">Manufacturing & Production</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3 text-muted-foreground">
@@ -247,7 +247,7 @@ const ERPSolutions = () => {
                 </Card>
                 <Card className="border-l-4 border-l-primary">
                   <CardHeader>
-                    <CardTitle className="text-xl">Retail & Distribution</CardTitle>
+                    <CardTitle className="text-base md:text-lg">Retail & Distribution</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3 text-muted-foreground">
@@ -268,7 +268,7 @@ const ERPSolutions = () => {
                 </Card>
                 <Card className="border-l-4 border-l-secondary">
                   <CardHeader>
-                    <CardTitle className="text-xl">Service Industries</CardTitle>
+                    <CardTitle className="text-base md:text-lg">Service Industries</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3 text-muted-foreground">

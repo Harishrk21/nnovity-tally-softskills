@@ -91,13 +91,13 @@ const About = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 About NnovityWorks
               </h1>
-              <p className="text-xl md:text-2xl font-bold text-white/95 mb-4">
+              <p className="text-sm md:text-base font-bold text-white/95 mb-4">
                 Innovate. Empower. Excel.
               </p>
-              <p className="text-lg md:text-xl text-white/80">
+              <p className="text-sm md:text-base text-white/80">
                 Empowering businesses with Tally Prime solutions and professional soft skills training.
               </p>
             </div>
@@ -108,7 +108,7 @@ const About = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Story</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Story</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6 animate-fade-in">
                 <p>
                   At NnovityWorks, we blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
@@ -124,15 +124,15 @@ const About = () => {
                 </p>
                 <div className="mt-8 grid md:grid-cols-3 gap-6 not-prose">
                   <div className="text-center p-6 bg-primary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
-                    <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-2">500+</div>
                     <div className="text-sm text-muted-foreground">Satisfied Clients</div>
                   </div>
                   <div className="text-center p-6 bg-secondary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
-                    <div className="text-3xl font-bold text-secondary mb-2">10K+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-secondary mb-2">10K+</div>
                     <div className="text-sm text-muted-foreground">Training Hours Delivered</div>
                   </div>
                   <div className="text-center p-6 bg-accent/10 rounded-xl transition-all duration-300 hover:shadow-lg">
-                    <div className="text-3xl font-bold text-accent mb-2">15+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-accent mb-2">15+</div>
                     <div className="text-sm text-muted-foreground">Years of Excellence</div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const About = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">About the Founder</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">About the Founder</h2>
               <Card className="border-secondary/30 shadow-xl overflow-hidden animate-fade-in">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5 gap-0">
@@ -156,7 +156,7 @@ const About = () => {
                           <div className="absolute inset-0 bg-hero-gradient opacity-20 rounded-2xl blur-xl"></div>
                           <img 
                             src="/millath.png" 
-                            alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert" 
+                            alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert"
                             className="relative rounded-2xl shadow-2xl w-full max-w-xs object-cover transition-transform duration-300 hover:scale-105"
                           />
                         </div>
@@ -166,8 +166,8 @@ const About = () => {
                     {/* Content Column */}
                     <div className="md:col-span-3 p-8 md:p-10 space-y-6">
                       <div>
-                        <h3 className="text-3xl font-bold mb-2">Mr. Samshul Millath</h3>
-                        <p className="text-lg text-primary mb-3 font-semibold">Tally Prime Implementation & Training Expert (Tally Prime & SoftSkills)</p>
+                        <h3 className="text-xl md:text-2xl font-bold mb-2">Mr. Samshul Millath</h3>
+                        <p className="text-sm md:text-base text-primary mb-3 font-semibold">Tally Prime Implementation & Training Expert (Tally Prime & SoftSkills)</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                           <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold">
                             15+ Years Experience
@@ -213,7 +213,7 @@ const About = () => {
         {/* Our Values */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Core Values</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Core Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {values.map((value, index) => {
                 const Icon = value.icon;
@@ -223,7 +223,7 @@ const About = () => {
                       <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 hover:bg-primary/20">
                         <Icon className="w-8 h-8 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-lg mb-2">{value.title}</h3>
+                      <h3 className="font-semibold text-base md:text-lg mb-2">{value.title}</h3>
                       <p className="text-sm text-muted-foreground">{value.description}</p>
                     </CardContent>
                   </Card>
@@ -243,10 +243,10 @@ const About = () => {
                 <Sparkles className="w-6 h-6" />
                 <span className="text-base font-bold">Our Services</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent leading-tight">
                 What We Offer
               </h2>
-              <p className="text-base md:text-lg text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed">
+              <p className="text-sm md:text-base text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed">
                 Comprehensive solutions for your business and professional development needs
               </p>
             </div>
@@ -328,7 +328,7 @@ const About = () => {
                           <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
                         </div>
                         
-                        <CardTitle className="text-lg md:text-xl font-bold text-slate-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
+                        <CardTitle className="text-base md:text-lg font-bold text-slate-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight">
                           {service.title}
                         </CardTitle>
                       </CardHeader>
@@ -364,18 +364,18 @@ const About = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto font-medium">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
+            <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with NnovityWorks today. We blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">
                   Get in Touch 
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                 <a href="tel:+919841115769">Call: +91 98411 15769</a>
               </Button>
             </div>

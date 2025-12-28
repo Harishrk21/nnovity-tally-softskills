@@ -106,7 +106,7 @@ const HRMSSolutions = () => {
           <div className="absolute inset-0" style={{ transform: 'none' }}>
             <img 
               src={heroHRMS} 
-              alt="HRMS software solutions for human resource management in Chennai" 
+              alt="HRMS software solutions for human resource management in Chennai"
               className="w-full h-full object-cover object-center"
               style={{ 
                 position: 'absolute',
@@ -135,18 +135,18 @@ const HRMSSolutions = () => {
                 <Users className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Human Resource Management System</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 animate-fade-in bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 animate-fade-in bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent" style={{ animationDelay: '0.2s' }}>
                 Simplify HR Operations with Intelligent HRMS Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-white/95 font-medium animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-sm md:text-base mb-8 text-white/95 font-medium animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 From recruitment to retirement, manage your entire employee lifecycle with our comprehensive 
                 HRMS platform. Automate payroll, track attendance, and empower your workforce.
               </p>
               <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 shadow-xl hover:scale-105 transition-all duration-300">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-sm md:text-base px-6 py-3 shadow-xl hover:scale-105 transition-all duration-300">
                   <NavLink to="/contact">Request Demo</NavLink>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary text-lg px-8 hover:scale-105 transition-all duration-300">
+                <Button asChild size="lg" variant="outline" className="border-2 border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary text-sm md:text-base px-6 py-3 hover:scale-105 transition-all duration-300">
                   <a href="tel:+919841115769">Call: +91 98411 15769</a>
                 </Button>
               </div>
@@ -158,8 +158,8 @@ const HRMSSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
-              <h2 className="text-4xl font-bold mb-4">Complete HRMS Features</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Complete HRMS Features</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 All the tools you need to manage your human resources efficiently and effectively
               </p>
             </div>
@@ -176,7 +176,7 @@ const HRMSSolutions = () => {
                       <div className="mb-4 w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 group-hover:scale-110 transition-all duration-300">
                         <Icon className="w-7 h-7 text-secondary group-hover:rotate-12 transition-transform" />
                       </div>
-                      <CardTitle className="text-xl group-hover:text-secondary transition-colors">{feature.title}</CardTitle>
+                      <CardTitle className="text-base md:text-lg group-hover:text-secondary transition-colors">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{feature.description}</CardDescription>
@@ -192,8 +192,8 @@ const HRMSSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Why Businesses Choose Our HRMS</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Businesses Choose Our HRMS</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
                 Measurable improvements in HR efficiency and employee satisfaction
               </p>
             </div>
@@ -206,7 +206,7 @@ const HRMSSolutions = () => {
                       <div className="mx-auto mb-4 w-20 h-20 rounded-2xl bg-warm-gradient flex items-center justify-center shadow-lg">
                         <Icon className="w-10 h-10 text-secondary-foreground" />
                       </div>
-                      <CardTitle className="text-2xl">{benefit.title}</CardTitle>
+                      <CardTitle className="text-xl md:text-2xl">{benefit.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-base">{benefit.description}</CardDescription>
@@ -224,8 +224,8 @@ const HRMSSolutions = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <h2 className="text-4xl font-bold">Advanced Payroll Management</h2>
-                  <p className="text-lg text-muted-foreground">
+                  <h2 className="text-2xl md:text-3xl font-bold">Advanced Payroll Management</h2>
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Our HRMS includes a powerful payroll engine that handles complex salary structures, 
                     multiple payment modes, and full statutory compliance.
                   </p>
@@ -247,7 +247,7 @@ const HRMSSolutions = () => {
                 </div>
                 <Card className="border-2 border-primary/20 shadow-xl">
                   <CardHeader>
-                    <CardTitle className="text-2xl">Compliance Made Easy</CardTitle>
+                    <CardTitle className="text-xl md:text-2xl">Compliance Made Easy</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="bg-muted p-4 rounded-lg">
@@ -279,7 +279,7 @@ const HRMSSolutions = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-16">Solutions for Every Company Size</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-16">Solutions for Every Company Size</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="border-l-4 border-l-secondary text-center">
                   <CardHeader>

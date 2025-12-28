@@ -89,7 +89,7 @@ const TallySales = () => {
           <div className="absolute inset-0 opacity-10" style={{ transform: 'none' }}>
             <img 
               src={heroTally} 
-              alt="Genuine Tally Prime software sales and licensing in Chennai - TallyPrime" 
+              alt="Genuine Tally Prime software sales and licensing in Chennai - TallyPrime"
               className="w-full h-full object-cover object-center"
               style={{ 
                 position: 'absolute',
@@ -104,10 +104,10 @@ const TallySales = () => {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl font-bold mb-6">
                 Tally Prime Software Sales & Licensing
               </h1>
-              <p className="text-xl mb-8 text-primary-foreground/90">
+              <p className="text-sm md:text-base mb-8 text-primary-foreground/90">
                 Official Tally Prime licenses with version recommendations based on your business needs. 
                 Fast onboarding and setup with expert guidance.
               </p>
@@ -127,7 +127,7 @@ const TallySales = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto animate-fade-in">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">What is Tally Prime?</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">What is Tally Prime?</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p>
                   <strong>Tally Prime</strong> is India's most popular business management software, trusted by millions of businesses worldwide. 
@@ -141,7 +141,7 @@ const TallySales = () => {
                 <div className="grid md:grid-cols-2 gap-6 not-prose mt-8">
                   <Card className="border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg">
                     <CardHeader>
-                      <CardTitle className="text-lg">Perfect For Beginners</CardTitle>
+                      <CardTitle className="text-base md:text-lg">Perfect For Beginners</CardTitle>
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground">
                       <ul className="space-y-2">
@@ -154,7 +154,7 @@ const TallySales = () => {
                   </Card>
                   <Card className="border-l-4 border-l-secondary transition-all duration-300 hover:shadow-lg">
                     <CardHeader>
-                      <CardTitle className="text-lg">Powerful For Experts</CardTitle>
+                      <CardTitle className="text-base md:text-lg">Powerful For Experts</CardTitle>
                     </CardHeader>
                     <CardContent className="text-sm text-muted-foreground">
                       <ul className="space-y-2">
@@ -174,7 +174,7 @@ const TallySales = () => {
         {/* Why Choose Us */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Why Buy Tally Prime from Nnovity Works?</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Why Buy Tally Prime from Nnovity Works?</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -184,7 +184,7 @@ const TallySales = () => {
                       <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center transition-all duration-300 hover:bg-primary/20">
                         <Icon className="w-8 h-8 text-primary" />
                       </div>
-                      <CardTitle className="text-lg">{feature.title}</CardTitle>
+                      <CardTitle className="text-base md:text-lg">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription>{feature.description}</CardDescription>
@@ -200,8 +200,8 @@ const TallySales = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-3xl font-bold mb-4">Our Tally Prime Products</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Tally Prime Products</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
                 Choose the perfect Tally Prime solution for your business needs. All products come with genuine licenses and full support.
               </p>
             </div>
@@ -214,7 +214,7 @@ const TallySales = () => {
                     </div>
                   )}
                   <CardHeader>
-                    <CardTitle className="text-2xl">{product.name}</CardTitle>
+                    <CardTitle className="text-xl md:text-2xl">{product.name}</CardTitle>
                     <CardDescription>{product.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -240,15 +240,15 @@ const TallySales = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white animate-fade-in">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Streamline Your Business?</h2>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto font-medium">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Streamline Your Business?</h2>
+            <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with our sales team for personalized product recommendations and competitive pricing.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Contact Sales Team</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
                 <NavLink to="/tally-support">View Support Services</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
