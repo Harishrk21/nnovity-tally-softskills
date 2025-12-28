@@ -141,7 +141,7 @@ const Index = () => {
             "@type": "Organization",
             "name": "NnovityWorks",
             "url": "https://nnovityworks.com",
-            "logo": "https://nnovityworks.com/logo.png",
+            "logo": "https://nnovityworks.com/logo2.jpg",
             "description": "Leading Tally Prime Solutions & Professional Soft Skills Training provider in Chennai. Expert services by Mr. Samshul Millath with 15+ years experience.",
             "address": {
               "@type": "PostalAddress",
