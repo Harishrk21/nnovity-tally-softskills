@@ -9,8 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -23,34 +23,66 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  // Check for success parameter in URL (from formsubmit.io redirect)
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-      });
-      // Clean up URL
-      window.history.replaceState({}, document.title, window.location.pathname);
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-    }
-  }, [toast]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    // Don't prevent default - let form submit naturally to formsubmit.io
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
-    
-    // FormSubmit.io will handle the submission and redirect to _next URL
-    // The form will submit naturally to https://formsubmit.co/smillath@nnovityworks.com
+    setIsSuccess(false);
+
+    try {
+      // Create FormData object
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('service', formData.service);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('_subject', 'New Contact Form Submission from NnovityWorks Website');
+      formDataToSend.append('_captcha', 'false');
+      formDataToSend.append('_template', 'table');
+
+      // Submit to formsubmit.co using fetch
+      const response = await fetch('https://formsubmit.co/ajax/smillath@nnovityworks.com', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          setIsSuccess(true);
+          toast({
+            title: "Message Sent Successfully!",
+            description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+            variant: "default",
+          });
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+        } else {
+          throw new Error('Submission failed');
+        }
+      } else {
+        throw new Error('Network error');
+      }
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -196,17 +228,21 @@ const Contact = () => {
                     <CardDescription>Fill out the form below and we'll get back to you shortly</CardDescription>
                   </CardHeader>
                   <CardContent>
+                    {isSuccess && (
+                      <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-start space-x-3 animate-fade-in">
+                        <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold text-green-800 dark:text-green-200">Message Sent Successfully!</p>
+                          <p className="text-sm text-green-700 dark:text-green-300 mt-1">
+                            Thank you for contacting us. We'll get back to you within 24 hours.
+                          </p>
+                        </div>
+                      </div>
+                    )}
                     <form 
-                      action="https://formsubmit.co/smillath@nnovityworks.com" 
-                      method="POST"
                       onSubmit={handleSubmit}
                       className="space-y-6"
                     >
-                      {/* FormSubmit.io hidden inputs */}
-                      <input type="hidden" name="_subject" value="New Contact Form Submission from NnovityWorks Website" />
-                      <input type="hidden" name="_captcha" value="false" />
-                      <input type="hidden" name="_next" value={typeof window !== 'undefined' ? window.location.origin + "/contact?success=true" : "/contact?success=true"} />
-                      <input type="hidden" name="_template" value="table" />
                       
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
@@ -265,8 +301,6 @@ const Contact = () => {
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
-                        {/* Hidden input for service to be sent via formsubmit */}
-                        <input type="hidden" name="service" value={formData.service} />
                       </div>
 
                       <div className="space-y-2">
