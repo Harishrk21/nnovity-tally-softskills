@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           <NavLink to="/" className="flex items-center space-x-3 group">
             <img 
-              src="/logo2.jpg" 
+              src="/logo1.jpg" 
               alt="NnovityWorks Logo - Best Tally Prime Solutions & Soft Skills Training in Chennai" 
               className="h-16 w-auto object-contain transform group-hover:scale-110 transition-transform duration-300"
             />
