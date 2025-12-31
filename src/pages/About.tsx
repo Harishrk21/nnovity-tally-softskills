@@ -291,7 +291,7 @@ const About = () => {
                   description: "Training for individuals, students, and professionals. Corporate Tally Prime training for accounting teams.",
                   features: ["Individual & Corporate Training", "MS-Office Training", "Practical hands-on sessions"],
                   gradient: "from-indigo-600 via-blue-500 to-sky-500",
-                  link: "/tally-support"
+                  link: "/training"
                 },
                 {
                   icon: Users,

@@ -10,7 +10,9 @@ import TallySupport from "./pages/TallySupport";
 import CRMSolutions from "./pages/CRMSolutions";
 import ERPSolutions from "./pages/ERPSolutions";
 import HRMSSolutions from "./pages/HRMSSolutions";
+import POSBillingSolutions from "./pages/POSBillingSolutions";
 import SoftskillsTraining from "./pages/SoftskillsTraining";
+import Training from "./pages/Training";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
@@ -32,7 +34,9 @@ const App = () => (
           <Route path="/crm-solutions" element={<CRMSolutions />} />
           <Route path="/erp-solutions" element={<ERPSolutions />} />
           <Route path="/hrms-solutions" element={<HRMSSolutions />} />
+          <Route path="/pos-billing-solutions" element={<POSBillingSolutions />} />
           <Route path="/softskills-training" element={<SoftskillsTraining />} />
+          <Route path="/training" element={<Training />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />

@@ -130,6 +130,19 @@ const Navigation = () => {
                           </NavLink>
                         </NavigationMenuLink>
                       </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <NavLink
+                            to="/pos-billing-solutions"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">POS Billing Solutions</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Fast counter billing software for supermarkets and retail stores
+                            </p>
+                          </NavLink>
+                        </NavigationMenuLink>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -251,6 +264,13 @@ const Navigation = () => {
                     className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
                   >
                     HRMS Solutions
+                  </NavLink>
+                  <NavLink
+                    to="/pos-billing-solutions"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
+                  >
+                    POS Billing Solutions
                   </NavLink>
                 </div>
               )}

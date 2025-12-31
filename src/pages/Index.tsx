@@ -85,7 +85,7 @@ const Index = () => {
       icon: GraduationCap,
       title: "Tally Prime & MS-Office Training",
       description: "Training for individuals, students, and professionals. Corporate Tally Prime training for accounting teams. MS-Office Training for Office Teams, Jobseekers & Students. Practical, hands-on session.",
-      link: "/tally-support",
+      link: "/training",
       gradient: "from-indigo-600 via-blue-500 to-sky-500"
     },
     {
@@ -141,7 +141,7 @@ const Index = () => {
             "@type": "Organization",
             "name": "NnovityWorks",
             "url": "https://nnovityworks.com",
-            "logo": "https://nnovityworks.com/logo1.jpg",
+            "logo": "https://nnovityworks.com/logo5.jpg",
             "description": "Leading Tally Prime Solutions & Professional Soft Skills Training provider in Chennai. Expert services by Mr. Samshul Millath with 15+ years experience.",
             "address": {
               "@type": "PostalAddress",
