@@ -76,6 +76,21 @@ const Navigation = () => {
                           </NavLink>
                         </NavigationMenuLink>
                       </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <a
+                            href="https://tallysolutions.com/download/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Download</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Download TallyPrime software from official Tally Solutions
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -141,21 +156,6 @@ const Navigation = () => {
                               Fast counter billing software for supermarkets and retail stores
                             </p>
                           </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <a
-                            href="https://tallysolutions.com/download/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Download</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Download TallyPrime software from official Tally Solutions
-                            </p>
-                          </a>
                         </NavigationMenuLink>
                       </li>
                     </ul>
@@ -244,6 +244,15 @@ const Navigation = () => {
                   >
                     Tally Prime Support
                   </NavLink>
+                  <a
+                    href="https://tallysolutions.com/download/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
+                  >
+                    Download
+                  </a>
                 </div>
               )}
             </div>
@@ -287,15 +296,6 @@ const Navigation = () => {
                   >
                     POS Billing Solutions
                   </NavLink>
-                  <a
-                    href="https://tallysolutions.com/download/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    Download
-                  </a>
                 </div>
               )}
             </div>
