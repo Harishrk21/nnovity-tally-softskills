@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Wrench, Cloud, Smartphone, Database, GraduationCap, Link2, HeadphonesIcon, Users, PhoneCall } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const TallySupport = () => {
   const services = [
@@ -69,8 +70,9 @@ const TallySupport = () => {
     <>
       <Helmet>
         <title>Tally Prime Support Services Chennai - Customization, Cloud, Training | NnovityWorks</title>
-        <meta name="description" content="Best Tally Prime support services in Chennai. Expert customization, Tally Prime on cloud, mobile access, training, data integration, and 24/7 technical support by NnovityWorks." />
-        <meta name="keywords" content="Tally Prime support Chennai, Tally Prime customization Chennai, Tally Prime cloud Chennai, Tally Prime training Chennai, best Tally Prime support, Tally Prime on mobile, Tally Prime integration, Tally Prime technical support, ERP solutions Chennai" />
+        <meta name="description" content="Best Tally Prime support services in Chennai, Anna Nagar. Expert customization, cloud hosting, mobile app, training, data integration & 24/7 support by NnovityWorks. Tally Prime AMC Chennai." />
+        <meta name="description" content="Best Tally Prime support services in Chennai, Anna Nagar. Expert customization, cloud hosting, mobile app, training, data integration  24/7 support by NnovityWorks. Tally Prime AMC Chennai." />
+        <meta name="keywords" content="Tally Prime support Chennai, Tally Prime support Anna Nagar, Tally Prime AMC Chennai, Tally Prime customization Chennai, Tally Prime cloud Chennai, Tally Prime mobile app Chennai, Tally Prime training Chennai, best Tally Prime support Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/tally-support" />
         
         {/* Open Graph */}
@@ -119,6 +121,11 @@ const TallySupport = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Tally Prime Support", url: "/tally-support" }
+  ]} />
       <Navigation />
 
       <main>
@@ -131,11 +138,11 @@ const TallySupport = () => {
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-4xl font-bold mb-6">
                 Tally Prime Support & AMC Services
-              </h1>
+               - Tally Prime Support Chennai</h1>
               <p className="text-sm md:text-base mb-8 text-primary-foreground/90">
                 Installation & Implementation, Troubleshooting & error fixing, Annual maintenance and priority support. 
                 Online & Onsite support available.
-              </p>
+              </p> Learn more about <a href="/tally-sales" className="text-blue-600 hover:text-blue-800 underline">buy Tally Prime</a>.
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
                   <NavLink to="/contact">Request Support</NavLink>

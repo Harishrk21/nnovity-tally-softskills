@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { Helmet } from "react-helmet";
 import { ParallaxSection } from "@/components/ParallaxSection";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const FAQ = () => {
   return (
@@ -54,6 +55,11 @@ const FAQ = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "FAQ", url: "/faq" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 

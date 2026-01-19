@@ -7,6 +7,7 @@ import { Check, ShoppingCart, Award, TrendingUp, Shield, HeadphonesIcon, Setting
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import heroTally from "@/assets/hero-tally.jpg";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const TallySales = () => {
   const features = [
@@ -41,8 +42,9 @@ const TallySales = () => {
     <>
       <Helmet>
         <title>Tally Prime Sales Chennai - Buy TallyPrime | NnovityWorks</title>
-        <meta name="description" content="Purchase genuine Tally Prime software in Chennai from authorized partner NnovityWorks. Get TallyPrime and enterprise solutions with expert installation and support." />
-        <meta name="keywords" content="buy Tally Prime Chennai, Tally Prime sales Chennai, TallyPrime price, Tally Prime software dealer Chennai, authorized Tally Prime partner, Tally Prime license Chennai" />
+        <meta name="description" content="Buy Tally Prime software in Chennai, Anna Nagar from authorized partner NnovityWorks. Best Tally Prime prices, official licenses, expert installation & support. Tally Prime sales Chennai." />
+        <meta name="description" content="Buy Tally Prime software in Chennai, Anna Nagar from authorized partner NnovityWorks. Best Tally Prime prices, official licenses, expert installation  support. Tally Prime sales Chennai." />
+        <meta name="keywords" content="buy Tally Prime Chennai, Tally Prime sales Chennai, Tally Prime sales Anna Nagar, Tally Prime software Chennai, Tally Prime license Chennai, authorized Tally Prime partner Chennai, best Tally Prime prices Chennai, Tally Prime dealer Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/tally-sales" />
         
         {/* Open Graph */}
@@ -81,6 +83,11 @@ const TallySales = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Tally Prime Sales", url: "/tally-sales" }
+  ]} />
       <Navigation />
 
       <main>
@@ -106,11 +113,11 @@ const TallySales = () => {
             <div className="max-w-3xl">
               <h1 className="text-3xl md:text-4xl font-bold mb-6">
                 Tally Prime Software Sales & Licensing
-              </h1>
+               - Tally Prime Sales Chennai</h1>
               <p className="text-sm md:text-base mb-8 text-primary-foreground/90">
                 Official Tally Prime licenses with version recommendations based on your business needs. 
                 Fast onboarding and setup with expert guidance.
-              </p>
+              </p> Learn more about <a href="/tally-support" className="text-blue-600 hover:text-blue-800 underline">Tally Prime support</a>.
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
                   <NavLink to="/contact">Request a Quote</NavLink>

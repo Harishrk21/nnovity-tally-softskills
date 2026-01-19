@@ -8,6 +8,7 @@ import { Award, Users, TrendingUp, BookOpen, Briefcase, MessageSquare, Target, L
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const SoftskillsTraining = () => {
   const programs = [
@@ -76,8 +77,9 @@ const SoftskillsTraining = () => {
     <>
       <Helmet>
         <title>Best Soft Skills Training in Chennai - Mr. Samshul Millath | NnovityWorks</title>
-        <meta name="description" content="Top soft skills trainer in Chennai. Mr. Samshul Millath, 15+ years experienced Tally Prime Implementation & Training Expert, offers communication skills, personality development, public speaking, time management, leadership, workplace behavior, and PoSH training for schools, colleges, and companies." />
-        <meta name="keywords" content="soft skills training Chennai, best soft skills trainer Chennai, personality development Chennai, leadership training Chennai, public speaking Chennai, PoSH training Chennai, corporate training Chennai, communication skills training, Mr. Samshul Millath trainer" />
+        <meta name="description" content="Best soft skills trainer in Chennai, Anna Nagar. Mr. Samshul Millath offers communication, leadership, personality development, public speaking & PoSH training for schools, colleges & companies. Corporate training Chennai." />
+        <meta name="description" content="Best soft skills trainer in Chennai, Anna Nagar. Mr. Samshul Millath offers communication, leadership, personality development, public speaking  PoSH training for schools, colleges  companies. Corporate training Chennai." />
+        <meta name="keywords" content="soft skills training Chennai, soft skills training Anna Nagar, best soft skills trainer Chennai, corporate training Chennai, personality development Chennai, leadership training Chennai, communication skills training Chennai, PoSH training Chennai, ACTD certified trainer Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/softskills-training" />
         
         {/* Open Graph */}
@@ -137,6 +139,11 @@ const SoftskillsTraining = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Soft Skills Training", url: "/softskills-training" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 
@@ -177,11 +184,11 @@ const SoftskillsTraining = () => {
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 Professional Soft Skills Training
-              </h1>
+               - Soft Skills Training Chennai</h1>
               <p className="text-sm md:text-base mb-6 text-white/95 font-medium">
                 Led by <strong className="text-white">Mr. Samshul Millath</strong>, Tally Prime Implementation & Training Expert with 15+ years of experience, 
                 specializing in communication skills, personality development, leadership, public speaking, and corporate training excellence.
-              </p>
+              </p> Learn more about <a href="/training" className="text-blue-600 hover:text-blue-800 underline">Tally Prime training</a>.
               <p className="text-sm md:text-base mb-8 text-white/80">
                 Empowering individuals and organizations across Chennai with comprehensive soft skills training 
                 for schools, colleges, and corporate events. Training 1000+ young minds from prestigious Educational institutions and CSR & NGO Activities.

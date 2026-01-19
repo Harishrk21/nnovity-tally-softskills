@@ -7,6 +7,7 @@ import { Users, TrendingUp, Target, Mail, Phone, BarChart3, Calendar, MessageSqu
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import heroCRM from "@/assets/hero-crm.jpg";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const CRMSolutions = () => {
   const features = [
@@ -79,8 +80,9 @@ const CRMSolutions = () => {
     <>
       <Helmet>
         <title>CRM Solutions Chennai - Customer Relationship Management Software | NnovityWorks</title>
-        <meta name="description" content="Professional CRM software solutions in Chennai by NnovityWorks. Streamline customer management, boost sales, and enhance customer relationships with our comprehensive CRM systems." />
-        <meta name="keywords" content="CRM Chennai, CRM software Chennai, customer relationship management Chennai, CRM solutions, sales CRM, customer management software, best CRM Chennai" />
+        <meta name="description" content="Best CRM software solutions in Chennai, Anna Nagar by NnovityWorks. Professional customer management, boost sales & enhance relationships. CRM software Chennai. Expert CRM implementation & support." />
+        <meta name="description" content="Best CRM software solutions in Chennai, Anna Nagar by NnovityWorks. Professional customer management, boost sales  enhance relationships. CRM software Chennai. Expert CRM implementation  support." />
+        <meta name="keywords" content="CRM software Chennai, CRM software Anna Nagar, customer relationship management Chennai, CRM solutions Chennai, best CRM Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/crm-solutions" />
         
         {/* Open Graph */}
@@ -96,6 +98,11 @@ const CRMSolutions = () => {
         <meta name="twitter:description" content="Professional CRM software for customer relationship management" />
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "CRM Solutions", url: "/crm-solutions" }
+  ]} />
       <Navigation />
 
       <main>

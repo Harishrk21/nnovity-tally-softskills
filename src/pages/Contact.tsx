@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -93,8 +94,9 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact NnovityWorks - Tally Prime & Soft Skills Training Enquiries Chennai</title>
-        <meta name="description" content="Contact NnovityWorks for Tally Prime solutions and soft skills training enquiries in Chennai. Reach out to Mr. Samshul Millath for expert consultation and support." />
-        <meta name="keywords" content="contact NnovityWorks, Tally Prime enquiry Chennai, soft skills training contact, Mr. Samshul Millath contact, Chennai training contact" />
+        <meta name="description" content="Contact NnovityWorks for Tally Prime solutions & soft skills training in Chennai, Anna Nagar. Reach Mr. Samshul Millath for expert consultation. Call +91 98411 15769. Best Tally Prime & training services." />
+        <meta name="description" content="Contact NnovityWorks for Tally Prime solutions  soft skills training in Chennai, Anna Nagar. Reach Mr. Samshul Millath for expert consultation. Call +91 98411 15769. Best Tally Prime  training services." />
+        <meta name="keywords" content="contact NnovityWorks, Tally Prime enquiry Chennai, soft skills training contact Chennai, Mr. Samshul Millath contact, Chennai training contact, Anna Nagar training contact" />
         <link rel="canonical" href="https://nnovityworks.com/contact" />
         
         {/* Open Graph */}
@@ -130,6 +132,11 @@ const Contact = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 
@@ -151,7 +158,7 @@ const Contact = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Get in Touch</h1>
               <p className="text-sm md:text-base text-white/95 font-medium">
                 Have questions about our services? We're here to help you find the right solution.
-              </p>
+              </p> Learn more about <a href="/tally-sales" className="text-blue-600 hover:text-blue-800 underline">Tally Prime services</a>.
             </div>
           </div>
         </section>

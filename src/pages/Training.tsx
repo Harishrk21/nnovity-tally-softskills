@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, BookOpen, Users, Clock, Award, CheckCircle2, Laptop, FileText, Calculator, Database, BarChart3, Globe, Mail, Presentation, Table, FileCheck, Target, Zap, Shield } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const Training = () => {
   const tallyTrainingModules = [
@@ -199,8 +200,9 @@ const Training = () => {
     <>
       <Helmet>
         <title>Tally Prime & MS Office Training Chennai - Professional Training Programs | NnovityWorks</title>
-        <meta name="description" content="Comprehensive Tally Prime and MS Office training in Chennai. Individual & corporate training programs by Mr. Samshul Millath. Hands-on practical sessions, certification, and job-oriented curriculum." />
-        <meta name="keywords" content="Tally Prime training Chennai, MS Office training Chennai, Excel training Chennai, Word training Chennai, PowerPoint training Chennai, corporate training Chennai, accounting software training Chennai, office skills training Chennai" />
+        <meta name="description" content="Best Tally Prime & MS Office training in Chennai, Anna Nagar. Individual & corporate programs by Mr. Samshul Millath. Hands-on sessions, certification & job-oriented curriculum. Tally training Chennai." />
+        <meta name="description" content="Best Tally Prime  MS Office training in Chennai, Anna Nagar. Individual  corporate programs by Mr. Samshul Millath. Hands-on sessions, certification  job-oriented curriculum. Tally training Chennai." />
+        <meta name="keywords" content="Tally Prime training Chennai, Tally Prime training Anna Nagar, MS Office training Chennai, Excel training Chennai, corporate training Chennai, Tally Prime certification Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/training" />
         
         {/* Open Graph */}
@@ -245,6 +247,11 @@ const Training = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "Training", url: "/training" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 

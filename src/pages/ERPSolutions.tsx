@@ -8,6 +8,7 @@ import { Package, DollarSign, Users, BarChart3, Settings, Database, ShoppingCart
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import heroERP from "@/assets/hero-erp.jpg";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const ERPSolutions = () => {
   const modules = [
@@ -80,8 +81,9 @@ const ERPSolutions = () => {
     <>
       <Helmet>
         <title>ERP Solutions Chennai - Enterprise Resource Planning Software | NnovityWorks</title>
-        <meta name="description" content="Professional ERP software solutions in Chennai by NnovityWorks. Integrate and automate your business processes with comprehensive Enterprise Resource Planning systems." />
-        <meta name="keywords" content="ERP Chennai, ERP software Chennai, enterprise resource planning Chennai, ERP solutions, business ERP, manufacturing ERP, best ERP Chennai" />
+        <meta name="description" content="Best ERP software solutions in Chennai, Anna Nagar by NnovityWorks. Professional Enterprise Resource Planning, integrate & automate business processes. ERP software Chennai. Expert ERP implementation." />
+        <meta name="description" content="Best ERP software solutions in Chennai, Anna Nagar by NnovityWorks. Professional Enterprise Resource Planning, integrate  automate business processes. ERP software Chennai. Expert ERP implementation." />
+        <meta name="keywords" content="ERP software Chennai, ERP software Anna Nagar, enterprise resource planning Chennai, ERP solutions Chennai, best ERP Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/erp-solutions" />
         
         {/* Open Graph */}
@@ -97,6 +99,11 @@ const ERPSolutions = () => {
         <meta name="twitter:description" content="Enterprise Resource Planning software for business automation" />
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "ERP Solutions", url: "/erp-solutions" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 

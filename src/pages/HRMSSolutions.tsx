@@ -8,6 +8,7 @@ import { Users, Calendar, DollarSign, FileText, TrendingUp, Award, Clock, UserCh
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import heroHRMS from "@/assets/hero-hrms.jpg";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const HRMSSolutions = () => {
   const features = [
@@ -80,8 +81,9 @@ const HRMSSolutions = () => {
     <>
       <Helmet>
         <title>HRMS Solutions Chennai - Human Resource Management Software | NnovityWorks</title>
-        <meta name="description" content="Professional HRMS software solutions in Chennai by NnovityWorks. Streamline HR operations, payroll, attendance, and employee management with comprehensive HR systems." />
-        <meta name="keywords" content="HRMS Chennai, HRMS software Chennai, human resource management Chennai, HR software, payroll software Chennai, attendance management, best HRMS Chennai" />
+        <meta name="description" content="Best HRMS software solutions in Chennai, Anna Nagar by NnovityWorks. Professional HR management, payroll, attendance & employee management. HRMS software Chennai. Expert HRMS implementation & support." />
+        <meta name="description" content="Best HRMS software solutions in Chennai, Anna Nagar by NnovityWorks. Professional HR management, payroll, attendance  employee management. HRMS software Chennai. Expert HRMS implementation  support." />
+        <meta name="keywords" content="HRMS software Chennai, HRMS software Anna Nagar, human resource management Chennai, HR software Chennai, payroll software Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/hrms-solutions" />
         
         {/* Open Graph */}
@@ -97,6 +99,11 @@ const HRMSSolutions = () => {
         <meta name="twitter:description" content="Human Resource Management Software for HR operations" />
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "HRMS Solutions", url: "/hrms-solutions" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 

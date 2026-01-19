@@ -6,6 +6,7 @@ import { Award, Target, Heart, TrendingUp, Briefcase, Settings, Cloud, Smartphon
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const About = () => {
   const values = [
@@ -34,21 +35,22 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About NnovityWorks - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai</title>
-        <meta name="description" content="Learn about NnovityWorks and Mr. Samshul Millath, 15+ years experienced Tally Prime Implementation & Training Expert. Leading provider of Tally Prime solutions and professional soft skills training in Chennai." />
-        <meta name="keywords" content="about NnovityWorks, Mr. Samshul Millath, Tally Prime expert Chennai, Tally Prime training Chennai, soft skills training company Chennai, Tally Prime implementation expert" />
+        <title>About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai</title>
+        <meta name="description" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai & Mr. Samshul Millath - 15+ years Tally Prime expert in Chennai, Anna Nagar. Best Tally Prime solutions & professional soft skills training provider. ACTD & UKIQ certified trainer." />
+        <meta name="description" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai  Mr. Samshul Millath - 15+ years Tally Prime expert in Chennai, Anna Nagar. Best Tally Prime solutions  professional soft skills training provider. ACTD  UKIQ certified trainer." />
+        <meta name="keywords" content="about NnovityWorks, Mr. Samshul Millath, Tally Prime expert Chennai, Tally Prime expert Anna Nagar, best soft skills trainer Chennai, ACTD certified trainer, UKIQ certified trainer, 15 years experience Tally Prime, Tally Prime training Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/about" />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nnovityworks.com/about" />
-        <meta property="og:title" content="About NnovityWorks - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai" />
+        <meta property="og:title" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai" />
         <meta property="og:description" content="Learn about NnovityWorks and Mr. Samshul Millath, 15+ years experienced Tally Prime Implementation & Training Expert in Chennai." />
         <meta property="og:image" content="https://nnovityworks.com/about-image.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About NnovityWorks - Mr. Samshul Millath" />
+        <meta name="twitter:title" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath" />
         <meta name="twitter:description" content="15+ years experienced Tally Prime Implementation & Training Expert in Chennai" />
         <meta name="twitter:image" content="https://nnovityworks.com/about-image.jpg" />
         
@@ -72,6 +74,11 @@ const About = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" }
+  ]} />
       <Navigation />
 
       <main>
@@ -92,11 +99,11 @@ const About = () => {
           <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                About NnovityWorks
+                About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai
               </h1>
               <p className="text-sm md:text-base font-bold text-white/95 mb-4">
                 Innovate. Empower. Excel.
-              </p>
+              </p> Learn more about <a href="/contact" className="text-blue-600 hover:text-blue-800 underline">contact us</a>.
               <p className="text-sm md:text-base text-white/80">
                 Empowering businesses with Tally Prime solutions and professional soft skills training.
               </p>

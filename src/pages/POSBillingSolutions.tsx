@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart, Zap, BarChart3, Receipt, CreditCard, Package, TrendingUp, Users, Clock, Shield, CheckCircle2, Store, Calculator, Printer, Smartphone, Database } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const POSBillingSolutions = () => {
   const features = [
@@ -99,8 +100,9 @@ const POSBillingSolutions = () => {
     <>
       <Helmet>
         <title>POS Billing Solutions Chennai - Fast Counter Billing Software for Supermarkets | NnovityWorks</title>
-        <meta name="description" content="Professional POS billing software solutions in Chennai by NnovityWorks. Fast counter billing for supermarkets, retail stores, and shops. Complete billing system with inventory management." />
-        <meta name="keywords" content="POS billing software Chennai, counter billing software Chennai, supermarket billing software, retail billing software, fast billing software, POS system Chennai, billing software for shops" />
+        <meta name="description" content="Best POS billing software in Chennai, Anna Nagar by NnovityWorks. Fast counter billing for supermarkets, retail stores & shops. POS system Chennai with inventory management. Expert POS support." />
+        <meta name="description" content="Best POS billing software in Chennai, Anna Nagar by NnovityWorks. Fast counter billing for supermarkets, retail stores  shops. POS system Chennai with inventory management. Expert POS support." />
+        <meta name="keywords" content="POS billing software Chennai, POS billing software Anna Nagar, counter billing software Chennai, supermarket billing software Chennai" />
         <link rel="canonical" href="https://nnovityworks.com/pos-billing-solutions" />
         
         {/* Open Graph */}
@@ -135,6 +137,11 @@ const POSBillingSolutions = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" },
+    { name: "POS Billing Solutions", url: "/pos-billing-solutions" }
+  ]} />
       <Navigation />
       <WhatsAppFloat />
 

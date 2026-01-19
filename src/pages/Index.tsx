@@ -30,6 +30,7 @@ import greytLogo from "@/assets/partners/greyt-logo.jpg";
 import vtigerLogo from "@/assets/partners/vtiger-logo.jpg";
 import pagarbookLogo from "@/assets/partners/pagarbook-logo.jpg";
 import Autoplay from "embla-carousel-autoplay";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const Index = () => {
   const [currentHeroImage, setCurrentHeroImage] = React.useState(0);
@@ -108,8 +109,9 @@ const Index = () => {
     <>
       <Helmet>
         <title>NnovityWorks - Innovate. Empower. Excel. | Tally Prime Solutions & Soft Skills Training Chennai</title>
-        <meta name="description" content="NnovityWorks empowers businesses with Tally Prime solutions and professional soft skills training. Led by Mr. Samshul Millath, 15+ years experienced Tally Prime Implementation & Training Expert. Tally Prime sales, support, cloud, mobile, customization, and comprehensive soft skills training in Chennai." />
-        <meta name="keywords" content="NnovityWorks, Tally Prime Chennai, Tally Prime sales Chennai, Tally Prime support Chennai, Tally Prime cloud Chennai, Tally Prime mobile Chennai, soft skills training Chennai, Mr. Samshul Millath, Tally Prime training Chennai, MS Office training Chennai, corporate training Chennai, personality development Chennai" />
+        <meta name="description" content="Best Tally Prime service provider & soft skills trainer in Chennai, Anna Nagar. Mr. Samshul Millath offers Tally Prime sales, support, cloud, training & corporate soft skills training. 15+ years expert experience." />
+        
+        <meta name="keywords" content="NnovityWorks, Tally Prime Chennai, Tally Prime Anna Nagar, soft skills training Chennai, soft skills training Anna Nagar, corporate training Chennai, best Tally Prime service provider Chennai, best soft skills trainer Chennai, Mr. Samshul Millath, Tally Prime training Chennai, Tally Prime support Chennai" />
         <link rel="canonical" href="https://nnovityworks.com" />
         
         <meta property="og:type" content="website" />
@@ -232,6 +234,10 @@ const Index = () => {
         </script>
       </Helmet>
 
+
+      <BreadcrumbSchema items={[
+    { name: "Home", url: "/" }
+  ]} />
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -406,7 +412,7 @@ const Index = () => {
                       <span className="bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent">
                         professional soft skills training
                       </span>
-                    </p>
+                    </p> Learn more about <a href="/contact" className="text-blue-600 hover:text-blue-800 underline">contact NnovityWorks</a>.
                     
                     {/* Expert Info */}
                     <div className="glass-morphism p-6 rounded-2xl inline-block">
@@ -445,7 +451,7 @@ const Index = () => {
                         <div className="bg-white rounded-2xl p-6 shadow-2xl">
                           <img 
                             src="/tallylogonew.png" 
-                            alt="Tally Prime Logo - Power of Simplicity" 
+                            alt="Tally Prime Logo - Power of Simplicity - Chennai, Anna Nagar" 
                             className="w-full h-auto max-w-[500px] object-contain"
                           />
                         </div>
