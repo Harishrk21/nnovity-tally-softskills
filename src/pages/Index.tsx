@@ -19,16 +19,17 @@ import { LazyImage } from "@/components/LazyImage";
 import { useParallaxTransform } from "@/hooks/useParallax";
 import heroTally from "@/assets/hero-tally.jpg";
 import heroSoftskills from "@/assets/hero-softskills.jpg";
-import heroCRM from "@/assets/hero-crm.jpg";
+import heroCRM from "@/assets/hero-tally.jpg";
 import heroERP from "@/assets/hero-erp.jpg";
 import heroHRMS from "@/assets/hero-hrms.jpg";
 import teamSuccess from "@/assets/team-success.jpg";
-import tallyLogo from "@/assets/partners/tally-logo.jpg";
-import awsLogo from "@/assets/partners/aws-logo.jpg";
 import bizanalystLogo from "@/assets/partners/bizanalyst-logo.jpg";
 import greytLogo from "@/assets/partners/greyt-logo.jpg";
 import vtigerLogo from "@/assets/partners/vtiger-logo.jpg";
 import pagarbookLogo from "@/assets/partners/pagarbook-logo.jpg";
+import wondersoftLogo from "@/assets/partners/wondersoft.png";
+import tallyPrimeLogo from "@/assets/partners/tally_prime.png";
+import busyLogo from "@/assets/partners/busy.png";
 import Autoplay from "embla-carousel-autoplay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
@@ -143,7 +144,7 @@ const Index = () => {
             "@type": "Organization",
             "name": "NnovityWorks",
             "url": "https://nnovityworks.com",
-            "logo": "https://nnovityworks.com/logo5.jpg",
+            "logo": "https://nnovityworks.com/favicon.png",
             "description": "Leading Tally Prime Solutions & Professional Soft Skills Training provider in Chennai. Expert services by Mr. Samshul Millath with 15+ years experience.",
             "address": {
               "@type": "PostalAddress",
@@ -728,46 +729,50 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="max-w-6xl mx-auto">
+            <div className="w-full">
               <Carousel
                 opts={{
-                  align: "start",
+                  align: "center",
                   loop: true,
                 }}
                 plugins={[
                   Autoplay({
                     delay: 2000,
+                    stopOnInteraction: false,
                   }),
                 ]}
                 className="w-full"
               >
-                <CarouselContent>
+                <CarouselContent className="-ml-4">
                   {[
-                    { logo: tallyLogo, name: "Tally Prime" },
-                    { logo: awsLogo, name: "AWS" },
+                    { logo: tallyPrimeLogo, name: "Tally Prime" },
+                    { logo: busyLogo, name: "Busy" },
                     { logo: bizanalystLogo, name: "Biz Analyst" },
                     { logo: greytLogo, name: "Greyt" },
                     { logo: vtigerLogo, name: "Vtiger" },
                     { logo: pagarbookLogo, name: "Pagarbook" },
+                    { logo: wondersoftLogo, name: "Wondersoft" },
+                    { logo: tallyPrimeLogo, name: "Tally Prime" },
+                    { logo: busyLogo, name: "Busy" },
+                    { logo: bizanalystLogo, name: "Biz Analyst" },
+                    { logo: greytLogo, name: "Greyt" },
+                    { logo: vtigerLogo, name: "Vtiger" },
+                    { logo: pagarbookLogo, name: "Pagarbook" },
+                    { logo: wondersoftLogo, name: "Wondersoft" },
                   ].map((partner, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-4">
-                        <Card className="hover-lift bg-white border-0 shadow-lg hover:shadow-2xl overflow-hidden group">
-                          <CardContent className="flex aspect-video items-center justify-center p-8 relative">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <img 
-                              src={partner.logo} 
-                              alt={`${partner.name} logo`}
-                              className="max-h-24 max-w-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                            />
-                          </CardContent>
-                        </Card>
+                    <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/4 lg:basis-1/6">
+                      <div className="flex items-center justify-center p-4 h-40">
+                        <img 
+                          src={partner.logo} 
+                          alt={`${partner.name} logo`}
+                          className="h-full w-full object-contain"
+                        />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-0" />
-                <CarouselNext className="right-0" />
+                <CarouselPrevious className="-left-4" />
+                <CarouselNext className="-right-4" />
               </Carousel>
             </div>
           </div>
@@ -790,7 +795,7 @@ const Index = () => {
                 {
                   icon: Shield,
                   title: "Trusted Tally Prime Partner",
-                  description: "Official Tally Prime partner with certified expertise and genuine software licenses",
+                  description: "Trusted Tally Prime expertise with genuine software licenses and expert implementation support",
                   gradient: "from-blue-500 to-cyan-500"
                 },
                 {

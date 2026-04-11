@@ -20,19 +20,19 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <NavLink to="/" className="flex items-center space-x-3 group">
+        <div className="flex h-16 items-center">
+          <NavLink to="/" className="flex items-center space-x-3 group flex-shrink-0">
             <img 
-              src="/logo5.jpg" 
+              src="/logo1.jpg" 
               alt="NnovityWorks Logo - Best Tally Prime Solutions & Soft Skills Training in Chennai" 
-              className="h-16 w-auto object-contain transform group-hover:scale-110 transition-transform duration-300"
+              className="h-16 w-auto object-contain"
             />
           </NavLink>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center justify-center space-x-1 flex-1">
             <NavLink
               to="/"
               className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
@@ -192,6 +192,10 @@ const Navigation = () => {
             >
               FAQ
             </NavLink>
+          </div>
+
+          {/* Get Started Button - Right Side */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <Button asChild className="ml-4 bg-hero-gradient hover:opacity-90 transition-opacity shadow-lg">
               <NavLink to="/contact">Get Started</NavLink>
             </Button>

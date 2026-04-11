@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Users, TrendingUp, Target, Mail, Phone, BarChart3, Calendar, MessageSquare, FileText, Globe, Zap, Shield } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import heroCRM from "@/assets/hero-crm.jpg";
+import heroCRM from "@/assets/hero-tally.jpg";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const CRMSolutions = () => {

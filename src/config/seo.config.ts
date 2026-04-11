@@ -151,7 +151,7 @@ export const SEO_CONFIG = {
       "@type": "Organization",
       name: "NnovityWorks",
       url: "https://nnovityworks.com",
-      logo: "https://nnovityworks.com/logo5.jpg",
+      logo: "https://nnovityworks.com/favicon.png",
       description: "Leading Tally Prime Solutions & Professional Soft Skills Training provider in Chennai",
       address: {
         "@type": "PostalAddress",
