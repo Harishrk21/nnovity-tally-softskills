@@ -4,6 +4,10 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   Carousel,
   CarouselContent,
@@ -32,13 +36,85 @@ import tallyPrimeLogo from "@/assets/partners/tally_prime.png";
 import busyLogo from "@/assets/partners/busy.png";
 import Autoplay from "embla-carousel-autoplay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
   const [currentHeroImage, setCurrentHeroImage] = React.useState(0);
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSuccess, setIsSuccess] = React.useState(false);
   const heroImages = [heroTally, heroSoftskills, heroCRM, heroERP, heroHRMS];
   const heroParallax = useParallaxTransform(0.3);
   const servicesParallax = useParallaxTransform(0.2);
   const successParallax = useParallaxTransform(0.25);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setIsSuccess(false);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("phone", formData.phone);
+      formDataToSend.append("service", formData.service);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("_subject", "New Hero Form Submission from NnovityWorks Website");
+      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("_template", "table");
+
+      const response = await fetch("https://formsubmit.co/ajax/smillath@nnovityworks.com", {
+        method: "POST",
+        body: formDataToSend,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          setIsSuccess(true);
+          toast({
+            title: "Message Sent Successfully!",
+            description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+            variant: "default",
+          });
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          });
+        } else {
+          throw new Error("Submission failed");
+        }
+      } else {
+        throw new Error("Network error");
+      }
+    } catch (error) {
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -46,6 +122,14 @@ const Index = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  React.useEffect(() => {
+    if (!isSuccess) return;
+    const timeout = setTimeout(() => {
+      setIsSuccess(false);
+    }, 5000);
+    return () => clearTimeout(timeout);
+  }, [isSuccess]);
 
   const allServices = [
     {
@@ -441,24 +525,120 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  {/* Right Side - Tally Prime Logo Frame */}
+                  {/* Right Side - Hero Contact Form */}
                   <div className="flex justify-center lg:justify-end">
-                    <div className="relative group">
+                    <div className="relative group w-full max-w-xl">
                       {/* Glow Effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                       
                       {/* Card */}
-                      <div className="relative glass-morphism rounded-3xl p-8 hover:scale-105 transition-all duration-500">
-                        <div className="bg-white rounded-2xl p-6 shadow-2xl">
-                          <img 
-                            src="/tallylogonew.png" 
-                            alt="Tally Prime Logo - Power of Simplicity - Chennai, Anna Nagar" 
-                            className="w-full h-auto max-w-[500px] object-contain"
-                          />
-                        </div>
+                      <div className="relative glass-morphism rounded-3xl p-6 md:p-8 transition-all duration-500">
+                        <Card className="border-white/20 bg-white/95">
+                          <CardHeader>
+                            <CardTitle>Send Us a Message</CardTitle>
+                            <CardDescription>Fill out the form below and we'll get back to you shortly</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            {isSuccess && (
+                              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start space-x-3 animate-fade-in">
+                                <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                                <div>
+                                  <p className="font-semibold text-green-800">Message Sent Successfully!</p>
+                                  <p className="text-sm text-green-700 mt-1">
+                                    Thank you for contacting us. We'll get back to you within 24 hours.
+                                  </p>
+                                </div>
+                              </div>
+                            )}
+                            <form onSubmit={handleSubmit} className="space-y-4">
+                              <div className="grid md:grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                  <Label htmlFor="hero-name">Full Name *</Label>
+                                  <Input
+                                    id="hero-name"
+                                    name="name"
+                                    placeholder="Your name"
+                                    value={formData.name}
+                                    onChange={(e) => handleChange("name", e.target.value)}
+                                    required
+                                  />
+                                </div>
+                                <div className="space-y-2">
+                                  <Label htmlFor="hero-phone">Phone Number *</Label>
+                                  <Input
+                                    id="hero-phone"
+                                    name="phone"
+                                    type="tel"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    value={formData.phone}
+                                    onChange={(e) => handleChange("phone", e.target.value)}
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div className="space-y-2">
+                                <Label htmlFor="hero-email">Email Address *</Label>
+                                <Input
+                                  id="hero-email"
+                                  name="email"
+                                  type="email"
+                                  placeholder="your.email@example.com"
+                                  value={formData.email}
+                                  onChange={(e) => handleChange("email", e.target.value)}
+                                  required
+                                />
+                              </div>
+
+                              <div className="space-y-2">
+                                <Label htmlFor="hero-service">Service Interested In *</Label>
+                                <Select value={formData.service} onValueChange={(value) => handleChange("service", value)} required>
+                                  <SelectTrigger id="hero-service">
+                                    <SelectValue placeholder="Select a service" />
+                                  </SelectTrigger>
+                                  <SelectContent>
+                                    <SelectItem value="tally-sales">Tally Prime Sales</SelectItem>
+                                    <SelectItem value="tally-customization">Tally Prime Customization</SelectItem>
+                                    <SelectItem value="tally-cloud">Tally Prime on Cloud</SelectItem>
+                                    <SelectItem value="tally-support">Tally Prime Technical Support</SelectItem>
+                                    <SelectItem value="tally-training">Tally Prime Training</SelectItem>
+                                    <SelectItem value="softskills-corporate">Corporate Softskills Training</SelectItem>
+                                    <SelectItem value="softskills-personal">Personal Development Training</SelectItem>
+                                    <SelectItem value="train-trainer">Train the Trainer Program</SelectItem>
+                                    <SelectItem value="posh-training">POSH Training</SelectItem>
+                                    <SelectItem value="hrms-crm-pos-solutions">HRMS/CRM/POS Solutions</SelectItem>
+                                    <SelectItem value="other">Other</SelectItem>
+                                  </SelectContent>
+                                </Select>
+                              </div>
+
+                              <div className="space-y-2">
+                                <Label htmlFor="hero-message">Message *</Label>
+                                <Textarea
+                                  id="hero-message"
+                                  name="message"
+                                  placeholder="Tell us about your requirements..."
+                                  rows={4}
+                                  value={formData.message}
+                                  onChange={(e) => handleChange("message", e.target.value)}
+                                  required
+                                />
+                              </div>
+
+                              <Button
+                                type="submit"
+                                size="lg"
+                                className="w-full bg-hero-gradient hover:opacity-90"
+                                disabled={isSubmitting}
+                              >
+                                {isSubmitting ? "Sending..." : "Send Message"}
+                              </Button>
+                            </form>
+                          </CardContent>
+                        </Card>
                         
                         {/* Shimmer Effect */}
-                        <div className="absolute inset-0 rounded-3xl animate-shimmer"></div>
+                        <div className="absolute inset-0 rounded-3xl animate-shimmer pointer-events-none"></div>
                       </div>
                     </div>
                   </div>
