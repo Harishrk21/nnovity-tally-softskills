@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -50,6 +51,17 @@ const Index = () => {
   });
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
+  const [isPopupOpen, setIsPopupOpen] = React.useState(false);
+  const popupTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [popupFormData, setPopupFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [isPopupSubmitting, setIsPopupSubmitting] = React.useState(false);
+  const [isPopupSuccess, setIsPopupSuccess] = React.useState(false);
   const heroImages = [heroTally, heroSoftskills, heroCRM, heroERP, heroHRMS];
   const heroParallax = useParallaxTransform(0.3);
   const servicesParallax = useParallaxTransform(0.2);
@@ -116,6 +128,72 @@ const Index = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  const handlePopupChange = (field: string, value: string) => {
+    setPopupFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handlePopupOpenChange = (open: boolean) => {
+    setIsPopupOpen(open);
+    if (!open) {
+      if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
+      popupTimerRef.current = setTimeout(() => {
+        setIsPopupOpen(true);
+      }, 15000);
+    }
+  };
+
+  const handlePopupSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsPopupSubmitting(true);
+    setIsPopupSuccess(false);
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", popupFormData.name);
+      formDataToSend.append("email", popupFormData.email);
+      formDataToSend.append("phone", popupFormData.phone);
+      formDataToSend.append("service", popupFormData.service);
+      formDataToSend.append("message", popupFormData.message);
+      formDataToSend.append("_subject", "New Popup Enquiry from NnovityWorks Website");
+      formDataToSend.append("_captcha", "false");
+      formDataToSend.append("_template", "table");
+
+      const response = await fetch("https://formsubmit.co/ajax/smillath@nnovityworks.com", {
+        method: "POST",
+        body: formDataToSend,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        if (result.success) {
+          setIsPopupSuccess(true);
+          toast({
+            title: "Enquiry Sent!",
+            description: "Thank you! We'll get back to you within 24 hours.",
+          });
+          setPopupFormData({ name: "", email: "", phone: "", service: "", message: "" });
+          setTimeout(() => {
+            setIsPopupOpen(false);
+            setIsPopupSuccess(false);
+          }, 3000);
+        } else {
+          throw new Error("Submission failed");
+        }
+      } else {
+        throw new Error("Network error");
+      }
+    } catch {
+      toast({
+        title: "Error Sending Message",
+        description: "There was an error. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsPopupSubmitting(false);
+    }
+  };
+
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
@@ -130,6 +208,17 @@ const Index = () => {
     }, 5000);
     return () => clearTimeout(timeout);
   }, [isSuccess]);
+
+  React.useEffect(() => {
+    const initialTimer = setTimeout(() => {
+      setIsPopupOpen(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(initialTimer);
+      if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
+    };
+  }, []);
 
   const allServices = [
     {
@@ -654,6 +743,112 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <Dialog open={isPopupOpen} onOpenChange={handlePopupOpenChange}>
+          <DialogContent className="z-[9999] rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-slate-900 via-slate-950 to-cyan-950 shadow-2xl shadow-cyan-500/30 sm:max-w-lg w-[calc(100%-2rem)] p-0">
+            {/* Gradient header strip */}
+            <div className="h-1.5 w-full rounded-t-3xl bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500" />
+
+            <div className="px-6 pb-6 pt-4 sm:px-8 sm:pb-8">
+              <DialogHeader className="mb-4">
+                <div className="flex items-center gap-3 mb-1">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg flex-shrink-0">
+                    <Phone className="w-4 h-4 text-white" />
+                  </div>
+                  <DialogTitle className="text-xl font-black text-white">Get a Free Consultation</DialogTitle>
+                </div>
+                <DialogDescription className="text-sm text-cyan-200/80 leading-relaxed pl-12">
+                  Select a service and we'll reach out within 24 hours.
+                </DialogDescription>
+              </DialogHeader>
+
+              {isPopupSuccess ? (
+                <div className="flex flex-col items-center justify-center py-10 gap-4 text-center">
+                  <CheckCircle2 className="w-16 h-16 text-emerald-400" />
+                  <p className="text-xl font-bold text-white">Enquiry Sent!</p>
+                  <p className="text-cyan-200 text-sm">We'll get back to you within 24 hours.</p>
+                </div>
+              ) : (
+                <form onSubmit={handlePopupSubmit} className="space-y-3">
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="popup-name" className="text-cyan-200 text-sm">Full Name *</Label>
+                      <Input
+                        id="popup-name"
+                        placeholder="Your name"
+                        value={popupFormData.name}
+                        onChange={(e) => handlePopupChange("name", e.target.value)}
+                        className="bg-slate-900 border-slate-700 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-cyan-400 h-9"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <Label htmlFor="popup-phone" className="text-cyan-200 text-sm">Phone Number *</Label>
+                      <Input
+                        id="popup-phone"
+                        type="tel"
+                        placeholder="+91 XXXXX XXXXX"
+                        value={popupFormData.phone}
+                        onChange={(e) => handlePopupChange("phone", e.target.value)}
+                        className="bg-slate-900 border-slate-700 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-cyan-400 h-9"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="popup-email" className="text-cyan-200 text-sm">Email Address *</Label>
+                    <Input
+                      id="popup-email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={popupFormData.email}
+                      onChange={(e) => handlePopupChange("email", e.target.value)}
+                      className="bg-slate-900 border-slate-700 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-cyan-400 h-9"
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="popup-service" className="text-cyan-200 text-sm">Select Service *</Label>
+                    <Select value={popupFormData.service} onValueChange={(value) => handlePopupChange("service", value)} required>
+                      <SelectTrigger id="popup-service" className="bg-slate-900 border-slate-700 text-white focus:border-cyan-400 h-9">
+                        <SelectValue placeholder="Choose a service..." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="tally-implementation">Tally Software Implementation Expert</SelectItem>
+                        <SelectItem value="tally-training-students">Essential Comprehensive Tally Software Training for Students & Jobseekers</SelectItem>
+                        <SelectItem value="softskills-development">Professional Comprehensive Soft Skills Development Training</SelectItem>
+                        <SelectItem value="business-automation">Business Automation Softwares</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="popup-message" className="text-cyan-200 text-sm">Message</Label>
+                    <Textarea
+                      id="popup-message"
+                      placeholder="Tell us about your requirements..."
+                      rows={3}
+                      value={popupFormData.message}
+                      onChange={(e) => handlePopupChange("message", e.target.value)}
+                      className="bg-slate-900 border-slate-700 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-cyan-400 resize-none"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isPopupSubmitting}
+                    className="w-full bg-gradient-to-r from-fuchsia-500 via-violet-500 to-cyan-500 text-white font-bold shadow-xl shadow-fuchsia-500/20 hover:from-fuchsia-600 hover:via-violet-600 hover:to-cyan-600 hover:scale-[1.02] transition-all duration-200"
+                  >
+                    {isPopupSubmitting ? "Sending..." : "Send Enquiry"}
+                  </Button>
+                </form>
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
 
         {/* Services Overview - Modern Card Design */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative">
