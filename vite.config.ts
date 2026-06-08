@@ -15,4 +15,26 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "radix-vendor": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-select",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-navigation-menu",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-popover",
+          ],
+          "chart-vendor": ["recharts"],
+          "misc-vendor": ["@tanstack/react-query", "embla-carousel-react", "embla-carousel-autoplay", "lucide-react"],
+        },
+      },
+    },
+  },
 }));
