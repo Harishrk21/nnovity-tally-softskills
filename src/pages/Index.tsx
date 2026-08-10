@@ -106,8 +106,8 @@ const Index = () => {
         {/* Hero */}
         <section className="relative overflow-hidden pb-8 pt-28 md:pb-12 md:pt-32 lg:pt-36">
           <div className="container relative z-10 mx-auto px-4">
-            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-              <ScrollReveal direction="left" delay={0}>
+            <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
+              <ScrollReveal direction="left" delay={0} className="order-1">
               <div className="space-y-5 text-center sm:space-y-6 lg:text-left">
                 <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                   Best Tally Prime Provider · Soft Skills Training Institute · Chennai
@@ -119,24 +119,25 @@ const Index = () => {
                 <p className="mx-auto max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg lg:mx-0">
                   NnovityWorks is a trusted Tally Prime service provider and soft skills training institute in Chennai — led by Mr. Samshul Millath, ACTD & UKIQ certified trainer with 15+ years of expertise.
                 </p>
-                <div className="flex flex-col items-stretch gap-3 pt-1 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
-                  <Button asChild size="lg" className="w-full rounded-full bg-hero-gradient px-6 text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:opacity-95 sm:w-auto">
+                {/* Desktop / laptop CTAs stay with the copy */}
+                <div className="hidden flex-row flex-wrap justify-start gap-3 pt-1 lg:flex">
+                  <Button asChild size="lg" className="rounded-full bg-hero-gradient px-6 text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:opacity-95">
                     <NavLink to="/contact">
                       Book Consultation
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
                     <NavLink to="/tally-sales">Buy Tally Prime</NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
                     <NavLink to="/softskills-training">Soft Skills Training</NavLink>
                   </Button>
                 </div>
               </div>
               </ScrollReveal>
 
-              <ScrollReveal direction="right" delay={120}>
+              <ScrollReveal direction="right" delay={120} className="order-2">
               <div className="relative mx-auto w-full max-w-sm overflow-visible px-1 sm:max-w-md lg:max-w-[400px] lg:justify-self-end">
                 <div className="relative overflow-hidden rounded-[1.5rem] shadow-xl transition-transform duration-700 hover:scale-[1.01] sm:rounded-[2rem]">
                   <img
@@ -172,6 +173,24 @@ const Index = () => {
                   </div>
                 </GlassBadge>
               </div>
+              </ScrollReveal>
+
+              {/* Mobile / tablet CTAs after the portrait */}
+              <ScrollReveal direction="up" delay={160} className="order-3 lg:hidden">
+                <div className="flex flex-col items-stretch gap-3 sm:mx-auto sm:max-w-md sm:flex-row sm:flex-wrap sm:justify-center">
+                  <Button asChild size="lg" className="w-full rounded-full bg-hero-gradient px-6 text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:opacity-95 sm:w-auto">
+                    <NavLink to="/contact">
+                      Book Consultation
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </NavLink>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                    <NavLink to="/tally-sales">Buy Tally Prime</NavLink>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                    <NavLink to="/softskills-training">Soft Skills Training</NavLink>
+                  </Button>
+                </div>
               </ScrollReveal>
             </div>
 

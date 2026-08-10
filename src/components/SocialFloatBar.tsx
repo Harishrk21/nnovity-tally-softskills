@@ -40,7 +40,7 @@ const SocialFloatBar = () => {
   ];
 
   return (
-    <div className="fixed bottom-4 right-3 z-40 flex flex-col gap-2.5 sm:bottom-5 sm:right-4 sm:gap-3 md:bottom-8 md:right-6">
+    <div className="social-float-bar fixed bottom-4 right-3 z-40 flex flex-col gap-2.5 sm:bottom-5 sm:right-4 sm:gap-3 md:bottom-8 md:right-6">
       {items.map((item, index) => (
         <a
           key={item.label}
