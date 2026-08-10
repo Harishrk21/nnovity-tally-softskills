@@ -1,5 +1,8 @@
-import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import RelatedServices from "@/components/RelatedServices";
+import SEO_CONFIG from "@/config/seo.config";
+import { PageHero } from "@/components/BrightUI";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
@@ -7,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ShoppingCart, Zap, BarChart3, Receipt, CreditCard, Package, TrendingUp, Users, Clock, Shield, CheckCircle2, Store, Calculator, Printer, Smartphone, Database } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import teamSuccess from "@/assets/team-success.jpg";
 
 const POSBillingSolutions = () => {
   const features = [
@@ -98,44 +102,10 @@ const POSBillingSolutions = () => {
 
   return (
     <>
-      <Helmet>
-        <title>POS Billing Solutions Chennai - Fast Counter Billing Software for Supermarkets | NnovityWorks</title>
-        <meta name="description" content="Best POS billing software in Chennai, Anna Nagar by NnovityWorks. Fast counter billing for supermarkets, retail stores & shops. POS system Chennai with inventory management. Expert POS support." />
-        <meta name="description" content="Best POS billing software in Chennai, Anna Nagar by NnovityWorks. Fast counter billing for supermarkets, retail stores  shops. POS system Chennai with inventory management. Expert POS support." />
-        <meta name="keywords" content="POS billing software Chennai, POS billing software Anna Nagar, counter billing software Chennai, supermarket billing software Chennai" />
-        <link rel="canonical" href="https://nnovityworks.com/pos-billing-solutions" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nnovityworks.com/pos-billing-solutions" />
-        <meta property="og:title" content="POS Billing Solutions Chennai - Fast Counter Billing Software | NnovityWorks" />
-        <meta property="og:description" content="Professional POS billing software for supermarkets and retail stores. Fast counter billing solutions in Chennai." />
-        <meta property="og:image" content="https://nnovityworks.com/pos-billing-solutions-image.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="POS Billing Solutions Chennai - NnovityWorks" />
-        <meta name="twitter:description" content="Fast counter billing software for supermarkets and retail stores" />
-        
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "POS Billing Solutions",
-            "applicationCategory": "BusinessApplication",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "INR"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "ratingCount": "150"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        page="pos"
+        jsonLd={[SEO_CONFIG.structuredData.organization]}
+      />
 
 
       <BreadcrumbSchema items={[
@@ -145,46 +115,22 @@ const POSBillingSolutions = () => {
       <Navigation />
       <WhatsAppFloat />
 
-      <main>
+      <main className="page-enter">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
-          {/* Animated Grid Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
-          </div>
-          {/* Floating Orbs */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center space-x-2 glass-morphism px-4 py-2 rounded-full mb-6">
-                <ShoppingCart className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Point of Sale Billing</span>
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                Fast POS Billing Solutions for Supermarkets & Retail Stores
-              </h1>
-              <p className="text-sm md:text-base mb-8 text-white/95 font-medium">
-                Streamline your billing process with our comprehensive POS billing software. Fast counter billing, 
-                inventory management, and sales analytics - all in one powerful solution.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-sm md:text-base px-6 py-3 shadow-xl transition-all duration-300">
-                  <NavLink to="/contact">Request Demo</NavLink>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-sm md:text-base px-6 py-3 transition-all duration-300">
-                  <a href="tel:+919841115769">Call: +91 98411 15769</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Business Solutions"
+          title={<>POS Billing <span className="text-accent-italic">built for retail</span></>}
+          description="Fast counter billing for stores and supermarket chains — speed, accuracy, and inventory control at checkout."
+          image={teamSuccess}
+          imageAlt="POS billing solutions for retail stores and supermarket counters"
+          primaryCta={{ label: "Request a Demo", to: "/contact" }}
+          secondaryCta={{ label: "Contact Sales", to: "/contact" }}
+          badge="Retail Billing Systems"
+          stats={[{ value: "Fast", label: "Checkout" }, { value: "Stock", label: "Synced" }, { value: "Reports", label: "Ready" }]}
+        />
 
         {/* What is POS Billing Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto animate-fade-in">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">What is POS Billing and Why Do You Need It?</h2>
@@ -326,7 +272,7 @@ const POSBillingSolutions = () => {
         </section>
 
         {/* Key Features Detail */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Key Features Explained</h2>
@@ -424,10 +370,10 @@ const POSBillingSolutions = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white">
+        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
               Ready to Speed Up Your Billing Process?
             </h2>
             <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-medium">
@@ -435,7 +381,7 @@ const POSBillingSolutions = () => {
               retail stores, and shops. Get started today and see the difference.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+              <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Request Demo</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
@@ -445,6 +391,8 @@ const POSBillingSolutions = () => {
           </div>
         </section>
       </main>
+      <RelatedServices exclude={["/pos-billing-solutions"]} title="Related business & training services" />
+
 
       <Footer />
     </>

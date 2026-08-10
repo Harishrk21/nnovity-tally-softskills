@@ -1,4 +1,7 @@
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import RelatedServices from "@/components/RelatedServices";
+import SEO_CONFIG from "@/config/seo.config";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import {
@@ -7,53 +10,56 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Helmet } from "react-helmet";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const FAQ = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
-      <Helmet>
-        <title>FAQ - Frequently Asked Questions | NnovityWorks Chennai</title>
-        <meta
-          name="description"
-          content="Find answers to common questions about Tally Prime, CRM, ERP, HRMS solutions, soft skills training programs, pricing, and support services in Chennai."
-        />
-        <meta
-          name="keywords"
-          content="Tally Prime FAQ, CRM questions, ERP FAQ, HRMS support, training FAQ Chennai, Tally Prime pricing, business software support, NnovityWorks FAQ"
-        />
-        <link rel="canonical" href="https://nnovityworks.com/faq" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nnovityworks.com/faq" />
-        <meta property="og:title" content="FAQ - Frequently Asked Questions | NnovityWorks Chennai" />
-        <meta property="og:description" content="Find answers to common questions about Tally Prime, CRM, ERP, HRMS solutions, and soft skills training in Chennai." />
-        <meta property="og:image" content="https://nnovityworks.com/faq-image.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="FAQ - NnovityWorks Chennai" />
-        <meta name="twitter:description" content="Frequently Asked Questions about Tally Prime and Training Services" />
-        
-        {/* Structured Data for FAQ */}
-        <script type="application/ld+json">
-          {JSON.stringify({
+    <div className="page-enter min-h-screen bg-background">
+      <SEOHead
+        page="faq"
+        jsonLd={[
+          SEO_CONFIG.structuredData.organization,
+          {
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [{
-              "@type": "Question",
-              "name": "What is Tally Prime and why do businesses need it?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tally Prime is a comprehensive business management software that handles accounting, inventory, taxation (GST), payroll, and financial reporting. Businesses need Tally Prime to streamline operations, ensure compliance with Indian tax laws, reduce manual errors, and get real-time insights into their financial health."
-              }
-            }]
-          })}
-        </script>
-      </Helmet>
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is Tally Prime and why do businesses need it?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Tally Prime is comprehensive business management software for accounting, inventory, GST, payroll and reporting. NnovityWorks provides Tally Prime sales, support and training in Chennai.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who is the best soft skills trainer in Chennai at NnovityWorks?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Mr. Samshul Millath is an ACTD & UKIQ certified soft skills trainer and Tally Prime Implementation Expert with 15+ years of experience, leading soft skills and corporate training programs at NnovityWorks in Anna Nagar, Chennai.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer soft skills training for corporates and colleges in Chennai?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. NnovityWorks is a soft skills training institute in Chennai offering communication, leadership, personality development, public speaking and PoSH programs for corporates, campuses and individuals.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Where can I buy Tally Prime in Chennai?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "You can buy genuine Tally Prime licenses from NnovityWorks in Anna Nagar, Chennai, with expert installation and ongoing support from Mr. Samshul Millath.",
+                },
+              },
+            ],
+          },
+        ]}
+      />
 
 
       <BreadcrumbSchema items={[
@@ -64,37 +70,26 @@ const FAQ = () => {
       <WhatsAppFloat />
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
-        {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
-        </div>
-        {/* Floating Orbs */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        </div>
-        <div className="container mx-auto max-w-6xl relative z-10 py-12 md:py-16 px-4">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-sm md:text-base text-white/90 max-w-3xl mx-auto font-medium">
-              Find answers to common questions about our Tally Prime solutions, CRM, ERP, HRMS implementations, 
-              training programs, pricing, and support services.
-            </p>
+        <section className="bright-mini-hero">
+          <div className="container relative z-10 mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 className="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                Frequently Asked Questions
+              </h1>
+              <p className="section-lead mx-auto">
+                Answers about Tally Prime, CRM, ERP, HRMS, training programs, pricing, and support.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* FAQ Sections */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+      <section className="py-16 md:py-24 px-4 bg-background">
         <div className="container mx-auto max-w-4xl space-y-12">
           
           {/* Tally Prime Questions */}
           <div className="animate-fade-in">
-            <h2 className="text-2xl md:text-3xl font-black mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Tally Prime Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 font-display text-foreground">Tally Prime Solutions</h2>
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="tally-1" className="bg-card rounded-lg px-6 border-border/50">
                 <AccordionTrigger className="text-left hover:text-primary">
@@ -521,7 +516,7 @@ const FAQ = () => {
               </a>
               <a 
                 href="tel:+919841115769" 
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-all duration-300 hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Call Now: +91 98411 15769
               </a>
@@ -529,6 +524,8 @@ const FAQ = () => {
           </div>
         </div>
       </section>
+      <RelatedServices exclude={["/faq"]} title="Go deeper into our services" />
+
 
       <Footer />
     </div>

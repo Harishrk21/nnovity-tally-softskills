@@ -1,5 +1,8 @@
-import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import RelatedServices from "@/components/RelatedServices";
+import SEO_CONFIG from "@/config/seo.config";
+import { PageHero } from "@/components/BrightUI";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -68,58 +71,20 @@ const TallySupport = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Tally Prime Support Services Chennai - Customization, Cloud, Training | NnovityWorks</title>
-        <meta name="description" content="Best Tally Prime support services in Chennai, Anna Nagar. Expert customization, cloud hosting, mobile app, training, data integration & 24/7 support by NnovityWorks. Tally Prime AMC Chennai." />
-        <meta name="description" content="Best Tally Prime support services in Chennai, Anna Nagar. Expert customization, cloud hosting, mobile app, training, data integration  24/7 support by NnovityWorks. Tally Prime AMC Chennai." />
-        <meta name="keywords" content="Tally Prime support Chennai, Tally Prime support Anna Nagar, Tally Prime AMC Chennai, Tally Prime customization Chennai, Tally Prime cloud Chennai, Tally Prime mobile app Chennai, Tally Prime training Chennai, best Tally Prime support Chennai" />
-        <link rel="canonical" href="https://nnovityworks.com/tally-support" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nnovityworks.com/tally-support" />
-        <meta property="og:title" content="Tally Prime Support Services Chennai - Customization, Cloud, Training | NnovityWorks" />
-        <meta property="og:description" content="Best Tally Prime support services in Chennai. Expert customization, cloud solutions, and training." />
-        <meta property="og:image" content="https://nnovityworks.com/tally-support-image.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Tally Prime Support Services Chennai" />
-        <meta name="twitter:description" content="Expert Tally Prime customization, cloud, and training services" />
-        
-        <script type="application/ld+json">
-          {JSON.stringify({
+      <SEOHead
+        page="tallySupport"
+        jsonLd={[
+          SEO_CONFIG.structuredData.organization,
+          {
             "@context": "https://schema.org",
             "@type": "Service",
-            "serviceType": "Tally Prime Support Services",
-            "provider": {
-              "@type": "Organization",
-              "name": "NnovityWorks",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "13,1st Main Road,R.V.Nagar,Block 1, Anna Nagar East",
-                "addressLocality": "Chennai",
-                "postalCode": "600102",
-                "addressRegion": "TN",
-                "addressCountry": "IN"
-              }
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Chennai"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Tally Prime Support Services",
-              "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tally Prime Customization" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tally Prime Cloud Solutions" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tally Prime Training" } }
-              ]
-            }
-          })}
-        </script>
-      </Helmet>
+            serviceType: "Tally Prime Support & AMC",
+            name: "Tally Prime Support Services Chennai",
+            provider: { "@type": "Organization", name: "NnovityWorks" },
+            areaServed: { "@type": "City", name: "Chennai" },
+          },
+        ]}
+      />
 
 
       <BreadcrumbSchema items={[
@@ -128,38 +93,25 @@ const TallySupport = () => {
   ]} />
       <Navigation />
 
-      <main>
+      <main className="page-enter">
         {/* Hero Section */}
-        <section className="bg-hero-gradient text-primary-foreground py-20 animate-fade-in relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10" style={{ transform: 'none' }}>
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptMCAzNmMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnptLTE4IDE4YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02eiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjEiLz48L2c+PC9zdmc+')]"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                Tally Prime Support & AMC Services
-               - Tally Prime Support Chennai</h1>
-              <p className="text-sm md:text-base mb-8 text-primary-foreground/90">
-                Installation & Implementation, Troubleshooting & error fixing, Annual maintenance and priority support. 
-                Online & Onsite support available.
-              </p> Learn more about <a href="/tally-sales" className="text-blue-600 hover:text-blue-800 underline">buy Tally Prime</a>.
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 transition-all duration-300 shadow-xl">
-                  <NavLink to="/contact">Request Support</NavLink>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">
-                  <NavLink to="/tally-sales">Buy Tally Prime Software</NavLink>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Tally Solutions"
+          title={<>Tally Support <span className="text-accent-italic">& AMC</span></>}
+          description="Installation, troubleshooting, customization, cloud access, and annual maintenance — online and onsite."
+          image={"/tallylogonew.png"}
+          imageAlt="Tally Prime support and AMC services"
+          primaryCta={{ label: "Request Support", to: "/contact" }}
+          secondaryCta={{ label: "Buy Tally Prime", to: "/tally-sales" }}
+          badge="Priority Technical Support"
+          stats={[{ value: "24/7", label: "Assistance Path" }, { value: "Onsite", label: "& Online" }, { value: "AMC", label: "Plans" }]}
+        />
 
         {/* Understanding Tally Prime Support */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto animate-fade-in">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Why Tally Prime Support Matters?</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-center font-display text-foreground">Why Tally Prime Support Matters?</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                 <p>
                   Buying Tally Prime software is just the beginning. To truly leverage its power, you need proper customization, 
@@ -179,7 +131,7 @@ const TallySupport = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Tally Prime Support Services</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 font-display text-foreground">Our Tally Prime Support Services</h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
                 Expert support services designed to help you get the most out of your Tally Prime investment
               </p>
@@ -200,7 +152,7 @@ const TallySupport = () => {
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         {service.features.map((feature, fIndex) => (
                           <li key={fIndex} className="flex items-start">
-                            <span className="text-accent mr-2">•</span>
+                            <span className="text-primary mr-2">•</span>
                             {feature}
                           </li>
                         ))}
@@ -221,8 +173,8 @@ const TallySupport = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 animate-fade-in">
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">1</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">1</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Certified Tally Prime Experts</h3>
@@ -230,8 +182,8 @@ const TallySupport = () => {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">2</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">2</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Quick Response Time</h3>
@@ -239,8 +191,8 @@ const TallySupport = () => {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: "0.2s"}}>
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">3</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">3</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Cost-Effective Solutions</h3>
@@ -250,8 +202,8 @@ const TallySupport = () => {
                 </div>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: "0.3s"}}>
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">4</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">4</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Local Chennai Presence</h3>
@@ -259,8 +211,8 @@ const TallySupport = () => {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">5</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">5</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Comprehensive Training</h3>
@@ -268,8 +220,8 @@ const TallySupport = () => {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: "0.5s"}}>
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-accent font-bold">6</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">6</span>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2">Long-term Partnership</h3>
@@ -283,15 +235,15 @@ const TallySupport = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white animate-fade-in">
+        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden animate-fade-in">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Need Tally Prime Support? We're Here to Help!</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Need Tally Prime Support? We're Here to Help!</h2>
             <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Whether it's a technical issue, customization need, or training requirement - our expert team is ready to assist you.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Get Support Now</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
@@ -301,6 +253,8 @@ const TallySupport = () => {
           </div>
         </section>
       </main>
+      <RelatedServices exclude={["/tally-support"]} title="Buy Tally, train teams & grow soft skills" />
+
 
       <Footer />
     </>

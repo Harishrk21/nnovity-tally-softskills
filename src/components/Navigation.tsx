@@ -1,7 +1,7 @@
 import { NavLink } from "./NavLink";
 import { Button } from "./ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,342 +11,261 @@ import {
   NavigationMenuTrigger,
 } from "./ui/navigation-menu";
 
+const linkClass =
+  "px-2.5 py-1.5 text-[13px] font-medium text-foreground/75 transition-all duration-300 hover:text-foreground rounded-full hover:bg-black/[0.04]";
+const activeClass = "text-foreground bg-black/[0.05]";
+
+const dropdownItemClass =
+  "block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-all duration-300 hover:bg-muted focus:bg-muted";
+
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  const closeMobile = () => {
+    setIsMobileMenuOpen(false);
+    setMobileDropdownOpen(null);
+  };
 
   const toggleMobileDropdown = (menu: string) => {
     setMobileDropdownOpen(mobileDropdownOpen === menu ? null : menu);
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center">
-          <NavLink to="/" className="flex items-center space-x-3 group flex-shrink-0">
-            <img 
-              src="/logo1.jpg" 
-              alt="NnovityWorks Logo - Best Tally Prime Solutions & Soft Skills Training in Chennai" 
-              className="h-16 w-auto object-contain"
-            />
-          </NavLink>
-
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex items-center justify-center space-x-1 flex-1">
-            <NavLink
-              to="/"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Home
-            </NavLink>
-
-            {/* Tally Prime Dropdown */}
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-foreground/80 hover:text-foreground data-[state=open]:bg-transparent">
-                    Tally Solutions
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/tally-sales"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Tally Prime Sales</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Purchase genuine TallyPrime software
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/tally-support"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Tally Prime Support</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Customization, cloud, training, and technical support
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <a
-                            href="https://tallysolutions.com/download/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">Download</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Download TallyPrime software from official Tally Solutions
-                            </p>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            {/* Business Solutions Dropdown */}
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-foreground/80 hover:text-foreground data-[state=open]:bg-transparent">
-                    Business Solutions
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/crm-solutions"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">CRM Solutions</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Customer Relationship Management systems
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/erp-solutions"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">ERP Solutions</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Enterprise Resource Planning systems
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/hrms-solutions"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">HRMS Solutions</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Human Resource Management systems
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <NavLink
-                            to="/pos-billing-solutions"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none">POS Billing Solutions</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                              Fast counter billing software for supermarkets and retail stores
-                            </p>
-                          </NavLink>
-                        </NavigationMenuLink>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            <NavLink
-              to="/softskills-training"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Softskills Training
-            </NavLink>
-            <NavLink
-              to="/about"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              to="/faq"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              FAQ
-            </NavLink>
-          </div>
-
-          {/* Get Started Button - Right Side */}
-          <div className="hidden lg:flex items-center flex-shrink-0">
-            <Button asChild className="ml-4 bg-hero-gradient hover:opacity-90 transition-opacity shadow-lg">
-              <NavLink to="/contact">Get Started</NavLink>
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden ml-auto p-2 rounded-md text-foreground hover:bg-muted"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2 border-t border-border animate-fade-in">
-            <NavLink
-              to="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Home
-            </NavLink>
-
-            {/* Tally Prime Mobile Dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown('tally')}
-                className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              >
-                Tally Solutions
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdownOpen === 'tally' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileDropdownOpen === 'tally' && (
-                <div className="pl-4 space-y-1 animate-fade-in">
-                  <NavLink
-                    to="/tally-sales"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    Tally Prime Sales
-                  </NavLink>
-                  <NavLink
-                    to="/tally-support"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    Tally Prime Support
-                  </NavLink>
-                  <a
-                    href="https://tallysolutions.com/download/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    Download
-                  </a>
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5 md:pt-4">
+      <div className="pointer-events-auto relative mx-auto max-w-6xl">
+        <nav
+          className={`border border-black/[0.06] bg-white/95 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl transition-all duration-300 ${
+            isMobileMenuOpen
+              ? "rounded-[1.75rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.28)]"
+              : "rounded-[999px]"
+          } ${scrolled && !isMobileMenuOpen ? "shadow-[0_14px_44px_-10px_rgba(0,0,0,0.22)]" : ""}`}
+        >
+          <div className="flex min-h-[3.5rem] items-center gap-2 px-3 py-2 md:min-h-[3.75rem] md:px-4 md:py-2.5">
+            <NavLink to="/" onClick={closeMobile} className="flex min-w-0 flex-shrink-0 items-center gap-2 group">
+              <img
+                src="/logo1.jpg"
+                alt="NnovityWorks Logo"
+                className="h-9 w-auto flex-shrink-0 rounded-full object-contain transition-transform duration-300 group-hover:scale-105 sm:h-10 md:h-11"
+              />
+              <div className="min-w-0 hidden xs:block min-[380px]:block">
+                <div className="truncate font-display text-sm font-semibold leading-none text-primary sm:text-[15px] md:text-base">
+                  NnovityWorks
                 </div>
-              )}
+                <div className="mt-0.5 truncate text-[9px] font-medium italic text-primary/80 sm:text-[10px]">
+                  Innovate. Empower. Excel.
+                </div>
+              </div>
+            </NavLink>
+
+            <div className="hidden flex-1 items-center justify-center gap-0.5 xl:flex">
+              <NavLink to="/" className={linkClass} activeClassName={activeClass}>
+                Home
+              </NavLink>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="h-auto rounded-full bg-transparent px-2.5 py-1.5 text-[13px] font-medium text-foreground/75 hover:bg-black/[0.04] hover:text-foreground data-[state=open]:bg-black/[0.05]">
+                      Tally Solutions
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[380px] gap-1 p-3">
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <NavLink to="/tally-sales" className={dropdownItemClass}>
+                              <div className="text-sm font-medium">Tally Prime Sales</div>
+                              <p className="line-clamp-2 text-sm text-muted-foreground">Purchase genuine TallyPrime software</p>
+                            </NavLink>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <NavLink to="/tally-support" className={dropdownItemClass}>
+                              <div className="text-sm font-medium">Tally Prime Support</div>
+                              <p className="line-clamp-2 text-sm text-muted-foreground">Customization, cloud, training, and support</p>
+                            </NavLink>
+                          </NavigationMenuLink>
+                        </li>
+                        <li>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href="https://tallysolutions.com/download/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={dropdownItemClass}
+                            >
+                              <div className="text-sm font-medium">Download</div>
+                              <p className="line-clamp-2 text-sm text-muted-foreground">Official TallyPrime downloads</p>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="h-auto rounded-full bg-transparent px-2.5 py-1.5 text-[13px] font-medium text-foreground/75 hover:bg-black/[0.04] hover:text-foreground data-[state=open]:bg-black/[0.05]">
+                      Business Solutions
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[380px] gap-1 p-3">
+                        {[
+                          { to: "/crm-solutions", title: "CRM Solutions", desc: "Customer Relationship Management" },
+                          { to: "/erp-solutions", title: "ERP Solutions", desc: "Enterprise Resource Planning" },
+                          { to: "/hrms-solutions", title: "HRMS Solutions", desc: "Human Resource Management" },
+                          { to: "/pos-billing-solutions", title: "POS Billing", desc: "Retail & supermarket billing" },
+                        ].map((item) => (
+                          <li key={item.to}>
+                            <NavigationMenuLink asChild>
+                              <NavLink to={item.to} className={dropdownItemClass}>
+                                <div className="text-sm font-medium">{item.title}</div>
+                                <p className="line-clamp-2 text-sm text-muted-foreground">{item.desc}</p>
+                              </NavLink>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+
+              <NavLink to="/softskills-training" className={linkClass} activeClassName={activeClass}>
+                Soft Skills Training
+              </NavLink>
+              <NavLink to="/about" className={linkClass} activeClassName={activeClass}>
+                About
+              </NavLink>
+              <NavLink to="/contact" className={linkClass} activeClassName={activeClass}>
+                Contact
+              </NavLink>
+              <NavLink to="/faq" className={linkClass} activeClassName={activeClass}>
+                FAQ
+              </NavLink>
             </div>
 
-            {/* Business Solutions Mobile Dropdown */}
-            <div>
-              <button
-                onClick={() => toggleMobileDropdown('business')}
-                className="flex items-center justify-between w-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
+            <div className="ml-auto hidden flex-shrink-0 xl:flex">
+              <Button
+                asChild
+                className="rounded-full bg-hero-gradient px-5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:opacity-95"
               >
-                Business Solutions
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdownOpen === 'business' ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileDropdownOpen === 'business' && (
-                <div className="pl-4 space-y-1 animate-fade-in">
-                  <NavLink
-                    to="/crm-solutions"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    CRM Solutions
-                  </NavLink>
-                  <NavLink
-                    to="/erp-solutions"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    ERP Solutions
-                  </NavLink>
-                  <NavLink
-                    to="/hrms-solutions"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    HRMS Solutions
-                  </NavLink>
-                  <NavLink
-                    to="/pos-billing-solutions"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted"
-                  >
-                    POS Billing Solutions
-                  </NavLink>
-                </div>
-              )}
-            </div>
-
-            <NavLink
-              to="/softskills-training"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Softskills Training
-            </NavLink>
-            <NavLink
-              to="/about"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              to="/faq"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground rounded-md hover:bg-muted"
-              activeClassName="text-primary bg-muted"
-            >
-              FAQ
-            </NavLink>
-            <div className="px-4 pt-2">
-              <Button asChild className="w-full bg-hero-gradient hover:opacity-90 transition-opacity">
-                <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Get Started
-                </NavLink>
+                <NavLink to="/contact">Book Consultation</NavLink>
               </Button>
             </div>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen((open) => !open)}
+              className="ml-auto inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-black/[0.06] xl:hidden"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
-        )}
+
+          {isMobileMenuOpen && (
+            <div className="max-h-[min(75vh,32rem)] overflow-y-auto overscroll-contain border-t border-black/[0.06] px-3 py-3 xl:hidden animate-fade-in">
+              <div className="space-y-1 pb-2">
+                <NavLink to="/" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>
+                  Home
+                </NavLink>
+
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => toggleMobileDropdown("tally")}
+                    className="flex w-full items-center justify-between rounded-full px-2.5 py-2.5 text-left text-[13px] font-medium text-foreground/80 hover:bg-black/[0.04]"
+                  >
+                    Tally Solutions
+                    <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${mobileDropdownOpen === "tally" ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileDropdownOpen === "tally" && (
+                    <div className="mt-1 space-y-1 rounded-2xl bg-muted/50 p-2 animate-fade-in">
+                      <NavLink to="/tally-sales" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">
+                        Tally Prime Sales
+                      </NavLink>
+                      <NavLink to="/tally-support" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">
+                        Tally Prime Support
+                      </NavLink>
+                      <a
+                        href="https://tallysolutions.com/download/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMobile}
+                        className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground"
+                      >
+                        Download TallyPrime
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => toggleMobileDropdown("business")}
+                    className="flex w-full items-center justify-between rounded-full px-2.5 py-2.5 text-left text-[13px] font-medium text-foreground/80 hover:bg-black/[0.04]"
+                  >
+                    Business Solutions
+                    <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform duration-300 ${mobileDropdownOpen === "business" ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileDropdownOpen === "business" && (
+                    <div className="mt-1 space-y-1 rounded-2xl bg-muted/50 p-2 animate-fade-in">
+                      <NavLink to="/crm-solutions" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">CRM Solutions</NavLink>
+                      <NavLink to="/erp-solutions" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">ERP Solutions</NavLink>
+                      <NavLink to="/hrms-solutions" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">HRMS Solutions</NavLink>
+                      <NavLink to="/pos-billing-solutions" onClick={closeMobile} className="block rounded-xl px-3 py-2.5 text-sm text-muted-foreground hover:bg-white hover:text-foreground">POS Billing</NavLink>
+                    </div>
+                  )}
+                </div>
+
+                <NavLink to="/softskills-training" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>Soft Skills Training</NavLink>
+                <NavLink to="/training" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>Training</NavLink>
+                <NavLink to="/about" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>About</NavLink>
+                <NavLink to="/contact" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>Contact</NavLink>
+                <NavLink to="/faq" onClick={closeMobile} className={`block ${linkClass}`} activeClassName={activeClass}>FAQ</NavLink>
+
+                <div className="px-1 pt-3">
+                  <Button asChild className="w-full rounded-full bg-hero-gradient py-6 text-white hover:opacity-95">
+                    <NavLink to="/contact" onClick={closeMobile}>Book Consultation</NavLink>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+        </nav>
       </div>
-    </nav>
+
+      {isMobileMenuOpen && (
+        <button
+          type="button"
+          aria-label="Close menu overlay"
+          className="pointer-events-auto fixed inset-0 -z-10 bg-foreground/20 backdrop-blur-[2px] xl:hidden"
+          onClick={closeMobile}
+        />
+      )}
+    </header>
   );
 };
 

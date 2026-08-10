@@ -1,5 +1,7 @@
-import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import RelatedServices from "@/components/RelatedServices";
+import SEO_CONFIG from "@/config/seo.config";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, Target, Heart, TrendingUp, Briefcase, Settings, Cloud, Smartphone, Sparkles, GraduationCap, Users, Check, ArrowRight } from "lucide-react";
@@ -34,45 +36,13 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai</title>
-        <meta name="description" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai & Mr. Samshul Millath - 15+ years Tally Prime expert in Chennai, Anna Nagar. Best Tally Prime solutions & professional soft skills training provider. ACTD & UKIQ certified trainer." />
-        <meta name="description" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai  Mr. Samshul Millath - 15+ years Tally Prime expert in Chennai, Anna Nagar. Best Tally Prime solutions  professional soft skills training provider. ACTD  UKIQ certified trainer." />
-        <meta name="keywords" content="about NnovityWorks, Mr. Samshul Millath, Tally Prime expert Chennai, Tally Prime expert Anna Nagar, best soft skills trainer Chennai, ACTD certified trainer, UKIQ certified trainer, 15 years experience Tally Prime, Tally Prime training Chennai" />
-        <link rel="canonical" href="https://nnovityworks.com/about" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nnovityworks.com/about" />
-        <meta property="og:title" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath | Tally Prime & Soft Skills Training Chennai" />
-        <meta property="og:description" content="Learn about NnovityWorks and Mr. Samshul Millath, 15+ years experienced Tally Prime Implementation & Training Expert in Chennai." />
-        <meta property="og:image" content="https://nnovityworks.com/about-image.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai - Mr. Samshul Millath" />
-        <meta name="twitter:description" content="15+ years experienced Tally Prime Implementation & Training Expert in Chennai" />
-        <meta name="twitter:image" content="https://nnovityworks.com/about-image.jpg" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "NnovityWorks",
-              "founder": {
-                "@type": "Person",
-                "name": "Mr. Samshul Millath",
-                "jobTitle": "Tally Prime Implementation & Training Expert",
-                "description": "15+ years experienced in Accounting & Business Automation Support"
-              },
-              "description": "Empowering businesses with Tally Prime solutions and professional soft skills training"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        page="about"
+        jsonLd={[
+          SEO_CONFIG.structuredData.organization,
+          SEO_CONFIG.structuredData.person,
+        ]}
+      />
 
 
       <BreadcrumbSchema items={[
@@ -81,41 +51,26 @@ const About = () => {
   ]} />
       <Navigation />
 
-      <main>
+      <main className="page-enter">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center text-white overflow-hidden">
-          <div className="absolute inset-0" style={{ transform: 'none' }}>
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
-          </div>
-          {/* Animated Grid Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
-          </div>
-          {/* Floating Orbs */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                About NnovityWorks - Best Tally Prime & Soft Skills Training in Chennai
+        <section className="bright-mini-hero">
+          <div className="container relative z-10 mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 className="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                About Mr. Samshul Millath & NnovityWorks
               </h1>
-              <p className="text-sm md:text-base font-bold text-white/95 mb-4">
-                Innovate. Empower. Excel.
-              </p> Learn more about <a href="/contact" className="text-blue-600 hover:text-blue-800 underline">contact us</a>.
-              <p className="text-sm md:text-base text-white/80">
-                Empowering businesses with Tally Prime solutions and professional soft skills training.
+              <p className="section-lead mx-auto">
+                Meet Chennai&apos;s trusted Tally Prime expert and soft skills trainer — building systems and people since 15+ years.
               </p>
             </div>
           </div>
         </section>
 
         {/* Our Story */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Story</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-center font-display text-foreground">Our Story</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6 animate-fade-in">
                 <p>
                   At NnovityWorks, we blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
@@ -124,7 +79,23 @@ const About = () => {
                   We specialize in <strong>Tally Prime Software Sales & Support</strong> and <strong>Soft Skills Training</strong>, offering practical solutions that improve both operational performance and human capability.
                 </p>
                 <p>
-                  Under the leadership of <strong>Mr. Samshul Millath</strong>, a Tally Prime Implementation & Training Expert with 15+ years of experience in Accounting & Business Automation Support, we've established ourselves as Chennai's trusted partner for both Tally Prime solutions and professional development training.
+                  Under the leadership of <strong>Mr. Samshul Millath</strong> — ACTD & UKIQ certified soft skills trainer and Tally Prime Implementation Expert with 15+ years of experience — we&apos;ve become a trusted{" "}
+                  <NavLink to="/softskills-training" className="font-medium text-primary underline-offset-4 hover:underline">
+                    soft skills training institute in Chennai
+                  </NavLink>{" "}
+                  and a reliable partner for{" "}
+                  <NavLink to="/tally-sales" className="font-medium text-primary underline-offset-4 hover:underline">
+                    Tally Prime sales
+                  </NavLink>
+                  ,{" "}
+                  <NavLink to="/tally-support" className="font-medium text-primary underline-offset-4 hover:underline">
+                    support
+                  </NavLink>
+                  , and{" "}
+                  <NavLink to="/training" className="font-medium text-primary underline-offset-4 hover:underline">
+                    training
+                  </NavLink>
+                  .
                 </p>
                 <p>
                   Our mission is to empower people and businesses with the right skills and systems to perform at their best. We've trained 1000+ young minds for Tally Prime Accounting & Soft Skills from prestigious Educational institutions and through CSR & NGO Activities.
@@ -134,12 +105,12 @@ const About = () => {
                     <div className="text-2xl md:text-3xl font-bold text-primary mb-2">500+</div>
                     <div className="text-sm text-muted-foreground">Satisfied Clients</div>
                   </div>
-                  <div className="text-center p-6 bg-secondary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
-                    <div className="text-2xl md:text-3xl font-bold text-secondary mb-2">10K+</div>
+                  <div className="text-center p-6 bg-primary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-2">10K+</div>
                     <div className="text-sm text-muted-foreground">Training Hours Delivered</div>
                   </div>
-                  <div className="text-center p-6 bg-accent/10 rounded-xl transition-all duration-300 hover:shadow-lg">
-                    <div className="text-2xl md:text-3xl font-bold text-accent mb-2">15+</div>
+                  <div className="text-center p-6 bg-primary/10 rounded-xl transition-all duration-300 hover:shadow-lg">
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-2">15+</div>
                     <div className="text-sm text-muted-foreground">Years of Excellence</div>
                   </div>
                 </div>
@@ -152,7 +123,7 @@ const About = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">About the Founder</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 font-display text-foreground">About the Founder</h2>
               <Card className="border-secondary/30 shadow-xl overflow-hidden animate-fade-in">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5 gap-0">
@@ -176,10 +147,10 @@ const About = () => {
                         <h3 className="text-xl md:text-2xl font-bold mb-2">Mr. Samshul Millath</h3>
                         <p className="text-sm md:text-base text-primary mb-3 font-semibold">Tally Prime Implementation & Training Expert (Tally Prime & SoftSkills)</p>
                         <div className="flex flex-wrap gap-2 mb-4">
-                          <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold">
+                          <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
                             15+ Years Experience
                           </span>
-                          <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-semibold">
+                          <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">
                             Accounting & Business Automation
                           </span>
                         </div>
@@ -218,9 +189,9 @@ const About = () => {
         </section>
 
         {/* Our Values */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-12 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">Our Core Values</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-12 font-display text-foreground">Our Core Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {values.map((value, index) => {
                 const Icon = value.icon;
@@ -241,16 +212,16 @@ const About = () => {
         </section>
 
         {/* What We Offer */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 relative">
+        <section className="py-16 md:py-24 bg-background relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(6,182,212,0.05)_0%,transparent_50%)]"></div>
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-12 md:mb-16">
-              <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full mb-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <div className="inline-flex items-center space-x-3 bg-primary text-white px-8 py-4 rounded-full mb-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <Sparkles className="w-6 h-6" />
                 <span className="text-base font-bold">Our Services</span>
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 font-display text-foreground leading-tight">
                 What We Offer
               </h2>
               <p className="text-sm md:text-base text-slate-700 font-medium max-w-4xl mx-auto leading-relaxed">
@@ -368,15 +339,15 @@ const About = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 relative overflow-hidden text-white">
+        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
             <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with NnovityWorks today. We blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
+              <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">
                   Get in Touch 
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -389,6 +360,8 @@ const About = () => {
           </div>
         </section>
       </main>
+      <RelatedServices exclude={["/about"]} title="Explore our Tally & soft skills services" />
+
 
       <Footer />
     </>

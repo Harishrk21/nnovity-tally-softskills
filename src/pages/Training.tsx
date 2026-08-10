@@ -1,5 +1,9 @@
-import { Helmet } from "react-helmet";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import RelatedServices from "@/components/RelatedServices";
+import SEO_CONFIG from "@/config/seo.config";
+import { PageHero } from "@/components/BrightUI";
+import heroTally from "@/assets/hero-tally.jpg";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Button } from "@/components/ui/button";
@@ -198,54 +202,21 @@ const Training = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Tally Prime & MS Office Training Chennai - Professional Training Programs | NnovityWorks</title>
-        <meta name="description" content="Best Tally Prime & MS Office training in Chennai, Anna Nagar. Individual & corporate programs by Mr. Samshul Millath. Hands-on sessions, certification & job-oriented curriculum. Tally training Chennai." />
-        <meta name="description" content="Best Tally Prime  MS Office training in Chennai, Anna Nagar. Individual  corporate programs by Mr. Samshul Millath. Hands-on sessions, certification  job-oriented curriculum. Tally training Chennai." />
-        <meta name="keywords" content="Tally Prime training Chennai, Tally Prime training Anna Nagar, MS Office training Chennai, Excel training Chennai, corporate training Chennai, Tally Prime certification Chennai" />
-        <link rel="canonical" href="https://nnovityworks.com/training" />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://nnovityworks.com/training" />
-        <meta property="og:title" content="Tally Prime & MS Office Training Chennai - NnovityWorks" />
-        <meta property="og:description" content="Professional Tally Prime and MS Office training programs in Chennai. Expert training by Mr. Samshul Millath." />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Tally Prime & MS Office Training Chennai" />
-        <meta name="twitter:description" content="Comprehensive training programs for Tally Prime and MS Office in Chennai" />
-        
-        <script type="application/ld+json">
-          {JSON.stringify({
+      <SEOHead
+        page="training"
+        jsonLd={[
+          SEO_CONFIG.structuredData.organization,
+          SEO_CONFIG.structuredData.person,
+          {
             "@context": "https://schema.org",
             "@type": "Course",
-            "name": "Tally Prime & MS Office Training",
-            "description": "Comprehensive training programs for Tally Prime accounting software and Microsoft Office suite",
-            "provider": {
-              "@type": "Organization",
-              "name": "NnovityWorks",
-              "url": "https://nnovityworks.com"
-            },
-            "instructor": {
-              "@type": "Person",
-              "name": "Mr. Samshul Millath",
-              "jobTitle": "Tally Prime Implementation & Training Expert"
-            },
-            "courseCode": "TP-MSO-TRAINING",
-            "educationalLevel": "Professional",
-            "teaches": [
-              "Tally Prime",
-              "Microsoft Word",
-              "Microsoft Excel",
-              "Microsoft PowerPoint",
-              "Microsoft Outlook",
-              "Accounting Software",
-              "Office Productivity"
-            ]
-          })}
-        </script>
-      </Helmet>
+            name: "Tally Prime & MS Office Training Chennai",
+            description: "Hands-on Tally Prime and MS Office training in Chennai by Mr. Samshul Millath",
+            provider: { "@type": "Organization", name: "NnovityWorks", url: "https://nnovityworks.com" },
+            instructor: { "@type": "Person", name: "Mr. Samshul Millath" },
+          },
+        ]}
+      />
 
 
       <BreadcrumbSchema items={[
@@ -255,47 +226,25 @@ const Training = () => {
       <Navigation />
       <WhatsAppFloat />
 
-      <main>
+      <main className="page-enter">
         {/* Hero Section */}
-        <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-cyan-900/85"></div>
-          {/* Animated Grid Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
-          </div>
-          {/* Floating Orbs */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10 py-12 md:py-16">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 mb-6 mx-auto">
-                <GraduationCap className="w-10 h-10 text-white" />
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                Tally Prime & MS Office Training
-              </h1>
-              <p className="text-sm md:text-base text-white/95 font-medium mb-6">
-                Professional training programs for individuals, students, and corporate teams. Master Tally Prime accounting software and Microsoft Office suite with hands-on practical sessions.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
-                  <NavLink to="/contact">Enroll Now</NavLink>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
-                  <a href="tel:+919841115769">Call: +91 98411 15769</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          eyebrow="Training Programs"
+          title={<>Tally & MS-Office <span className="text-accent-italic">Training</span></>}
+          description="Hands-on accounting and office productivity training for professionals, students, and corporate teams."
+          image={heroTally}
+          imageAlt="Tally and MS Office training"
+          primaryCta={{ label: "Join a Batch", to: "/contact" }}
+          secondaryCta={{ label: "Soft Skills", to: "/softskills-training" }}
+          badge="Practical Skill Building"
+          stats={[{ value: "Hands-on", label: "Sessions" }, { value: "Corporate", label: "Ready" }, { value: "Campus", label: "Friendly" }]}
+        />
 
         {/* Training Features */}
-        <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 font-display text-foreground">
                 Why Choose Our Training Programs?
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -330,7 +279,7 @@ const Training = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 mb-4">
                 <Calculator className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 font-display text-foreground">
                 Tally Prime Training Program
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
@@ -408,13 +357,13 @@ const Training = () => {
         </section>
 
         {/* MS Office Training */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 mb-4">
                 <Laptop className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 font-display text-foreground">
                 MS Office Training Program
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
@@ -507,7 +456,7 @@ const Training = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-8 text-center bg-gradient-to-r from-slate-900 via-blue-900 to-cyan-900 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 text-center font-display text-foreground">
                 Who Should Attend?
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -575,13 +524,13 @@ const Training = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 text-white relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                 Ready to Enhance Your Skills?
               </h2>
               <p className="text-sm md:text-base text-white/90 mb-8">
@@ -599,6 +548,8 @@ const Training = () => {
           </div>
         </section>
       </main>
+      <RelatedServices exclude={["/training"]} title="Tally sales, support & soft skills" />
+
 
       <Footer />
     </>
