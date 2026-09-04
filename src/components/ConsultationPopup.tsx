@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-const FIRST_OPEN_MS = 5000;
+const FIRST_OPEN_MS = 15000;
 const REOPEN_MS = 20000;
 
 const ConsultationPopup = () => {
@@ -164,10 +164,10 @@ const ConsultationPopup = () => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="consultation-popup-title"
-        className="relative z-10 flex w-full max-h-[min(92dvh,100%)] flex-col overflow-hidden rounded-t-[1.5rem] border border-border bg-white shadow-2xl animate-fade-in sm:max-h-[min(88dvh,640px)] sm:max-w-lg sm:rounded-[1.75rem]"
+        className="relative z-10 flex w-full max-h-[min(92dvh,100%)] flex-col overflow-hidden rounded-t-[1.5rem] border border-border bg-card shadow-2xl animate-fade-in sm:max-h-[min(88dvh,640px)] sm:max-w-lg sm:rounded-[1.75rem]"
       >
         {/* Sticky header */}
-        <div className="relative flex-shrink-0 border-b border-border/70 bg-white px-4 pb-3 pt-4 sm:px-6 sm:pb-4 sm:pt-5">
+        <div className="relative flex-shrink-0 border-b border-border/70 bg-card px-4 pb-3 pt-4 sm:px-6 sm:pb-4 sm:pt-5">
           <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-border sm:hidden" aria-hidden="true" />
           <button
             type="button"
@@ -218,7 +218,7 @@ const ConsultationPopup = () => {
                   placeholder="Your name"
                   value={formData.name}
                   onChange={(e) => handleChange("name", e.target.value)}
-                  className="h-11 rounded-xl border-border bg-white text-base sm:h-10 sm:text-sm"
+                  className="h-11 rounded-xl border-border bg-background text-base sm:h-10 sm:text-sm"
                   autoComplete="name"
                   required
                 />
@@ -236,7 +236,7 @@ const ConsultationPopup = () => {
                   placeholder="+91 XXXXX XXXXX"
                   value={formData.phone}
                   onChange={(e) => handleChange("phone", e.target.value)}
-                  className="h-11 rounded-xl border-border bg-white text-base sm:h-10 sm:text-sm"
+                  className="h-11 rounded-xl border-border bg-background text-base sm:h-10 sm:text-sm"
                   autoComplete="tel"
                   required
                 />
@@ -255,7 +255,7 @@ const ConsultationPopup = () => {
                 placeholder="your.email@example.com"
                 value={formData.email}
                 onChange={(e) => handleChange("email", e.target.value)}
-                className="h-11 rounded-xl border-border bg-white text-base sm:h-10 sm:text-sm"
+                className="h-11 rounded-xl border-border bg-background text-base sm:h-10 sm:text-sm"
                 autoComplete="email"
                 required
               />
@@ -268,7 +268,7 @@ const ConsultationPopup = () => {
               <Select value={formData.service} onValueChange={(value) => handleChange("service", value)} required>
                 <SelectTrigger
                   id="popup-service"
-                  className="h-11 rounded-xl border-border bg-white text-base sm:h-10 sm:text-sm"
+                  className="h-11 rounded-xl border-border bg-background text-base sm:h-10 sm:text-sm"
                 >
                   <SelectValue placeholder="Choose a service..." />
                 </SelectTrigger>
@@ -302,14 +302,14 @@ const ConsultationPopup = () => {
                 rows={2}
                 value={formData.message}
                 onChange={(e) => handleChange("message", e.target.value)}
-                className="min-h-[72px] resize-none rounded-xl border-border bg-white text-base sm:min-h-[88px] sm:text-sm"
+                className="min-h-[72px] resize-none rounded-xl border-border bg-background text-base sm:min-h-[88px] sm:text-sm"
               />
             </div>
           </form>
         </div>
 
         {/* Sticky footer CTA */}
-        <div className="flex-shrink-0 border-t border-border/70 bg-white px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:px-6 sm:pb-5 sm:pt-4">
+        <div className="flex-shrink-0 border-t border-border/70 bg-card px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:px-6 sm:pb-5 sm:pt-4">
           <Button
             type="submit"
             form="consultation-popup-form"

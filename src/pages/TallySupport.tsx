@@ -128,7 +128,7 @@ const TallySupport = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 font-display text-foreground">Our Tally Prime Support Services</h2>
@@ -235,10 +235,10 @@ const TallySupport = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden animate-fade-in">
+        <section className="relative overflow-hidden bg-slate-950 py-16 text-white md:py-24 animate-fade-in">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Need Tally Prime Support? We're Here to Help!</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-white">Need Tally Prime Support? We're Here to Help!</h2>
             <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Whether it's a technical issue, customization need, or training requirement - our expert team is ready to assist you.
             </p>
@@ -246,7 +246,7 @@ const TallySupport = () => {
               <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Get Support Now</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 border-2 border-white/40 bg-transparent text-white hover:bg-white/10 hover:border-white/60 hover:scale-105 transition-all duration-300 font-bold">
                 <a href="tel:+919841115769">Call Support: +91 98411 15769</a>
               </Button>
             </div>

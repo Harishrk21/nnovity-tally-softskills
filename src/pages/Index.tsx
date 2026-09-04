@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import SEOHead from "@/components/SEOHead";
 import RelatedServices from "@/components/RelatedServices";
 import SEO_CONFIG from "@/config/seo.config";
-import { GlassBadge, StatRow } from "@/components/BrightUI";
+import { StatRow } from "@/components/BrightUI";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -127,10 +127,10 @@ const Index = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
+                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-card px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
                     <NavLink to="/tally-sales">Buy Tally Prime</NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
+                  <Button asChild size="lg" variant="outline" className="rounded-full border-border bg-card px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted">
                     <NavLink to="/softskills-training">Soft Skills Training</NavLink>
                   </Button>
                 </div>
@@ -138,7 +138,7 @@ const Index = () => {
               </ScrollReveal>
 
               <ScrollReveal direction="right" delay={120} className="order-2">
-              <div className="relative mx-auto w-full max-w-sm overflow-visible px-1 sm:max-w-md lg:max-w-[400px] lg:justify-self-end">
+              <div className="relative mx-auto w-full max-w-sm overflow-hidden px-1 sm:max-w-md lg:max-w-[400px] lg:justify-self-end">
                 <div className="relative overflow-hidden rounded-[1.5rem] shadow-xl transition-transform duration-700 hover:scale-[1.01] sm:rounded-[2rem]">
                   <img
                     src="/millath.png"
@@ -146,32 +146,6 @@ const Index = () => {
                     className="aspect-[4/5] w-full object-cover object-top"
                   />
                 </div>
-
-                <GlassBadge tone="primary" className="absolute left-2 top-4 z-10 flex max-w-[calc(100%-1rem)] items-center gap-2 text-xs shadow-lg animate-float sm:left-3 sm:top-8 sm:text-sm md:-left-6">
-                  <Award className="h-4 w-4 flex-shrink-0" />
-                  <span className="truncate">Tally Expert & Soft Skills Trainer</span>
-                </GlassBadge>
-
-                <GlassBadge className="absolute right-2 top-20 z-10 flex items-center gap-2 text-xs sm:right-3 sm:top-24 sm:text-sm md:-right-4">
-                  <Star className="h-4 w-4 flex-shrink-0 fill-amber-400 text-amber-400" />
-                  <div>
-                    <div className="text-[10px] uppercase tracking-wide text-muted-foreground">Experience</div>
-                    <div className="font-semibold">15+ Years</div>
-                  </div>
-                </GlassBadge>
-
-                <GlassBadge className="absolute bottom-24 left-2 z-10 text-xs sm:bottom-28 sm:left-3 sm:text-sm md:-left-4">
-                  <div className="text-[10px] uppercase tracking-wide text-muted-foreground">Satisfaction</div>
-                  <div className="font-semibold">98%</div>
-                </GlassBadge>
-
-                <GlassBadge className="absolute bottom-6 right-2 z-10 flex max-w-[70%] items-center gap-2 text-xs sm:bottom-10 sm:right-3 sm:text-sm md:-right-6">
-                  <Users className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <div className="min-w-0">
-                    <div className="font-semibold">500+</div>
-                    <div className="truncate text-[10px] text-muted-foreground">Businesses Served</div>
-                  </div>
-                </GlassBadge>
               </div>
               </ScrollReveal>
 
@@ -184,10 +158,10 @@ const Index = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-card px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
                     <NavLink to="/tally-sales">Buy Tally Prime</NavLink>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-card px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
                     <NavLink to="/softskills-training">Soft Skills Training</NavLink>
                   </Button>
                 </div>
@@ -210,13 +184,13 @@ const Index = () => {
         </section>
 
         {/* Trusted by / partners */}
-        <section className="overflow-hidden border-y border-border/60 bg-white/60 py-10">
+        <section className="overflow-hidden border-y border-border/60 bg-card/60 py-10">
           <div className="container mx-auto px-4">
             <p className="mb-6 text-center text-sm text-muted-foreground">Trusted by businesses and teams across Chennai</p>
           </div>
           <div className="relative w-full overflow-hidden">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white/90 to-transparent sm:w-20" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white/90 to-transparent sm:w-20" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-background/90 to-transparent sm:w-20" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-background/90 to-transparent sm:w-20" />
             <div className="partners-marquee flex w-max items-center gap-10 sm:gap-14">
               {[...partners, ...partners, ...partners].map((partner, index) => (
                 <div
@@ -261,7 +235,7 @@ const Index = () => {
                     { title: "Measured outcomes", desc: "Clear adoption and performance goals." },
                     { title: "Truly customised", desc: "Content and setup shaped to your maturity." },
                   ].map((item) => (
-                    <div key={item.title} className="hover-lift rounded-2xl border border-border bg-white p-5 shadow-sm">
+                    <div key={item.title} className="hover-lift rounded-2xl border border-border bg-card p-5 shadow-sm">
                       <h3 className="font-semibold text-foreground">{item.title}</h3>
                       <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
                     </div>
@@ -269,38 +243,6 @@ const Index = () => {
                 </div>
               </div>
               </ScrollReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Meet founder */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto mb-12 max-w-3xl text-center">
-              <p className="section-eyebrow">Meet Our Expert</p>
-              <h2 className="section-title">The practitioner behind every engagement.</h2>
-              <p className="section-lead mx-auto">
-                Certified expertise and real-world implementation experience for both technology and talent.
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-10 rounded-[2rem] border border-border bg-background p-6 md:grid-cols-[280px_1fr] md:p-10">
-              <div className="overflow-hidden rounded-[1.5rem]">
-                <img src="/millath.png" alt="Mr. Samshul Millath" className="aspect-square w-full object-cover object-top" />
-              </div>
-              <div>
-                <GlassBadge tone="primary" className="mb-4 inline-flex">Tally Prime Implementation & Training Expert</GlassBadge>
-                <h3 className="font-display text-3xl font-semibold">Mr. Samshul Millath</h3>
-                <p className="mt-2 text-muted-foreground">ACTD & UKIQ Certified Soft Skills Trainer</p>
-                <p className="mt-5 leading-relaxed text-muted-foreground">
-                  15+ years in Accounting & Business Automation Support. Delivering TallyPrime Sales, Service, Training & Implementation — plus soft skills programs that have trained 1000+ young minds across institutions, CSR, and NGO initiatives.
-                </p>
-                <Button asChild className="mt-6 rounded-full" variant="outline">
-                  <NavLink to="/about">
-                    Learn more about us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </NavLink>
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -325,7 +267,7 @@ const Index = () => {
                   <NavLink
                     key={program.num}
                     to={program.link}
-                    className="group hover-lift rounded-[1.5rem] border border-border bg-white p-6 shadow-sm transition-all hover:border-primary/30"
+                    className="group hover-lift rounded-[1.5rem] border border-border bg-card p-6 shadow-sm transition-all hover:border-primary/30"
                   >
                     <div className="mb-5 flex items-center justify-between">
                       <span className="font-display text-sm text-primary">{program.num}</span>
@@ -346,7 +288,7 @@ const Index = () => {
         </section>
 
         {/* Dual solutions */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-card py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="rounded-[2rem] border border-border bg-background p-8 md:p-10">
@@ -397,7 +339,7 @@ const Index = () => {
               {whyUs.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} className="rounded-[1.5rem] border border-border bg-white p-6 shadow-sm">
+                  <div key={item.title} className="rounded-[1.5rem] border border-border bg-card p-6 shadow-sm">
                     <div className="mb-4 flex items-center justify-between">
                       <span className="font-display text-sm text-primary">0{index + 1}</span>
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -414,7 +356,7 @@ const Index = () => {
         </section>
 
         {/* Method */}
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-card py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="mx-auto mb-12 max-w-3xl text-center">
               <p className="section-eyebrow">Our Method</p>
@@ -457,7 +399,7 @@ const Index = () => {
                   role: "CEO",
                 },
               ].map((t) => (
-                <div key={t.author + t.role} className="rounded-[1.5rem] border border-border bg-white p-7 shadow-sm">
+                <div key={t.author + t.role} className="rounded-[1.5rem] border border-border bg-card p-7 shadow-sm">
                   <div className="mb-4 flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
@@ -475,7 +417,7 @@ const Index = () => {
         </section>
 
         {/* FAQ teaser */}
-        <section className="bg-white py-16 md:py-20">
+        <section className="bg-card py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <p className="section-eyebrow">FAQ</p>
@@ -492,7 +434,7 @@ const Index = () => {
         </section>
 
         {/* SEO interlinks */}
-        <section className="border-y border-border bg-white py-14 md:py-16">
+        <section className="border-y border-border bg-card py-14 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl text-center">
               <p className="section-eyebrow">Why Chennai chooses NnovityWorks</p>
@@ -562,7 +504,7 @@ const Index = () => {
                   <p>Anna Nagar East, Chennai</p>
                 </div>
               </div>
-              <div className="rounded-[2rem] border border-border bg-white p-6 shadow-md md:p-8">
+              <div className="rounded-[2rem] border border-border bg-card p-6 shadow-md md:p-8">
                 <ContactForm
                   subject="New Home Page Enquiry from NnovityWorks Website"
                   compact

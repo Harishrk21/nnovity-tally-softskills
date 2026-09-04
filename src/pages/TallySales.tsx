@@ -144,7 +144,7 @@ const TallySales = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-12 font-display text-foreground">Why Buy Tally Prime from Nnovity Works?</h2>
             <div className="grid md:grid-cols-4 gap-6">
@@ -209,10 +209,10 @@ const TallySales = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden animate-fade-in">
+        <section className="relative overflow-hidden bg-slate-950 py-16 text-white md:py-24 animate-fade-in">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Streamline Your Business?</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-white">Ready to Streamline Your Business?</h2>
             <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with our sales team for personalized product recommendations and competitive pricing.
             </p>
@@ -220,7 +220,7 @@ const TallySales = () => {
               <Button asChild size="lg" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Contact Sales Team</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 border-2 border-white/40 bg-transparent text-white hover:bg-white/10 hover:border-white/60 hover:scale-105 transition-all duration-300 font-bold">
                 <NavLink to="/tally-support">View Support Services</NavLink>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-all duration-300">

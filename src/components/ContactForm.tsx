@@ -111,7 +111,7 @@ const ContactForm = ({
               placeholder="Your name"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
-              className="rounded-xl border-border bg-white"
+              className="rounded-xl border-border bg-background"
               required
             />
           </div>
@@ -124,7 +124,7 @@ const ContactForm = ({
               placeholder="+91 XXXXX XXXXX"
               value={formData.phone}
               onChange={(e) => handleChange("phone", e.target.value)}
-              className="rounded-xl border-border bg-white"
+              className="rounded-xl border-border bg-background"
               required
             />
           </div>
@@ -139,7 +139,7 @@ const ContactForm = ({
             placeholder="your.email@example.com"
             value={formData.email}
             onChange={(e) => handleChange("email", e.target.value)}
-            className="rounded-xl border-border bg-white"
+            className="rounded-xl border-border bg-background"
             required
           />
         </div>
@@ -147,7 +147,7 @@ const ContactForm = ({
         <div className="space-y-2">
           <Label htmlFor="cf-service">Service Interested In *</Label>
           <Select value={formData.service} onValueChange={(value) => handleChange("service", value)} required>
-            <SelectTrigger id="cf-service" className="rounded-xl border-border bg-white">
+            <SelectTrigger id="cf-service" className="rounded-xl border-border bg-background">
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
@@ -175,7 +175,7 @@ const ContactForm = ({
             rows={compact ? 4 : 5}
             value={formData.message}
             onChange={(e) => handleChange("message", e.target.value)}
-            className="rounded-xl border-border bg-white"
+            className="rounded-xl border-border bg-background"
             required
           />
         </div>

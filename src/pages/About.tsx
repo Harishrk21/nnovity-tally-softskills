@@ -120,7 +120,7 @@ const About = () => {
         </section>
 
         {/* About Samshul Millath */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-semibold text-center mb-12 font-display text-foreground">About the Founder</h2>
@@ -128,17 +128,12 @@ const About = () => {
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5 gap-0">
                     {/* Image Column */}
-                    <div className="md:col-span-2 bg-gradient-to-br from-secondary/20 to-primary/10">
-                      <div className="h-full flex items-center justify-center p-8">
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-hero-gradient opacity-20 rounded-2xl blur-xl"></div>
-                          <img 
-                            src="/millath.png" 
-                            alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert"
-                            className="relative rounded-2xl shadow-2xl w-full max-w-xs object-cover transition-transform duration-300 hover:scale-105"
-                          />
-                        </div>
-                      </div>
+                    <div className="relative min-h-[320px] overflow-hidden md:col-span-2 md:min-h-0">
+                      <img
+                        src="/millath.png"
+                        alt="Mr. Samshul Millath - Tally Prime Implementation & Training Expert"
+                        className="absolute inset-0 h-full w-full object-cover object-top"
+                      />
                     </div>
                     
                     {/* Content Column */}
@@ -291,7 +286,7 @@ const About = () => {
                 const Icon = service.icon;
                 
                 return (
-                  <Card key={index} className="group hover-lift border-0 shadow-xl hover:shadow-2xl bg-white overflow-hidden" style={{animationDelay: `${index * 0.05}s`}}>
+                  <Card key={index} className="group hover-lift border-0 shadow-xl hover:shadow-2xl bg-card overflow-hidden" style={{animationDelay: `${index * 0.05}s`}}>
                     <NavLink to={service.link} className="block h-full">
                       {/* Gradient Top Bar */}
                       <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
@@ -339,10 +334,10 @@ const About = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
+        <section className="relative overflow-hidden bg-slate-950 py-16 text-white md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-white">Ready to Upgrade Your Skills or Streamline Your Business Systems?</h2>
             <p className="text-sm md:text-base mb-8 text-white/90 max-w-2xl mx-auto font-medium">
               Get in touch with NnovityWorks today. We blend technology and talent development to help individuals and businesses grow with clarity, efficiency, and confidence.
             </p>
@@ -353,7 +348,7 @@ const About = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-sm md:text-base px-5 md:px-6 py-3 md:py-4 border-2 border-white/40 bg-transparent text-white hover:bg-white/10 hover:border-white/60 hover:scale-105 transition-all duration-300 font-bold">
                 <a href="tel:+919841115769">Call: +91 98411 15769</a>
               </Button>
             </div>

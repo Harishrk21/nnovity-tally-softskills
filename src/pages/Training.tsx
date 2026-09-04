@@ -524,13 +524,13 @@ const Training = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
+        <section className="relative overflow-hidden bg-slate-950 py-16 text-white md:py-24">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white">
                 Ready to Enhance Your Skills?
               </h2>
               <p className="text-sm md:text-base text-white/90 mb-8">

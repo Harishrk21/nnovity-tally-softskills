@@ -18,7 +18,7 @@ const SocialFloatBar = () => {
     {
       label: "Email",
       href: "mailto:smillath@nnovityworks.com",
-      className: "bg-foreground hover:bg-foreground/90",
+      className: "bg-slate-800 text-white hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600",
       icon: <Mail className="h-5 w-5" />,
     },
     {

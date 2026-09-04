@@ -177,7 +177,7 @@ const POSBillingSolutions = () => {
         </section>
 
         {/* Features Grid */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16 animate-fade-in">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Comprehensive POS Billing Features</h2>
@@ -207,7 +207,7 @@ const POSBillingSolutions = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Our POS Billing Solutions?</h2>
@@ -370,10 +370,10 @@ const POSBillingSolutions = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-foreground text-background relative overflow-hidden">
+        <section className="relative overflow-hidden bg-slate-950 py-16 text-white md:py-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.2)_0%,transparent_50%)]"></div>
           <div className="container mx-auto px-4 text-center relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-white">
               Ready to Speed Up Your Billing Process?
             </h2>
             <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto font-medium">
@@ -384,7 +384,7 @@ const POSBillingSolutions = () => {
               <Button asChild size="lg" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 bg-primary hover:from-cyan-600 hover:to-blue-700 shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/70 hover:scale-105 transition-all duration-300 border-0 font-bold">
                 <NavLink to="/contact">Request Demo</NavLink>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 glass-morphism text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50 hover:scale-105 transition-all duration-300 font-bold">
+              <Button asChild size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-5 border-2 border-white/40 bg-transparent text-white hover:bg-white/10 hover:border-white/60 hover:scale-105 transition-all duration-300 font-bold">
                 <a href="tel:+919841115769">Call Sales: +91 98411 15769</a>
               </Button>
             </div>

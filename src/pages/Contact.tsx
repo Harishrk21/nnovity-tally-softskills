@@ -118,7 +118,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="border-t border-border bg-white py-16">
+        <section className="border-t border-border bg-card py-16">
           <div className="container mx-auto px-4">
             <h2 className="mb-8 text-center font-display text-3xl font-semibold md:text-4xl">Find Us in Chennai</h2>
             <div className="mx-auto max-w-4xl">

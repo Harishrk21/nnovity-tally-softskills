@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="overflow-hidden border-t border-border bg-white pb-24 sm:pb-20 md:pb-8">
+    <footer className="overflow-hidden border-t border-border bg-card pb-24 sm:pb-20 md:pb-8">
       <div className="container mx-auto px-4 py-10 sm:py-12 md:py-16">
         {/* CTA band */}
         <div className="mb-10 grid gap-6 rounded-[1.5rem] bg-foreground px-5 py-8 text-background sm:mb-12 sm:rounded-[2rem] sm:px-8 sm:py-10 md:mb-14 md:grid-cols-[1.4fr_auto] md:items-center md:gap-10 md:px-12">

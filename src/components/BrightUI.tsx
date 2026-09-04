@@ -86,7 +86,7 @@ export const PageHero = ({
                   </NavLink>
                 </Button>
                 {secondaryCta && (
-                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-white px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
+                  <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border bg-card px-6 transition-all duration-300 hover:scale-[1.03] hover:bg-muted sm:w-auto">
                     <NavLink to={secondaryCta.to}>{secondaryCta.label}</NavLink>
                   </Button>
                 )}
@@ -106,7 +106,7 @@ export const PageHero = ({
           <ScrollReveal direction="right" delay={100}>
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
               <div className="absolute -inset-3 rounded-[2.2rem] bg-hero-gradient opacity-20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white shadow-xl">
+              <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card shadow-xl">
                 <img
                   src={image}
                   alt={imageAlt}

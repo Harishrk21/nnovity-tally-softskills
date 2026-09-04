@@ -20,7 +20,7 @@ const RelatedServices = ({
     .slice(0, limit);
 
   return (
-    <section className={`border-t border-border bg-white py-14 md:py-16 ${className}`}>
+    <section className={`border-t border-border bg-card py-14 md:py-16 ${className}`}>
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl">
           <p className="section-eyebrow">Internal Resources</p>
