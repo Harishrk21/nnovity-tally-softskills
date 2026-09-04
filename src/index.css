@@ -69,8 +69,8 @@
     --sidebar-border: 240 12% 88%;
     --sidebar-ring: 217 91% 60%;
 
-    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-    --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+    --font-display: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   }
 
   .dark {
@@ -153,6 +153,19 @@
 
   h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  body,
+  p,
+  li,
+  label,
+  input,
+  textarea,
+  button,
+  a {
+    font-family: var(--font-body);
   }
 }
 
@@ -188,7 +201,7 @@
   }
 
   .section-title {
-    @apply font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl;
   }
 
   .section-lead {
@@ -266,7 +279,7 @@
   }
 
   .text-accent-italic {
-    @apply font-display italic text-primary;
+    @apply font-display font-bold not-italic text-primary;
   }
 
   .partners-marquee {

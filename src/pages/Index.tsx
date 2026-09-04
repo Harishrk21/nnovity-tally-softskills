@@ -405,7 +405,7 @@ const Index = () => {
                       <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <p className="font-display text-lg italic leading-relaxed text-foreground">"{t.text}"</p>
+                  <p className="font-display text-lg font-medium leading-relaxed text-foreground">"{t.text}"</p>
                   <div className="mt-6 border-t border-border pt-4">
                     <p className="font-semibold">{t.author}</p>
                     <p className="text-sm text-muted-foreground">{t.role}</p>

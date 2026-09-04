@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'Times New Roman', 'serif'],
-        body: ['DM Sans', 'system-ui', 'sans-serif'],
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'Segoe UI', 'system-ui', 'sans-serif'],
+        body: ['"Source Sans 3"', 'Segoe UI', 'system-ui', 'sans-serif'],
+        sans: ['"Source Sans 3"', 'Segoe UI', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -38,7 +38,7 @@ const Footer = () => {
               <img src="/logo1.jpg" alt="NnovityWorks - Best Tally Prime and soft skills training in Chennai" className="h-10 w-auto flex-shrink-0 object-contain sm:h-12" />
               <div className="min-w-0">
                 <div className="truncate font-display text-lg font-semibold sm:text-xl">NnovityWorks</div>
-                <div className="text-[11px] italic text-primary sm:text-xs">Innovate. Empower. Excel.</div>
+                <div className="text-[11px] font-medium text-primary sm:text-xs">Innovate. Empower. Excel.</div>
               </div>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
