@@ -61,12 +61,12 @@ const Navigation = () => {
               : "rounded-[999px]"
           }`}
         >
-          <div className="flex min-h-[3.75rem] items-center gap-2 px-3 py-2 md:min-h-[4rem] md:px-4 md:py-2.5">
-            <NavLink to="/" onClick={closeMobile} className="flex min-w-0 flex-shrink-0 items-center gap-2 group">
+          <div className="flex min-h-[4.5rem] items-center gap-2 px-3 py-2 md:min-h-[5.25rem] md:px-4 md:py-2.5">
+            <NavLink to="/" onClick={closeMobile} className="flex min-w-0 flex-shrink-0 items-center group">
               <img
-                src="/logo1.jpg"
-                alt="NnovityWorks Logo"
-                className="h-11 w-auto flex-shrink-0 rounded-full object-contain transition-transform duration-300 group-hover:scale-105 sm:h-12 md:h-14"
+                src="/logo-novity.jpg"
+                alt="Novity Works - The Skill Factory"
+                className="h-16 w-16 flex-shrink-0 rounded-full object-cover shadow-sm ring-1 ring-border/60 transition-transform duration-300 group-hover:scale-105 sm:h-[4.5rem] sm:w-[4.5rem] md:h-20 md:w-20"
               />
             </NavLink>
 
